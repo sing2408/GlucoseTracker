@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B3AF32A2C401688001BE8AB /* TestConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3AF3292C401688001BE8AB /* TestConverter.swift */; };
 		24AB42B62C3E9E210094F172 /* GlucoseTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AB42B52C3E9E210094F172 /* GlucoseTrackerApp.swift */; };
 		24AB42BA2C3E9E220094F172 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24AB42B92C3E9E220094F172 /* Assets.xcassets */; };
 		24AB42BD2C3E9E220094F172 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24AB42BC2C3E9E220094F172 /* Preview Assets.xcassets */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0B3AF3292C401688001BE8AB /* TestConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestConverter.swift; sourceTree = "<group>"; };
 		24AB42B22C3E9E210094F172 /* GlucoseTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GlucoseTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24AB42B52C3E9E210094F172 /* GlucoseTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlucoseTrackerApp.swift; sourceTree = "<group>"; };
 		24AB42B92C3E9E220094F172 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 		24AB42D22C3ED82E0094F172 /* Temporary */ = {
 			isa = PBXGroup;
 			children = (
+				0B3AF3292C401688001BE8AB /* TestConverter.swift */,
 				24AB42D02C3ED8250094F172 /* AddDummyView.swift */,
 				24AB42D62C3EE2DA0094F172 /* HomeDummyView.swift */,
 			);
@@ -217,6 +220,7 @@
 			files = (
 				24AB42CD2C3ED3F80094F172 /* AddRecordView.swift in Sources */,
 				24AB42C62C3ED1C20094F172 /* User.swift in Sources */,
+				0B3AF32A2C401688001BE8AB /* TestConverter.swift in Sources */,
 				24AB42CB2C3ED3510094F172 /* HistoryView.swift in Sources */,
 				24AB42D42C3EDA7C0094F172 /* TextStyles.swift in Sources */,
 				24AB42C42C3E9ED60094F172 /* GlucoseData.swift in Sources */,

@@ -20,10 +20,6 @@ struct AddRecordView: View {
     var body: some View {
         NavigationStack {
             VStack {
-                
-                DatePicker("", selection: $date, displayedComponents: .date)
-                    .padding()
-                
                 VStack {
                     Text("Track your current sugar level!")
                         .font(.appLargeTitle)
@@ -35,56 +31,63 @@ struct AddRecordView: View {
                 } .padding()
                 Spacer()
                 VStack(spacing: 20){
-                    
-                    TextField("- - -", text: $amount)
-                        .keyboardType(.numberPad)
-                        .font(.system(size: 80, weight: .bold))
-                        .foregroundStyle(.appTertiary)
-                        .multilineTextAlignment(.center)
-                        .onChange(of: amount) { newValue in
-                            // Filter out non-numeric characters and restrict to 3 digits
-                            let filtered = newValue.filter { "0123456789".contains($0) }
-                            if filtered != newValue {
-                                amount = String(filtered.prefix(3))
-                            } else {
-                                amount = String(newValue.prefix(3))
-                            }
-                        }
-                    
-                    Picker(selection: $type) {
-                        Text("Before Meal").tag("Before Meal")
-                        Text("After Meal").tag("After Meal")
-                    } label: {
-                        Text("Type")
+                    DatePicker("", selection: $date, displayedComponents: [.date, .hourAndMinute])
+                        .frame(width: 100)
+                    HStack {
+                        TextField("- - -", text: $amount)
+                            .keyboardType(.numberPad)
+                            .font(.system(size: 80, weight: .bold))
+                            .foregroundStyle(.appTertiary)
+                            .multilineTextAlignment(.center)
+                            .onChange(of: amount) { newValue in
+                                let filtered = newValue.filter { "0123456789".contains($0) }
+                                if filtered != newValue {
+                                    amount = String(filtered.prefix(3))
+                                } else {
+                                    amount = String(newValue.prefix(3))
+                                }
+                            }                        
                     }
-                    .pickerStyle(SegmentedPickerStyle())
-                    .frame(maxWidth: 300)
-                    
-                    VStack(alignment: .leading, spacing: 5) {
+                    VStack {
+                        Picker(selection: $type) {
+                            Text("Before Meal").tag("Before Meal")
+                            Text("After Meal").tag("After Meal")
+                        } label: {
+                            Text("Type")
+                        }
+                        .pickerStyle(SegmentedPickerStyle())
+                        .frame(maxWidth: 300)
+                        
                         if type == "After Meal" {
-                            Text("Meal Consumed")
-                                .font(.subheadline)
-                            TextField("Note", text: $notes)
-                                .frame(maxWidth: 300, maxHeight: 50)
-                                .padding(.leading)
-                                .background(Color.white)
-                                .cornerRadius(10)
-                                .shadow(radius: 1)
-
+                            VStack(alignment: .leading, spacing: 5) {
+                                Text("Meal Consumed")
+                                    .font(.subheadline)
+                                TextField("Note", text: $notes)
+                                    .frame(maxWidth: 300, minHeight: 40)
+                                    .padding(.leading)
+                                    .background(Color.white)
+                                    .cornerRadius(10)
+                                    .shadow(radius: 1)
+                            }
+                            .padding(.top, 5)
                         }
                     }
-                    .frame(maxWidth: 300, maxHeight: 70)
                     .padding()
+                    .background(Color.white)
+                    .cornerRadius(10)
+                    .shadow(radius: 2)
+                    .frame(maxWidth: 300)
+
                     
                     Button(action: {
                         saveNewRecord()
                         dismiss()
                     }, label: {
-                        Text("Save")
+                        Text("Submit")
                             .font(.appTitle2)
                             .foregroundStyle(.white)
-                            .frame(maxWidth: 300, maxHeight: 50)
-                            .background(.appTertiary)
+                            .frame(maxWidth: 300, minHeight: 50)
+                            .background(.gray)
                             .cornerRadius(10)
                     })
                 }
@@ -102,7 +105,6 @@ struct AddRecordView: View {
         context.insert(newRecord)
         dismiss()
     }
-    
 }
 
 #Preview {
