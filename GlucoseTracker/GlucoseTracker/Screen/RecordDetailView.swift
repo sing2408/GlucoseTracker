@@ -14,41 +14,48 @@ struct RecordDetailView: View {
     
     var body: some View {
         VStack {
-            Text("Record Detail")
-                .font(.appTitle1)
+            VStack {
+                Text("Record Detail")
+                    .font(.appTitle1)
+                
+                Spacer()
+                
+                Text("Sugar Level")
+                    .font(.appTitle2)
+                Spacer()
+                
+                Text("120")
+                    .font(.appAverageText)
+                Spacer()
+                
+                Text("miligram/desiliter")
+                    .font(.appTitle2)
+            }
             
-            Spacer()
+            VStack {
+                Picker("please select type", selection: $selectedType) {
+                    ForEach(mealType, id: \.self) {
+                        Text($0)
+                    }
+                }.pickerStyle(.palette)
+            }
+            .padding(.horizontal, 47)
             
-            Text("Sugar Level")
-                .font(.appTitle2)
-            Spacer()
-            
-            Text("120")
-                .font(.appAverageText)
-            Spacer()
-            
-            Text("miligram/desiliter")
-                .font(.appTitle2)
-        }
-        .background(.orange)
-        
-        VStack {
-            Picker("please select type", selection: $selectedType) {
-                ForEach(mealType, id: \.self) {
-                    Text($0)
-                }
-            }.pickerStyle(.palette)
-        }
-        
-        VStack(alignment: .leading) {
-            Text("Meal consumed")
-            
-            Form {
-                TextField(text: $mealNumber, prompt: Text("Add notes about your meal...")) {
+            VStack (alignment: .leading) {
+                Text("Meal consumed")
+                    .padding(.top, 30)
+                    .padding(.bottom, -30)
+                
+                Form {
+                    TextField(text: $mealNumber, prompt: Text("Add notes about your meal...")) {
+                    }.textFieldStyle(.roundedBorder)
+                    
                 }
             }
+            .frame(height: 215)
             .scrollContentBackground(.hidden)
-           
+            .padding(.horizontal, 10)
+            
             VStack {
                 Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
                     Text("Add Sugar Level")
@@ -62,11 +69,9 @@ struct RecordDetailView: View {
                 })
                 .padding(.horizontal, 47)
             }
+            .padding(.horizontal, 16)
         }
-        .padding(.horizontal, 16)
-        .background(.gray)
     }
-    
 }
 
 #Preview {
