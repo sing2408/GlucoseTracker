@@ -47,6 +47,7 @@ struct DataCell: View {
             Text(glucoseData.date, format: .dateTime.month())
             Text(glucoseData.type)
             Text(glucoseData.amount, format: .number)
+            Text(glucoseData.notes)
         }
     }
 }

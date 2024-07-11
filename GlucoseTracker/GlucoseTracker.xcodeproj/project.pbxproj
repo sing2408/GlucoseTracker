@@ -69,13 +69,12 @@
 			children = (
 				24AB42B52C3E9E210094F172 /* GlucoseTrackerApp.swift */,
 				24AB42B92C3E9E220094F172 /* Assets.xcassets */,
-				24AB42D22C3ED82E0094F172 /* Temporary */,
-				24AB42C82C3ED2ED0094F172 /* HomeView.swift */,
-				24AB42CA2C3ED3510094F172 /* HistoryView.swift */,
-				24AB42CC2C3ED3F80094F172 /* AddRecordView.swift */,
-				24AB42CE2C3ED4000094F172 /* RecordDetailView.swift */,
 				24AB42C72C3ED2BC0094F172 /* Model */,
+				24AB42D92C3F86E10094F172 /* View */,
+				24AB42DA2C3F86F30094F172 /* ViewModel */,
+				24AB42D82C3F86920094F172 /* Screen */,
 				24AB42D52C3EDA870094F172 /* Extensions */,
+				24AB42D22C3ED82E0094F172 /* Temporary */,
 				24AB42BB2C3E9E220094F172 /* Preview Content */,
 			);
 			path = GlucoseTracker;
@@ -113,6 +112,31 @@
 				24AB42D32C3EDA7C0094F172 /* TextStyles.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		24AB42D82C3F86920094F172 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				24AB42CA2C3ED3510094F172 /* HistoryView.swift */,
+				24AB42CC2C3ED3F80094F172 /* AddRecordView.swift */,
+				24AB42CE2C3ED4000094F172 /* RecordDetailView.swift */,
+				24AB42C82C3ED2ED0094F172 /* HomeView.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		24AB42D92C3F86E10094F172 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		24AB42DA2C3F86F30094F172 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
