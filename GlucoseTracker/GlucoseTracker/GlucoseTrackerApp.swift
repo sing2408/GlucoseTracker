@@ -22,7 +22,7 @@ struct GlucoseTrackerApp: App {
     
     var body: some Scene {
         WindowGroup {
-            HomeDummyView()
+            HomeView()
         }
         .modelContainer(container)
     }

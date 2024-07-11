@@ -13,4 +13,5 @@ extension Font {
     static let appTitle1 = Font.system(size: 28, weight: .bold)
     static let appTitle2 = Font.system(size: 22, weight: .bold)
     static let appBody = Font.system(size: 17, weight: .regular)
+
 }

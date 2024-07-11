@@ -15,6 +15,7 @@ struct AddDummyView: View {
     @State private var type: String = ""
     @State private var amount: Int = 0
     @State private var date: Date = .now
+    @State private var notes: String = ""
     
     var body: some View {
         VStack {
@@ -23,10 +24,11 @@ struct AddDummyView: View {
                 TextField("Type", text: $type)
                 TextField("Sugar Level", value: $amount, format: .number)
                     .keyboardType(.numberPad)
+                TextField("Notes", text: $notes)
             }
             
             Button("Save") {
-                let data = GlucoseData(date: date, amount: amount, type: type)
+                let data = GlucoseData(date: date, amount: amount, type: type, notes: notes)
                 modelContext.insert(data)
                 dismiss()
             }
