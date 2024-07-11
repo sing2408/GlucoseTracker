@@ -19,6 +19,8 @@
 		24AB42D12C3ED8250094F172 /* AddDummyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AB42D02C3ED8250094F172 /* AddDummyView.swift */; };
 		24AB42D42C3EDA7C0094F172 /* TextStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AB42D32C3EDA7C0094F172 /* TextStyles.swift */; };
 		24AB42D72C3EE2DA0094F172 /* HomeDummyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AB42D62C3EE2DA0094F172 /* HomeDummyView.swift */; };
+		24BEAF602C3F8B5D003DA842 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BEAF5F2C3F8B5D003DA842 /* Card.swift */; };
+		24BEAF622C3F8B74003DA842 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BEAF612C3F8B74003DA842 /* HomeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +37,8 @@
 		24AB42D02C3ED8250094F172 /* AddDummyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDummyView.swift; sourceTree = "<group>"; };
 		24AB42D32C3EDA7C0094F172 /* TextStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextStyles.swift; sourceTree = "<group>"; };
 		24AB42D62C3EE2DA0094F172 /* HomeDummyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDummyView.swift; sourceTree = "<group>"; };
+		24BEAF5F2C3F8B5D003DA842 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		24BEAF612C3F8B74003DA842 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +132,7 @@
 		24AB42D92C3F86E10094F172 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				24BEAF5F2C3F8B5D003DA842 /* Card.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -135,6 +140,7 @@
 		24AB42DA2C3F86F30094F172 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				24BEAF612C3F8B74003DA842 /* HomeViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -216,9 +222,11 @@
 				24AB42C42C3E9ED60094F172 /* GlucoseData.swift in Sources */,
 				24AB42C92C3ED2ED0094F172 /* HomeView.swift in Sources */,
 				24AB42D72C3EE2DA0094F172 /* HomeDummyView.swift in Sources */,
+				24BEAF622C3F8B74003DA842 /* HomeViewModel.swift in Sources */,
 				24AB42D12C3ED8250094F172 /* AddDummyView.swift in Sources */,
 				24AB42CF2C3ED4000094F172 /* RecordDetailView.swift in Sources */,
 				24AB42B62C3E9E210094F172 /* GlucoseTrackerApp.swift in Sources */,
+				24BEAF602C3F8B5D003DA842 /* Card.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
