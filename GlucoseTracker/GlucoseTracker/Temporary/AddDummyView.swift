@@ -21,6 +21,7 @@ struct AddDummyView: View {
         VStack {
             Form{
                 DatePicker("Date", selection: $date, displayedComponents: .date)
+                DatePicker("Time", selection: $date, displayedComponents: .hourAndMinute)
                 TextField("Type", text: $type)
                 TextField("Sugar Level", value: $amount, format: .number)
                     .keyboardType(.numberPad)

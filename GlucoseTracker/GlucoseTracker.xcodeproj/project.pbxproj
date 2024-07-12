@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2468A8F82C4038CC00BF5574 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2468A8F72C4038CC00BF5574 /* DateFormatter.swift */; };
+		2468A8FA2C40390000BF5574 /* ChartRecordCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2468A8F92C40390000BF5574 /* ChartRecordCard.swift */; };
 		0B3AF32A2C401688001BE8AB /* TestConverter2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3AF3292C401688001BE8AB /* TestConverter2.swift */; };
 		0BC53D972C40B959006B8C35 /* AddDummy2View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC53D962C40B959006B8C35 /* AddDummy2View.swift */; };
 		0BC53D992C40C5AE006B8C35 /* UnitConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC53D982C40C5AE006B8C35 /* UnitConverter.swift */; };
@@ -27,6 +29,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2468A8F72C4038CC00BF5574 /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
+		2468A8F92C40390000BF5574 /* ChartRecordCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartRecordCard.swift; sourceTree = "<group>"; };
 		0B3AF3292C401688001BE8AB /* TestConverter2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestConverter2.swift; sourceTree = "<group>"; };
 		0BC53D962C40B959006B8C35 /* AddDummy2View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDummy2View.swift; sourceTree = "<group>"; };
 		0BC53D982C40C5AE006B8C35 /* UnitConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitConverter.swift; sourceTree = "<group>"; };
@@ -122,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				24AB42D32C3EDA7C0094F172 /* TextStyles.swift */,
+				2468A8F72C4038CC00BF5574 /* DateFormatter.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -142,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				24BEAF5F2C3F8B5D003DA842 /* Card.swift */,
+				2468A8F92C40390000BF5574 /* ChartRecordCard.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -230,11 +236,13 @@
 				0BC53D992C40C5AE006B8C35 /* UnitConverter.swift in Sources */,
 				24AB42CB2C3ED3510094F172 /* HistoryView.swift in Sources */,
 				24AB42D42C3EDA7C0094F172 /* TextStyles.swift in Sources */,
+				2468A8F82C4038CC00BF5574 /* DateFormatter.swift in Sources */,
 				24AB42C42C3E9ED60094F172 /* GlucoseData.swift in Sources */,
 				0BC53D972C40B959006B8C35 /* AddDummy2View.swift in Sources */,
 				24AB42C92C3ED2ED0094F172 /* HomeView.swift in Sources */,
 				24AB42D72C3EE2DA0094F172 /* HomeDummyView.swift in Sources */,
 				24BEAF622C3F8B74003DA842 /* HomeViewModel.swift in Sources */,
+				2468A8FA2C40390000BF5574 /* ChartRecordCard.swift in Sources */,
 				24AB42D12C3ED8250094F172 /* AddDummyView.swift in Sources */,
 				24AB42CF2C3ED4000094F172 /* RecordDetailView.swift in Sources */,
 				24AB42B62C3E9E210094F172 /* GlucoseTrackerApp.swift in Sources */,
