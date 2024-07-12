@@ -3,14 +3,15 @@
 //  GlucoseTracker
 //
 //  Created by Singgih Tulus Makmud on 10/07/24.
-//
+
 
 import SwiftUI
 import SwiftData
 
 struct HomeView: View {
     
-    @StateObject private var viewModel = HomeViewModel()
+    @State var viewModel:GlutenDataViewModel
+    @StateObject var homeViewModel = HomeViewModel()
     
     var body: some View {
         
@@ -18,9 +19,9 @@ struct HomeView: View {
             
             ZStack {
                 LinearGradient(
-                    gradient: Gradient(colors: [.gray, .white]),
+                    gradient: Gradient(colors: [.blue, .white]),
                     startPoint: .top,
-                    endPoint: .bottom
+                    endPoint: UnitPoint(x: 0.5, y: 0.15)
                 )
                 
                 VStack{
@@ -29,7 +30,7 @@ struct HomeView: View {
                     Text("Summary")
                         .font(.appLargeTitle)
                     
-                    Text("\(viewModel.startDateString) - \(viewModel.endDateString)")
+                    Text("\(homeViewModel.startDateString) - now")
                         .font(.appBody)
                     
                     
@@ -41,29 +42,27 @@ struct HomeView: View {
                         HStack(alignment: .firstTextBaseline){
                             Text("120")
                                 .font(.appAverageText)
-                            Text("mg/dl")
+                            Text("mg/dL")
                                 .font(.appTitle2)
                         }
+                        .foregroundColor(.blue)
                         
                         Text("You're doing great!")
                             .font(.appBody)
                     }
                     .padding()
                     
-                    
                     VStack(alignment: .leading){
-                        
                         HStack{
                             Text("Chart & Record")
                                 .font(.appTitle2)
                             
                             Spacer()
                             
-                            NavigationLink(destination: HomeDummyView()) {
-                                Text("Details")
-                                Image(systemName: "chevron.right")
-                                
-                            }
+                            Text("Detail>")
+                                .foregroundStyle(.gray)
+                                .opacity(0.65)
+                                .bold()
                         }
                         
                         ChartRecordCard()
@@ -72,11 +71,12 @@ struct HomeView: View {
                     .padding()
                     
                     Button{
-                        viewModel.isShowingSheet.toggle()
+                        homeViewModel.isShowingSheet.toggle()
+                        print("Tapped")
                     } label: {
                         Rectangle()
                             .frame(width: 342, height: 64)
-                            .foregroundColor(.gray)
+                            .foregroundColor(.blue)
                             .cornerRadius(12)
                             .overlay{
                                 Text("Add New Record")
@@ -87,20 +87,27 @@ struct HomeView: View {
                     .padding()
                     
                     Spacer()
+                    
                 }
+                .offset(y: 25)
                 .padding()
             }
             .ignoresSafeArea()
         }
-        .sheet(isPresented: $viewModel.isShowingSheet) {
-            AddRecordView()
-        }
+//        .sheet(isPresented: $viewModel.isShowingSheet) {
+//            AddRecordView()
+//        }
+    }
+    
+    init(modelContext: ModelContext) {
+        let viewModel = GlutenDataViewModel(modelContext: modelContext)
+        _viewModel = State(initialValue: viewModel)
     }
 }
 
-#Preview {
-    HomeView()
-        .modelContainer(for: GlucoseData.self)
-    
-}
+//#Preview {
+//    HomeView()
+//        .modelContainer(for: GlucoseData.self)
+//    
+//}
 

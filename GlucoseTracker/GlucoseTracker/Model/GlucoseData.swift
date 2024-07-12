@@ -17,7 +17,7 @@ class GlucoseData:Identifiable {
         return Double(amount / 18)
     }
     var type: String = "Before eat"
-    var notes: String
+    var notes: String = ""
     
     init(id: String = UUID().uuidString, date: Date, amount: Int, type: String, notes: String) {
         self.id = id

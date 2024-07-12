@@ -18,14 +18,22 @@
 		24AB42C42C3E9ED60094F172 /* GlucoseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AB42C32C3E9ED60094F172 /* GlucoseData.swift */; };
 		24AB42C62C3ED1C20094F172 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AB42C52C3ED1C20094F172 /* User.swift */; };
 		24AB42C92C3ED2ED0094F172 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AB42C82C3ED2ED0094F172 /* HomeView.swift */; };
-		24AB42CB2C3ED3510094F172 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AB42CA2C3ED3510094F172 /* HistoryView.swift */; };
 		24AB42CD2C3ED3F80094F172 /* AddRecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AB42CC2C3ED3F80094F172 /* AddRecordView.swift */; };
 		24AB42CF2C3ED4000094F172 /* RecordDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AB42CE2C3ED4000094F172 /* RecordDetailView.swift */; };
 		24AB42D12C3ED8250094F172 /* AddDummyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AB42D02C3ED8250094F172 /* AddDummyView.swift */; };
 		24AB42D42C3EDA7C0094F172 /* TextStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AB42D32C3EDA7C0094F172 /* TextStyles.swift */; };
 		24AB42D72C3EE2DA0094F172 /* HomeDummyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AB42D62C3EE2DA0094F172 /* HomeDummyView.swift */; };
-		24BEAF602C3F8B5D003DA842 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BEAF5F2C3F8B5D003DA842 /* Card.swift */; };
 		24BEAF622C3F8B74003DA842 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BEAF612C3F8B74003DA842 /* HomeViewModel.swift */; };
+		2711E3D22C40F8060039A7EC /* ChartHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2711E3D12C40F8060039A7EC /* ChartHistoryView.swift */; };
+		2711E3D42C40FAC80039A7EC /* ChartCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2711E3D32C40FAC80039A7EC /* ChartCard.swift */; };
+		2711E3D62C40FE660039A7EC /* ChartCardAvg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2711E3D52C40FE660039A7EC /* ChartCardAvg.swift */; };
+		2711E3D82C41073E0039A7EC /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2711E3D72C41073E0039A7EC /* ChartView.swift */; };
+		2711E3DA2C4109BF0039A7EC /* GlutenDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2711E3D92C4109BF0039A7EC /* GlutenDataViewModel.swift */; };
+		2711E3DC2C41141E0039A7EC /* SampleAddRecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2711E3DB2C41141E0039A7EC /* SampleAddRecordView.swift */; };
+		2711E3DE2C4114F10039A7EC /* HideKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2711E3DD2C4114F10039A7EC /* HideKeyboard.swift */; };
+		2711E3E02C411A300039A7EC /* HistoryList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2711E3DF2C411A300039A7EC /* HistoryList.swift */; };
+		2711E3E22C41647C0039A7EC /* RecentCheckCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2711E3E12C41647C0039A7EC /* RecentCheckCard.swift */; };
+		2711E3E42C4177420039A7EC /* ChartGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2711E3E32C4177420039A7EC /* ChartGraph.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,14 +49,22 @@
 		24AB42C32C3E9ED60094F172 /* GlucoseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlucoseData.swift; sourceTree = "<group>"; };
 		24AB42C52C3ED1C20094F172 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		24AB42C82C3ED2ED0094F172 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		24AB42CA2C3ED3510094F172 /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
 		24AB42CC2C3ED3F80094F172 /* AddRecordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRecordView.swift; sourceTree = "<group>"; };
 		24AB42CE2C3ED4000094F172 /* RecordDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordDetailView.swift; sourceTree = "<group>"; };
 		24AB42D02C3ED8250094F172 /* AddDummyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDummyView.swift; sourceTree = "<group>"; };
 		24AB42D32C3EDA7C0094F172 /* TextStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextStyles.swift; sourceTree = "<group>"; };
 		24AB42D62C3EE2DA0094F172 /* HomeDummyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDummyView.swift; sourceTree = "<group>"; };
-		24BEAF5F2C3F8B5D003DA842 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		24BEAF612C3F8B74003DA842 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		2711E3D12C40F8060039A7EC /* ChartHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartHistoryView.swift; sourceTree = "<group>"; };
+		2711E3D32C40FAC80039A7EC /* ChartCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartCard.swift; sourceTree = "<group>"; };
+		2711E3D52C40FE660039A7EC /* ChartCardAvg.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartCardAvg.swift; sourceTree = "<group>"; };
+		2711E3D72C41073E0039A7EC /* ChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartView.swift; sourceTree = "<group>"; };
+		2711E3D92C4109BF0039A7EC /* GlutenDataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlutenDataViewModel.swift; sourceTree = "<group>"; };
+		2711E3DB2C41141E0039A7EC /* SampleAddRecordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleAddRecordView.swift; sourceTree = "<group>"; };
+		2711E3DD2C4114F10039A7EC /* HideKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HideKeyboard.swift; sourceTree = "<group>"; };
+		2711E3DF2C411A300039A7EC /* HistoryList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryList.swift; sourceTree = "<group>"; };
+		2711E3E12C41647C0039A7EC /* RecentCheckCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentCheckCard.swift; sourceTree = "<group>"; };
+		2711E3E32C4177420039A7EC /* ChartGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartGraph.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +144,7 @@
 			children = (
 				24AB42D32C3EDA7C0094F172 /* TextStyles.swift */,
 				2468A8F72C4038CC00BF5574 /* DateFormatter.swift */,
+				2711E3DD2C4114F10039A7EC /* HideKeyboard.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -135,10 +152,11 @@
 		24AB42D82C3F86920094F172 /* Screen */ = {
 			isa = PBXGroup;
 			children = (
-				24AB42CA2C3ED3510094F172 /* HistoryView.swift */,
 				24AB42CC2C3ED3F80094F172 /* AddRecordView.swift */,
 				24AB42CE2C3ED4000094F172 /* RecordDetailView.swift */,
 				24AB42C82C3ED2ED0094F172 /* HomeView.swift */,
+				2711E3D12C40F8060039A7EC /* ChartHistoryView.swift */,
+				2711E3DB2C41141E0039A7EC /* SampleAddRecordView.swift */,
 			);
 			path = Screen;
 			sourceTree = "<group>";
@@ -146,8 +164,13 @@
 		24AB42D92C3F86E10094F172 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				24BEAF5F2C3F8B5D003DA842 /* Card.swift */,
 				2468A8F92C40390000BF5574 /* ChartRecordCard.swift */,
+				2711E3D32C40FAC80039A7EC /* ChartCard.swift */,
+				2711E3D52C40FE660039A7EC /* ChartCardAvg.swift */,
+				2711E3D72C41073E0039A7EC /* ChartView.swift */,
+				2711E3DF2C411A300039A7EC /* HistoryList.swift */,
+				2711E3E12C41647C0039A7EC /* RecentCheckCard.swift */,
+				2711E3E32C4177420039A7EC /* ChartGraph.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -156,6 +179,7 @@
 			isa = PBXGroup;
 			children = (
 				24BEAF612C3F8B74003DA842 /* HomeViewModel.swift */,
+				2711E3D92C4109BF0039A7EC /* GlutenDataViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -230,23 +254,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2711E3D42C40FAC80039A7EC /* ChartCard.swift in Sources */,
 				24AB42CD2C3ED3F80094F172 /* AddRecordView.swift in Sources */,
 				24AB42C62C3ED1C20094F172 /* User.swift in Sources */,
+				2711E3D82C41073E0039A7EC /* ChartView.swift in Sources */,
 				0B3AF32A2C401688001BE8AB /* TestConverter2.swift in Sources */,
 				0BC53D992C40C5AE006B8C35 /* UnitConverter.swift in Sources */,
-				24AB42CB2C3ED3510094F172 /* HistoryView.swift in Sources */,
+				2711E3E02C411A300039A7EC /* HistoryList.swift in Sources */,
+				2711E3DE2C4114F10039A7EC /* HideKeyboard.swift in Sources */,
 				24AB42D42C3EDA7C0094F172 /* TextStyles.swift in Sources */,
+				2711E3E22C41647C0039A7EC /* RecentCheckCard.swift in Sources */,
+				2711E3D22C40F8060039A7EC /* ChartHistoryView.swift in Sources */,
 				2468A8F82C4038CC00BF5574 /* DateFormatter.swift in Sources */,
+				2711E3E42C4177420039A7EC /* ChartGraph.swift in Sources */,
 				24AB42C42C3E9ED60094F172 /* GlucoseData.swift in Sources */,
 				0BC53D972C40B959006B8C35 /* AddDummy2View.swift in Sources */,
 				24AB42C92C3ED2ED0094F172 /* HomeView.swift in Sources */,
 				24AB42D72C3EE2DA0094F172 /* HomeDummyView.swift in Sources */,
 				24BEAF622C3F8B74003DA842 /* HomeViewModel.swift in Sources */,
+				2711E3DC2C41141E0039A7EC /* SampleAddRecordView.swift in Sources */,
+				2711E3D62C40FE660039A7EC /* ChartCardAvg.swift in Sources */,
 				2468A8FA2C40390000BF5574 /* ChartRecordCard.swift in Sources */,
 				24AB42D12C3ED8250094F172 /* AddDummyView.swift in Sources */,
 				24AB42CF2C3ED4000094F172 /* RecordDetailView.swift in Sources */,
+				2711E3DA2C4109BF0039A7EC /* GlutenDataViewModel.swift in Sources */,
 				24AB42B62C3E9E210094F172 /* GlucoseTrackerApp.swift in Sources */,
-				24BEAF602C3F8B5D003DA842 /* Card.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -380,7 +412,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"GlucoseTracker/Preview Content\"";
-				DEVELOPMENT_TEAM = M6ZUY47J83;
+				DEVELOPMENT_TEAM = L27J25C3C8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -409,7 +441,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"GlucoseTracker/Preview Content\"";
-				DEVELOPMENT_TEAM = M6ZUY47J83;
+				DEVELOPMENT_TEAM = L27J25C3C8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;

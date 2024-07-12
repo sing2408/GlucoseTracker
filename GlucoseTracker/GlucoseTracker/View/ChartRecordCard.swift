@@ -11,6 +11,7 @@ struct ChartRecordCard: View {
     var body: some View {
         Rectangle()
             .frame(width: 361, height: 272)
+            .shadow(color: Color.gray.opacity(0.5), radius: 10, x: 0, y: 5)
             .foregroundColor(.gray)
             .cornerRadius(16)
             .overlay {
@@ -24,7 +25,7 @@ struct ChartRecordCard: View {
                     HStack {
                         Image(systemName: "circle.fill")
                             .resizable()
-                            .foregroundColor(.appSecondary)
+                            .foregroundColor(.green)
                             .frame(width: 60, height: 60)
                         
                         VStack(alignment: .leading) {

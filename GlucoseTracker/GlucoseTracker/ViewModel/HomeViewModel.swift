@@ -8,9 +8,9 @@
 import SwiftUI
 
 class HomeViewModel: ObservableObject {
-    @Published var startDateString: String
-    @Published var endDateString: String
-    @Published var isShowingSheet = false
+    var startDateString: String
+    var endDateString: String
+    var isShowingSheet = false
     
     init() {
         let calendar = Calendar.current
@@ -18,7 +18,7 @@ class HomeViewModel: ObservableObject {
         
         // Calculate the start and end dates
         let endDate = calendar.startOfDay(for: now)
-        let startDate = calendar.date(byAdding: .day, value: -6, to: endDate)!
+        let startDate = calendar.date(byAdding: .day, value: -7, to: endDate)!
         
         // Create the date range strings using the custom DateFormatter
         self.startDateString = DateFormatter.custom.string(from: startDate)
