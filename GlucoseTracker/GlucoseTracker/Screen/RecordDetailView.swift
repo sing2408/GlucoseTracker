@@ -8,68 +8,95 @@
 import SwiftUI
 
 struct RecordDetailView: View {
-    var mealType = ["Before Meal", "After Meal"]
-    @State private var selectedType = "Before Meal"
-    @State private var mealNumber: String = ""
+    var mealType = ["mg/dL", "mMol"]
+    @State private var selectedType = "mg/dL"
     
     var body: some View {
-        VStack {
+        NavigationStack {
             VStack {
-                Text("Record Detail")
-                    .font(.appTitle1)
-                
-                Spacer()
-                
-                Text("Sugar Level")
-                    .font(.appTitle2)
-                Spacer()
-                
-                Text("120")
-                    .font(.appAverageText)
-                Spacer()
-                
-                Text("miligram/desiliter")
-                    .font(.appTitle2)
-            }
-            
-            VStack {
-                Picker("please select type", selection: $selectedType) {
-                    ForEach(mealType, id: \.self) {
-                        Text($0)
-                    }
-                }.pickerStyle(.palette)
-            }
-            .padding(.horizontal, 47)
-            
-            VStack (alignment: .leading) {
-                Text("Meal consumed")
-                    .padding(.top, 30)
-                    .padding(.bottom, -30)
-                
-                Form {
-                    TextField(text: $mealNumber, prompt: Text("Add notes about your meal...")) {
-                    }.textFieldStyle(.roundedBorder)
+                HStack {
+                    
+                    Button(action: {}, label: {
+                        Text("Cancel")
+                    })
+                    .frame(width: 100, height: 22, alignment: .leading)
+                    
+                    Button(action: {}, label: {
+                        Image(systemName: "pencil")
+                    })
+                    .frame(width: 250, height: 22, alignment: .trailing)
+                    
+                    Spacer()
                     
                 }
+                
+                Spacer()
+                VStack {
+                    Text("Sugar Level Record")
+                        .font(.appTitle1)
+                        .frame(width: 300)
+                    Spacer()
+                    Text("109")
+                        .font(Font.system(size: 96, weight: .bold))
+                        .frame(width: 200)
+                    
+                    Spacer()
+                    
+                    Picker("please select type", selection: $selectedType) {
+                        ForEach(mealType, id: \.self) {
+                            Text($0)
+                        }
+                    }.pickerStyle(.palette)
+                }
+                .padding(.horizontal, 124)
+                
+                
+                VStack {
+                    VStack(spacing: 20) {
+                        List {
+                            Section() {
+                                HStack {
+                                    Text("Type")
+                                    Spacer()
+                                    Text("After Meal")
+                                        .multilineTextAlignment(.trailing)
+                                        .textFieldStyle(PlainTextFieldStyle())
+                                }
+                                .listRowBackground(Color(red: 0.95, green: 0.95, blue: 0.97))
+                                
+                                HStack {
+                                    Text("Time")
+                                    Spacer()
+                                    Text("13.20 pm")
+                                        .multilineTextAlignment(.trailing)
+                                        .textFieldStyle(PlainTextFieldStyle())
+                                }
+                                .listRowBackground(Color(red: 0.95, green: 0.95, blue: 0.97))
+                                
+                                HStack {
+                                    Text("Date")
+                                    Spacer()
+                                    Text("12 July 2023")
+                                        .multilineTextAlignment(.trailing)
+                                        .textFieldStyle(PlainTextFieldStyle())
+                                }
+                                .listRowBackground(Color(red: 0.95, green: 0.95, blue: 0.97))
+                                
+                                HStack {
+                                    Text("Meal Consumed")
+                                    Spacer()
+                                    Text("Klatak satay")
+                                        .multilineTextAlignment(.trailing)
+                                        .textFieldStyle(PlainTextFieldStyle())
+                                }
+                                .listRowBackground(Color(red: 0.95, green: 0.95, blue: 0.97))
+                            }
+                        }
+                        
+                        .scrollContentBackground(.hidden)
+                    }
+                }
             }
-            .frame(height: 215)
-            .scrollContentBackground(.hidden)
-            .padding(.horizontal, 10)
-            
-            VStack {
-                Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
-                    Text("Add Sugar Level")
-                        .font(.appTitle2)
-                        .frame(maxWidth: .infinity)
-                        .foregroundColor(.white)
-                        .padding(.horizontal, 16)
-                        .padding(.vertical, 16)
-                        .background(Color(.appSecondary))
-                        .cornerRadius(10)
-                })
-                .padding(.horizontal, 47)
-            }
-            .padding(.horizontal, 16)
         }
     }
 }
