@@ -45,6 +45,7 @@ struct DataCell: View {
     var body: some View {
         HStack{
             Text(glucoseData.date, format: .dateTime.month())
+            Text(glucoseData.date, format: .dateTime.hour().minute())
             Text(glucoseData.type)
             Text(glucoseData.amount, format: .number)
             Text(glucoseData.notes)

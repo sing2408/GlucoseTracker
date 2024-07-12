@@ -9,95 +9,94 @@ import SwiftUI
 import SwiftData
 
 struct HomeView: View {
+    
+    @StateObject private var viewModel = HomeViewModel()
+    
     var body: some View {
-        ZStack {
-            Color.appBackground
+        
+        NavigationStack{
             
-            VStack {
-                Spacer()
-                VStack (alignment: .leading){
-                    Text("This Week")
+            ZStack {
+                LinearGradient(
+                    gradient: Gradient(colors: [.gray, .white]),
+                    startPoint: .top,
+                    endPoint: .bottom
+                )
+                
+                VStack{
+                    Spacer()
+                    
+                    Text("Summary")
                         .font(.appLargeTitle)
-                    Rectangle()
-                        .frame(width: 329, height: 185)
-                        .cornerRadius(16)
-                        .foregroundColor(.appSecondary)
-                        .overlay {
-                            VStack{
-                                Text("Avg. Sugar Level")
-                                    .font(.appTitle2)
-                                    .foregroundColor(.appPrimary)
-                                HStack{
-                                    Text("120")
-                                        .font(.appAverageText)
-                                        .foregroundColor(.appPrimary)
-                                    Text("mg/dl")
-                                        .font(.appTitle2)
-                                        .foregroundColor(.appPrimary)
-                                }
-                                Text("Keep it up, Bryan!")
-                                    .font(.appBody)
-                                    .foregroundColor(.appPrimary)
-                            }
-                            
-                        }
-                }
-                
-                Spacer()
-                
-                VStack (alignment: .leading){
-                    Text("Chart & Record")
-                        .font(.appTitle2)
                     
-                    Rectangle()
-                        .frame(width: 329, height: 185)
-                        .cornerRadius(16)
-                        .foregroundColor(.appTertiary)
+                    Text("\(viewModel.startDateString) - \(viewModel.endDateString)")
+                        .font(.appBody)
                     
-                    Rectangle()
-                        .frame(width: 329, height: 112)
-                        .cornerRadius(16)
-                        .foregroundColor(.appPrimary)
-                        .overlay{
-                            HStack{
-                                Image(systemName: "star.fill")
-                                    .resizable()
-                                    .foregroundColor(.appSecondary)
-                                    .frame(width: 60, height: 60)
-                                VStack{
-                                    Text("Recent check up")
-                                        .font(.appBody)
-                                        .bold()
-                                    HStack{
-                                        Text("120")
-                                            .font(.appLargeTitle)
-                                        Text("mg/dl")
-                                            .font(.appBody)
-                                            .bold()
-                                    }
-                                }
-                            }
+                    
+                    VStack{
+                        Text("Average Sugar Level")
+                            .font(.title3)
+                            .fontWeight(.semibold)
+                        
+                        HStack(alignment: .firstTextBaseline){
+                            Text("120")
+                                .font(.appAverageText)
+                            Text("mg/dl")
+                                .font(.appTitle2)
                         }
-                }
-                
-                
-                Image(systemName: "plus.circle.fill")
-                    .resizable()
-                    .frame(width: 75, height: 75)
-                    .foregroundColor(.appSecondary)
+                        
+                        Text("You're doing great!")
+                            .font(.appBody)
+                    }
                     .padding()
-                
-                
-                
+                    
+                    
+                    VStack(alignment: .leading){
+                        
+                        HStack{
+                            Text("Chart & Record")
+                                .font(.appTitle2)
+                            
+                            Spacer()
+                            
+                            NavigationLink(destination: HomeDummyView()) {
+                                Text("Details")
+                                Image(systemName: "chevron.right")
+                                
+                            }
+                        }
+                        
+                        ChartRecordCard()
+                        
+                    }
+                    .padding()
+                    
+                    Button{
+                        viewModel.isShowingSheet.toggle()
+                    } label: {
+                        Rectangle()
+                            .frame(width: 342, height: 64)
+                            .foregroundColor(.gray)
+                            .cornerRadius(12)
+                            .overlay{
+                                Text("Add New Record")
+                                    .font(.appTitle2)
+                                    .foregroundColor(.white)
+                            }
+                    }
+                    .padding()
+                    
+                    Spacer()
+                }
+                .padding()
             }
-            .padding()
-            
+            .ignoresSafeArea()
         }
-        .ignoresSafeArea()
+        .sheet(isPresented: $viewModel.isShowingSheet) {
+            AddDummyView()
+        }
     }
 }
-
-
 
 #Preview {
     HomeView()
