@@ -9,13 +9,18 @@ import SwiftUI
 import SwiftData
 
 @Model
-class GlucoseData {
+class GlucoseData:Identifiable {
+    var id = UUID().uuidString
     var date: Date
     var amount: Int
-    var type: String
+    var mmolAmount: Double {
+        return Double(amount / 18)
+    }
+    var type: String = "Before eat"
     var notes: String
     
-    init(date: Date, amount: Int, type: String, notes: String) {
+    init(id: String = UUID().uuidString, date: Date, amount: Int, type: String, notes: String) {
+        self.id = id
         self.date = date
         self.amount = amount
         self.type = type
