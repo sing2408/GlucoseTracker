@@ -93,7 +93,7 @@ struct HomeView: View {
             .ignoresSafeArea()
         }
         .sheet(isPresented: $viewModel.isShowingSheet) {
-            AddDummyView()
+            AddRecordView()
         }
     }
 }
