@@ -40,8 +40,25 @@ struct AddRecordView: View {
                     DatePicker("", selection: $date, displayedComponents: [.date, .hourAndMinute])
                         .frame(width: 100)
                     
-                    UnitConverter(amount: $amount)
-                    
+                    VStack {
+                        HStack (alignment: .firstTextBaseline) {
+                            TextField("109", text: $amount)
+                                .keyboardType(.numberPad)
+                                .font(.system(size: 80, weight: .bold))
+                                .foregroundStyle(.black)
+                                .frame(maxWidth: 150)
+                                .onChange(of: amount) { newValue in
+                                    let filtered = newValue.filter { "0123456789".contains($0) }
+                                    if filtered != newValue {
+                                        amount = String(filtered.prefix(3))
+                                    } else {
+                                        amount = String(newValue.prefix(3))
+                                    }
+                            }
+                            Text("mg/dl")
+                            .font(.appTitle2)
+                        }
+                    }
                     VStack {
                         Picker(selection: $type) {
                             Text("Before Meal").tag("Before Meal")
@@ -95,14 +112,14 @@ struct AddRecordView: View {
     }
     
     func saveNewRecord() {
-        guard let amountDouble = Double(amount) else {
+        guard let amountInt = Int(amount) else {
             // Handle invalid input
             alertMessage = "Please enter a valid number for the amount."
             showAlert = true
             return
         }
-        
-        let newRecord = GlucoseData(date: date, amount: amountDouble, type: type, notes: notes)
+
+        let newRecord = GlucoseData(date: date, amount: amountInt, type: type, notes: notes)
         
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
@@ -114,7 +131,7 @@ struct AddRecordView: View {
         print("  Amount: \(newRecord.amount)")
         print("  Type: \(newRecord.type)")
         print("  Notes: \(newRecord.notes)")
-
+        
         context.insert(newRecord)
         dismiss()
     }

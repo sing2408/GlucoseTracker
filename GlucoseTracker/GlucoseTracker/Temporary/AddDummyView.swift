@@ -29,9 +29,9 @@ struct AddDummyView: View {
             }
             
             Button("Save") {
-                let data = GlucoseData(date: date, amount: amount, type: type, notes: notes)
-                modelContext.insert(data)
-                dismiss()
+//                let data = GlucoseData(date: date, amount: amount, type: type, notes: notes)
+//                modelContext.insert(data)
+//                dismiss()
             }
             
         }
