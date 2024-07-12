@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct RecordDetailView: View {
+
+    @Environment(\.dismiss) var dismiss
+    
     var mealType = ["mg/dL", "mMol"]
     @State private var selectedType = "mg/dL"
     
@@ -15,20 +18,14 @@ struct RecordDetailView: View {
         NavigationStack {
             VStack {
                 HStack {
-                    
-                    Button(action: {}, label: {
-                        Text("Cancel")
-                    })
-                    .frame(width: 100, height: 22, alignment: .leading)
-                    
                     Button(action: {}, label: {
                         Image(systemName: "pencil")
                     })
-                    .frame(width: 250, height: 22, alignment: .trailing)
-                    
-                    Spacer()
-                    
-                }
+                    .frame(width: 250, height: 22, alignment: .topTrailing)
+                } 
+                .navigationBarItems(leading: Button("Cancel") {
+                    dismiss()
+                })
                 
                 Spacer()
                 VStack {
