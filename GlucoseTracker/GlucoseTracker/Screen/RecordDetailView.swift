@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct RecordDetailView: View {
-
+    
     @Environment(\.dismiss) var dismiss
     
     var mealType = ["mg/dL", "mMol"]
@@ -17,18 +17,9 @@ struct RecordDetailView: View {
     var body: some View {
         NavigationStack {
             VStack {
-                HStack {
-                    Button(action: {}, label: {
-                        Image(systemName: "pencil")
-                    })
-                    .frame(width: 250, height: 22, alignment: .topTrailing)
-                } 
-                .navigationBarItems(leading: Button("Cancel") {
-                    dismiss()
-                })
-                
                 Spacer()
                 VStack {
+                    Spacer()
                     Text("Sugar Level Record")
                         .font(.appTitle1)
                         .frame(width: 300)
@@ -43,19 +34,20 @@ struct RecordDetailView: View {
                         ForEach(mealType, id: \.self) {
                             Text($0)
                         }
-                    }.pickerStyle(.palette)
+                    }.pickerStyle(SegmentedPickerStyle())
                 }
                 .padding(.horizontal, 124)
                 
                 
                 VStack {
                     VStack(spacing: 20) {
-                        List {
+                       Form {
                             Section() {
                                 HStack {
                                     Text("Type")
                                     Spacer()
                                     Text("After Meal")
+                                        .foregroundColor(.gray)
                                         .multilineTextAlignment(.trailing)
                                         .textFieldStyle(PlainTextFieldStyle())
                                 }
@@ -65,6 +57,7 @@ struct RecordDetailView: View {
                                     Text("Time")
                                     Spacer()
                                     Text("13.20 pm")
+                                        .foregroundColor(.gray)
                                         .multilineTextAlignment(.trailing)
                                         .textFieldStyle(PlainTextFieldStyle())
                                 }
@@ -74,6 +67,7 @@ struct RecordDetailView: View {
                                     Text("Date")
                                     Spacer()
                                     Text("12 July 2023")
+                                        .foregroundColor(.gray)
                                         .multilineTextAlignment(.trailing)
                                         .textFieldStyle(PlainTextFieldStyle())
                                 }
@@ -83,20 +77,26 @@ struct RecordDetailView: View {
                                     Text("Meal Consumed")
                                     Spacer()
                                     Text("Klatak satay")
+                                        .foregroundColor(.gray)
                                         .multilineTextAlignment(.trailing)
                                         .textFieldStyle(PlainTextFieldStyle())
                                 }
                                 .listRowBackground(Color(red: 0.95, green: 0.95, blue: 0.97))
                             }
                         }
-                        
                         .scrollContentBackground(.hidden)
                     }
                 }
             }
+            .navigationBarItems(leading: Button("Cancel") {
+                dismiss()
+            }, trailing: NavigationLink(destination: RecordDetailView()) {
+                Image(systemName: "pencil")
+            })
         }
     }
 }
+
 
 #Preview {
     RecordDetailView()

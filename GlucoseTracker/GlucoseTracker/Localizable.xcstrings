@@ -1,0 +1,153 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "" : {
+
+    },
+    "- - -" : {
+
+    },
+    "%@ - %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ - %2$@"
+          }
+        }
+      }
+    },
+    "12 July 2023" : {
+
+    },
+    "13.20 pm" : {
+
+    },
+    "109" : {
+
+    },
+    "120" : {
+
+    },
+    "Add" : {
+
+    },
+    "Add New Record" : {
+
+    },
+    "After Meal" : {
+
+    },
+    "Average Sugar Level" : {
+
+    },
+    "Before Meal" : {
+
+    },
+    "Cancel" : {
+
+    },
+    "Chart & Record" : {
+
+    },
+    "Date" : {
+
+    },
+    "Details" : {
+
+    },
+    "Home View" : {
+
+    },
+    "Ini Chart & Record History View" : {
+
+    },
+    "Input your current sugar level based on your glucometer result each day." : {
+
+    },
+    "Invalid Input" : {
+
+    },
+    "June" : {
+
+    },
+    "Key" : {
+      "extractionState" : "manual"
+    },
+    "Klatak satay" : {
+
+    },
+    "Meal Consumed" : {
+
+    },
+    "mg/dl" : {
+
+    },
+    "mg/dL" : {
+
+    },
+    "mMol" : {
+
+    },
+    "Note" : {
+
+    },
+    "Notes" : {
+
+    },
+    "OK" : {
+
+    },
+    "please select type" : {
+
+    },
+    "Recent check up" : {
+
+    },
+    "Save" : {
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Simpan"
+          }
+        }
+      }
+    },
+    "Submit" : {
+
+    },
+    "Sugar Level" : {
+
+    },
+    "Sugar Level Record" : {
+
+    },
+    "Summary" : {
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ringkasan"
+          }
+        }
+      }
+    },
+    "Time" : {
+
+    },
+    "Track your current sugar level!" : {
+
+    },
+    "Type" : {
+
+    },
+    "Unit" : {
+
+    },
+    "You're doing great!" : {
+
+    }
+  },
+  "version" : "1.0"
+}
