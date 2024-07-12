@@ -1,10 +1,19 @@
+//
+//  UnitConverter.swift
+//  GlucoseTracker
+//
+//  Created by Rio Ikhsan on 12/07/24.
+//
+
 import SwiftUI
 
-struct TestConverter: View {
-    @State private var amount: String = ""
+struct UnitConverter: View {
+    
+    @Binding var amount: String
     @State private var unit: String = "mg/dL"
     @State private var previousUnit: String = "mg/dL"
 
+    
     var body: some View {
         VStack {
             TextField("- - -", text: $amount)
@@ -32,10 +41,10 @@ struct TestConverter: View {
         }
         
         if oldUnit == "mg/dL" && newUnit == "mMol" {
-            let convertedValue = roundDouble(inputAmount / 18.0, toPlaces: 2)
+            let convertedValue = roundDouble(inputAmount / 18.0, toPlaces: 1)
             amount = String(format: "%.2f", convertedValue)
         } else if oldUnit == "mMol" && newUnit == "mg/dL" {
-            let convertedValue = roundDouble(inputAmount * 18.0, toPlaces: 2)
+            let convertedValue = roundDouble(inputAmount * 18.0, toPlaces: 1)
             amount = String(format: "%.2f", convertedValue)
         }
     }
@@ -46,8 +55,7 @@ struct TestConverter: View {
     }
 }
 
-struct TestConverter_Previews: PreviewProvider {
-    static var previews: some View {
-        TestConverter()
-    }
+
+#Preview {
+    UnitConverter(amount: .constant(""))
 }
