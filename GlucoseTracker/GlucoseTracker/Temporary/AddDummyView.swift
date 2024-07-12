@@ -13,7 +13,7 @@ struct AddDummyView: View {
     @Environment(\.dismiss) var dismiss
     
     @State private var type: String = ""
-    @State private var amount: Int = 0
+    @State private var amount: Double = 0
     @State private var date: Date = .now
     @State private var notes: String = ""
     
