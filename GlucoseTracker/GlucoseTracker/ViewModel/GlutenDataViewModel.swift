@@ -41,4 +41,40 @@ class GlutenDataViewModel:ObservableObject {
         items.last
     }
     
+    var avgOverall: Int {
+        let calendar = Calendar.current
+        let sevenDaysAgo = calendar.date(byAdding: .day, value: -14, to: Date())!
+        
+        let lastSevenDaysData = items.filter { $0.date >= sevenDaysAgo }
+        let totalAmount = lastSevenDaysData.reduce(0) { $0 + $1.amount}
+        
+        guard !lastSevenDaysData.isEmpty else { return 0 }
+        
+        return totalAmount / lastSevenDaysData.count
+    }
+    
+    var avgBeforeMeal: Int {
+        let calendar = Calendar.current
+        let sevenDaysAgo = calendar.date(byAdding: .day, value: -14, to: Date())!
+        
+        let lastSevenDaysData = items.filter { $0.date >= sevenDaysAgo && $0.type == "Before eat"}
+        let totalAmount = lastSevenDaysData.reduce(0) { $0 + $1.amount}
+        
+        guard !lastSevenDaysData.isEmpty else { return 0 }
+        
+        return totalAmount / lastSevenDaysData.count
+    }
+    
+    var avgfAfterMeal: Int {
+        let calendar = Calendar.current
+        let sevenDaysAgo = calendar.date(byAdding: .day, value: -14, to: Date())!
+        
+        let lastSevenDaysData = items.filter { $0.date >= sevenDaysAgo && $0.type == "After eat"}
+        let totalAmount = lastSevenDaysData.reduce(0) { $0 + $1.amount}
+        
+        guard !lastSevenDaysData.isEmpty else { return 0 }
+        
+        return totalAmount / lastSevenDaysData.count
+    }
+    
 }

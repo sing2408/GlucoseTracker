@@ -9,6 +9,7 @@ import SwiftUI
 import SwiftData
 
 struct ChartHistoryView: View {
+    @Environment (\.colorScheme) var colorScheme
     @State var viewModel:GlutenDataViewModel
     @State private var chartType:String = "All"
     
@@ -23,18 +24,26 @@ struct ChartHistoryView: View {
                 Text("After eat").tag("After eat")
             }
             .pickerStyle(SegmentedPickerStyle())
-            ZStack {
-                ChartCard()
-                ChartCardAvg()
-                    .padding()
-                    .offset(y: -115)
+            
+            if viewModel.items.count < 4 {
+                NoGrapChart()
+            } else {
+                ZStack {
+                    ChartCard()
+                    VStack {
+                        ChartCardAvg(modelContext: viewModel.modelContext)
+                        ChartGraph(modelContext: viewModel.modelContext)
+                    }
+                }
             }
+            
             Text("History")
                 .font(Font.appTitle2)
                 .frame(maxWidth: .infinity, alignment: .leading)
             
             HistoryList(modelContext: viewModel.modelContext)
         }
+        .offset(y: viewModel.items.count < 4 ? -20 : 0)
         .padding()
     }
     

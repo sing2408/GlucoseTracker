@@ -11,7 +11,6 @@
 		0BC53D972C40B959006B8C35 /* AddDummy2View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC53D962C40B959006B8C35 /* AddDummy2View.swift */; };
 		0BC53D992C40C5AE006B8C35 /* UnitConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC53D982C40C5AE006B8C35 /* UnitConverter.swift */; };
 		2468A8F82C4038CC00BF5574 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2468A8F72C4038CC00BF5574 /* DateFormatter.swift */; };
-		2468A8FA2C40390000BF5574 /* ChartRecordCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2468A8F92C40390000BF5574 /* ChartRecordCard.swift */; };
 		24AB42B62C3E9E210094F172 /* GlucoseTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AB42B52C3E9E210094F172 /* GlucoseTrackerApp.swift */; };
 		24AB42BA2C3E9E220094F172 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24AB42B92C3E9E220094F172 /* Assets.xcassets */; };
 		24AB42BD2C3E9E220094F172 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24AB42BC2C3E9E220094F172 /* Preview Assets.xcassets */; };
@@ -27,13 +26,14 @@
 		2711E3D22C40F8060039A7EC /* ChartHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2711E3D12C40F8060039A7EC /* ChartHistoryView.swift */; };
 		2711E3D42C40FAC80039A7EC /* ChartCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2711E3D32C40FAC80039A7EC /* ChartCard.swift */; };
 		2711E3D62C40FE660039A7EC /* ChartCardAvg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2711E3D52C40FE660039A7EC /* ChartCardAvg.swift */; };
-		2711E3D82C41073E0039A7EC /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2711E3D72C41073E0039A7EC /* ChartView.swift */; };
 		2711E3DA2C4109BF0039A7EC /* GlutenDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2711E3D92C4109BF0039A7EC /* GlutenDataViewModel.swift */; };
 		2711E3DC2C41141E0039A7EC /* SampleAddRecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2711E3DB2C41141E0039A7EC /* SampleAddRecordView.swift */; };
 		2711E3DE2C4114F10039A7EC /* HideKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2711E3DD2C4114F10039A7EC /* HideKeyboard.swift */; };
 		2711E3E02C411A300039A7EC /* HistoryList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2711E3DF2C411A300039A7EC /* HistoryList.swift */; };
 		2711E3E22C41647C0039A7EC /* RecentCheckCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2711E3E12C41647C0039A7EC /* RecentCheckCard.swift */; };
 		2711E3E42C4177420039A7EC /* ChartGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2711E3E32C4177420039A7EC /* ChartGraph.swift */; };
+		2711E3E62C417B250039A7EC /* NoGraphCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2711E3E52C417B250039A7EC /* NoGraphCard.swift */; };
+		2711E3E82C417BF70039A7EC /* ChartRecordCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2711E3E72C417BF70039A7EC /* ChartRecordCard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,7 +41,6 @@
 		0BC53D962C40B959006B8C35 /* AddDummy2View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDummy2View.swift; sourceTree = "<group>"; };
 		0BC53D982C40C5AE006B8C35 /* UnitConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitConverter.swift; sourceTree = "<group>"; };
 		2468A8F72C4038CC00BF5574 /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
-		2468A8F92C40390000BF5574 /* ChartRecordCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartRecordCard.swift; sourceTree = "<group>"; };
 		24AB42B22C3E9E210094F172 /* GlucoseTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GlucoseTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24AB42B52C3E9E210094F172 /* GlucoseTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlucoseTrackerApp.swift; sourceTree = "<group>"; };
 		24AB42B92C3E9E220094F172 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -58,13 +57,14 @@
 		2711E3D12C40F8060039A7EC /* ChartHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartHistoryView.swift; sourceTree = "<group>"; };
 		2711E3D32C40FAC80039A7EC /* ChartCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartCard.swift; sourceTree = "<group>"; };
 		2711E3D52C40FE660039A7EC /* ChartCardAvg.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartCardAvg.swift; sourceTree = "<group>"; };
-		2711E3D72C41073E0039A7EC /* ChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartView.swift; sourceTree = "<group>"; };
 		2711E3D92C4109BF0039A7EC /* GlutenDataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlutenDataViewModel.swift; sourceTree = "<group>"; };
 		2711E3DB2C41141E0039A7EC /* SampleAddRecordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleAddRecordView.swift; sourceTree = "<group>"; };
 		2711E3DD2C4114F10039A7EC /* HideKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HideKeyboard.swift; sourceTree = "<group>"; };
 		2711E3DF2C411A300039A7EC /* HistoryList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryList.swift; sourceTree = "<group>"; };
 		2711E3E12C41647C0039A7EC /* RecentCheckCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentCheckCard.swift; sourceTree = "<group>"; };
 		2711E3E32C4177420039A7EC /* ChartGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartGraph.swift; sourceTree = "<group>"; };
+		2711E3E52C417B250039A7EC /* NoGraphCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoGraphCard.swift; sourceTree = "<group>"; };
+		2711E3E72C417BF70039A7EC /* ChartRecordCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartRecordCard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,13 +164,13 @@
 		24AB42D92C3F86E10094F172 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				2468A8F92C40390000BF5574 /* ChartRecordCard.swift */,
+				2711E3E72C417BF70039A7EC /* ChartRecordCard.swift */,
 				2711E3D32C40FAC80039A7EC /* ChartCard.swift */,
 				2711E3D52C40FE660039A7EC /* ChartCardAvg.swift */,
-				2711E3D72C41073E0039A7EC /* ChartView.swift */,
 				2711E3DF2C411A300039A7EC /* HistoryList.swift */,
 				2711E3E12C41647C0039A7EC /* RecentCheckCard.swift */,
 				2711E3E32C4177420039A7EC /* ChartGraph.swift */,
+				2711E3E52C417B250039A7EC /* NoGraphCard.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -257,7 +257,6 @@
 				2711E3D42C40FAC80039A7EC /* ChartCard.swift in Sources */,
 				24AB42CD2C3ED3F80094F172 /* AddRecordView.swift in Sources */,
 				24AB42C62C3ED1C20094F172 /* User.swift in Sources */,
-				2711E3D82C41073E0039A7EC /* ChartView.swift in Sources */,
 				0B3AF32A2C401688001BE8AB /* TestConverter2.swift in Sources */,
 				0BC53D992C40C5AE006B8C35 /* UnitConverter.swift in Sources */,
 				2711E3E02C411A300039A7EC /* HistoryList.swift in Sources */,
@@ -268,13 +267,14 @@
 				2468A8F82C4038CC00BF5574 /* DateFormatter.swift in Sources */,
 				2711E3E42C4177420039A7EC /* ChartGraph.swift in Sources */,
 				24AB42C42C3E9ED60094F172 /* GlucoseData.swift in Sources */,
+				2711E3E62C417B250039A7EC /* NoGraphCard.swift in Sources */,
 				0BC53D972C40B959006B8C35 /* AddDummy2View.swift in Sources */,
 				24AB42C92C3ED2ED0094F172 /* HomeView.swift in Sources */,
 				24AB42D72C3EE2DA0094F172 /* HomeDummyView.swift in Sources */,
 				24BEAF622C3F8B74003DA842 /* HomeViewModel.swift in Sources */,
 				2711E3DC2C41141E0039A7EC /* SampleAddRecordView.swift in Sources */,
+				2711E3E82C417BF70039A7EC /* ChartRecordCard.swift in Sources */,
 				2711E3D62C40FE660039A7EC /* ChartCardAvg.swift in Sources */,
-				2468A8FA2C40390000BF5574 /* ChartRecordCard.swift in Sources */,
 				24AB42D12C3ED8250094F172 /* AddDummyView.swift in Sources */,
 				24AB42CF2C3ED4000094F172 /* RecordDetailView.swift in Sources */,
 				2711E3DA2C4109BF0039A7EC /* GlutenDataViewModel.swift in Sources */,

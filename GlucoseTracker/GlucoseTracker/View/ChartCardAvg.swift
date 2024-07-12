@@ -6,10 +6,10 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct ChartCardAvg: View {
-    @State var avgBeforeEat:String = "128"
-    @State var avgAfterEat:String = "253"
+    @State var viewModel: GlutenDataViewModel
     
     var body: some View {
         HStack {
@@ -17,7 +17,7 @@ struct ChartCardAvg: View {
                 Text("Before meal avg.")
                     .opacity(0.6)
                 HStack(spacing: 0) {
-                    Text("\(avgBeforeEat)")
+                    Text("\(viewModel.avgBeforeMeal)")
                         .font(Font.system(size: 24))
                         .bold()
                     Text("mg/dL")
@@ -32,7 +32,7 @@ struct ChartCardAvg: View {
                 Text("After meal avg.")
                     .opacity(0.6)
                 HStack(spacing: 0) {
-                    Text("\(avgAfterEat)")
+                    Text("\(viewModel.avgfAfterMeal)")
                         .font(Font.system(size: 24))
                         .bold()
                     Text("mg/dL")
@@ -41,10 +41,12 @@ struct ChartCardAvg: View {
             }
             .foregroundColor(.pink)
         }
-        .padding()
+        .frame(width: 300)
+        .offset(y: 15)
     }
-}
-
-#Preview {
-    ChartCardAvg()
+    
+    init(modelContext: ModelContext) {
+        let viewModel = GlutenDataViewModel(modelContext: modelContext)
+        _viewModel = State(initialValue: viewModel)
+    }
 }

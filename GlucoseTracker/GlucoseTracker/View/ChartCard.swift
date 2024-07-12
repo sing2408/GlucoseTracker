@@ -11,7 +11,7 @@ struct ChartCard: View {
     @Environment (\.colorScheme) var colorScheme
     var body: some View {
         RoundedRectangle(cornerRadius: 10)
-            .frame(height: 300)
+            .frame(width: 350, height: 300)
             .shadow(color: Color.gray.opacity(0.5), radius: 10, x: 0, y: 5)
             .padding()
             .foregroundColor(colorScheme == .dark ? .black : .white)
