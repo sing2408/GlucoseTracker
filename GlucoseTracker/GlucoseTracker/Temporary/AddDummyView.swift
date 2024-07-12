@@ -13,7 +13,7 @@ struct AddDummyView: View {
     @Environment(\.dismiss) var dismiss
     
     @State private var type: String = ""
-    @State private var amount: Int = 0
+    @State private var amount: Double = 0
     @State private var date: Date = .now
     @State private var notes: String = ""
     
@@ -21,6 +21,7 @@ struct AddDummyView: View {
         VStack {
             Form{
                 DatePicker("Date", selection: $date, displayedComponents: .date)
+                DatePicker("Time", selection: $date, displayedComponents: .hourAndMinute)
                 TextField("Type", text: $type)
                 TextField("Sugar Level", value: $amount, format: .number)
                     .keyboardType(.numberPad)
