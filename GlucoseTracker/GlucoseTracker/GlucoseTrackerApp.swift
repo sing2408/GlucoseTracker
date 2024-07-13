@@ -11,19 +11,22 @@ import SwiftData
 @main
 
 struct GlucoseTrackerApp: App {
-    var container: ModelContainer {
-            do {
-                let container = try ModelContainer(for: GlucoseData.self)
-                return container
-            } catch {
-                fatalError("Failed to create container")
-            }
-        }
+    let container: ModelContainer
     
     var body: some Scene {
         WindowGroup {
-            AddRecordView()
+            NavigationView {
+                HomeView(modelContext: container.mainContext)
+            }
         }
         .modelContainer(container)
+    }
+    
+    init() {
+        do {
+            container = try ModelContainer(for: GlucoseData.self)
+        } catch {
+            fatalError("Failed to create ModelContainer for Glucose data.")
+        }
     }
 }
