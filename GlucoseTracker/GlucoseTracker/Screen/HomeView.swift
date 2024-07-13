@@ -13,6 +13,7 @@ struct HomeView: View {
     @Environment (\.colorScheme) var colorScheme
     @State var viewModel:GlutenDataViewModel
     @StateObject var homeViewModel = HomeViewModel()
+    @State var isShowingSheet = false
     
     var body: some View {
         
@@ -93,7 +94,7 @@ struct HomeView: View {
                     }
                     
                     Button{
-                        homeViewModel.isShowingSheet.toggle()
+                        isShowingSheet.toggle()
                         print("Tapped")
                     } label: {
                         Rectangle()
@@ -116,9 +117,9 @@ struct HomeView: View {
             }
             .ignoresSafeArea()
         }
-//        .sheet(isPresented: $viewModel.isShowingSheet) {
-//            AddRecordView()
-//        }
+        .sheet(isPresented: $isShowingSheet) {
+            AddRecordView(modelContext: viewModel.modelContext)
+        }
     }
     
     init(modelContext: ModelContext) {
