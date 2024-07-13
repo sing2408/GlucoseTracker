@@ -13,7 +13,7 @@ struct ChartCardAvg: View {
     
     var body: some View {
         HStack {
-            VStack {
+            VStack(alignment: .leading) {
                 Text("Before meal avg.")
                     .opacity(0.6)
                 HStack(spacing: 0) {
@@ -28,7 +28,7 @@ struct ChartCardAvg: View {
             
             Spacer()
             
-            VStack {
+            VStack(alignment: .leading) {
                 Text("After meal avg.")
                     .opacity(0.6)
                 HStack(spacing: 0) {

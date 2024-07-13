@@ -34,6 +34,7 @@
 		2711E3E42C4177420039A7EC /* ChartGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2711E3E32C4177420039A7EC /* ChartGraph.swift */; };
 		2711E3E62C417B250039A7EC /* NoGraphCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2711E3E52C417B250039A7EC /* NoGraphCard.swift */; };
 		2711E3E82C417BF70039A7EC /* ChartRecordCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2711E3E72C417BF70039A7EC /* ChartRecordCard.swift */; };
+		2711E3EE2C4250220039A7EC /* ChartGraphByType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2711E3ED2C4250220039A7EC /* ChartGraphByType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,6 +66,7 @@
 		2711E3E32C4177420039A7EC /* ChartGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartGraph.swift; sourceTree = "<group>"; };
 		2711E3E52C417B250039A7EC /* NoGraphCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoGraphCard.swift; sourceTree = "<group>"; };
 		2711E3E72C417BF70039A7EC /* ChartRecordCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartRecordCard.swift; sourceTree = "<group>"; };
+		2711E3ED2C4250220039A7EC /* ChartGraphByType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartGraphByType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +173,7 @@
 				2711E3E12C41647C0039A7EC /* RecentCheckCard.swift */,
 				2711E3E32C4177420039A7EC /* ChartGraph.swift */,
 				2711E3E52C417B250039A7EC /* NoGraphCard.swift */,
+				2711E3ED2C4250220039A7EC /* ChartGraphByType.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -256,6 +259,7 @@
 			files = (
 				2711E3D42C40FAC80039A7EC /* ChartCard.swift in Sources */,
 				24AB42CD2C3ED3F80094F172 /* AddRecordView.swift in Sources */,
+				2711E3EE2C4250220039A7EC /* ChartGraphByType.swift in Sources */,
 				24AB42C62C3ED1C20094F172 /* User.swift in Sources */,
 				0B3AF32A2C401688001BE8AB /* TestConverter2.swift in Sources */,
 				0BC53D992C40C5AE006B8C35 /* UnitConverter.swift in Sources */,

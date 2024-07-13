@@ -25,16 +25,30 @@ struct HistoryList: View {
             List {
                 ForEach(viewModel.items.reversed()) { item in
                     HStack {
-                        Text(dateFormatter.string(from: item.date))
-                        Divider()
-                        VStack {
-                            Text("\(String(item.amount)) mg/dL")
-                            Text("\(String(item.mmolAmount)) mmol/L")
+                        Image(systemName: item.type == "Before eat" ? "takeoutbag.and.cup.and.straw" : "takeoutbag.and.cup.and.straw.fill")
+                            .foregroundColor(item.type == "Before eat" ? .blue : .pink)
+                            .font(.system(size: 36))
+                        Spacer()
+                        VStack(alignment: .leading) {
+                            Text("\(item.type)")
+                                .font(Font.appBody)
+                                .foregroundColor(item.type == "Before eat" ? .blue : .pink)
+                                .bold()
+                            HStack(spacing: 0){
+                                Text("\(item.amount)")
+                                    .font(Font.appTitle2)
+                                Text("mg/dL")
+                                    .foregroundStyle(.gray)
+                                    .opacity(0.75)
+                                    .bold()
+                            }
                         }
-                        Divider()
-                        Text(item.type)
+                        Spacer()
+                        Text("\(DateFormatter.custom.string(from: item.date))")
+                            .foregroundStyle(.gray)
+                            .opacity(0.75)
+                            .frame(width: 100)
                     }
-                    .padding()
                 }
                 .onDelete { indexes in
                     for index in indexes {
@@ -58,7 +72,3 @@ struct HistoryList: View {
         return formatter
     }()
 }
-
-//#Preview {
-//    HistoryList()
-//}

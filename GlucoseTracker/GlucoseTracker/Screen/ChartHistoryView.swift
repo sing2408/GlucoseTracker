@@ -28,11 +28,25 @@ struct ChartHistoryView: View {
             if viewModel.items.count < 4 {
                 NoGrapChart()
             } else {
-                ZStack {
-                    ChartCard()
-                    VStack {
-                        ChartCardAvg(modelContext: viewModel.modelContext)
-                        ChartGraph(modelContext: viewModel.modelContext)
+                if chartType == "All" {
+                    ZStack {
+                        ChartCard()
+                        VStack {
+                            ChartCardAvg(modelContext: viewModel.modelContext)
+                            ChartGraph(modelContext: viewModel.modelContext)
+                        }
+                    }
+                } else if chartType == "Before eat" {
+                    ZStack {
+                        ChartCard()
+                        ChartGraphByType(modelContext: viewModel.modelContext, chartType: chartType)
+                            .padding()
+                    }
+                } else {
+                    ZStack {
+                        ChartCard()
+                        ChartGraphByType(modelContext: viewModel.modelContext, chartType: chartType)
+                            .padding()
                     }
                 }
             }
@@ -52,7 +66,3 @@ struct ChartHistoryView: View {
         _viewModel = State(initialValue: viewModel)
     }
 }
-
-//#Preview {
-//    ChartHistoryView()
-//}
