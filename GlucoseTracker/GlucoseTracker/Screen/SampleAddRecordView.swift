@@ -78,7 +78,3 @@ struct SampleAddRecordView: View {
         return formatter
     }()
 }
-
-//#Preview {
-//    SampleAddRecordView()
-//}

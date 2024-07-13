@@ -17,7 +17,6 @@
 		24AB42C42C3E9ED60094F172 /* GlucoseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AB42C32C3E9ED60094F172 /* GlucoseData.swift */; };
 		24AB42C62C3ED1C20094F172 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AB42C52C3ED1C20094F172 /* User.swift */; };
 		24AB42C92C3ED2ED0094F172 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AB42C82C3ED2ED0094F172 /* HomeView.swift */; };
-		24AB42CD2C3ED3F80094F172 /* AddRecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AB42CC2C3ED3F80094F172 /* AddRecordView.swift */; };
 		24AB42CF2C3ED4000094F172 /* RecordDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AB42CE2C3ED4000094F172 /* RecordDetailView.swift */; };
 		24AB42D12C3ED8250094F172 /* AddDummyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AB42D02C3ED8250094F172 /* AddDummyView.swift */; };
 		24AB42D42C3EDA7C0094F172 /* TextStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AB42D32C3EDA7C0094F172 /* TextStyles.swift */; };
@@ -34,6 +33,8 @@
 		2711E3E42C4177420039A7EC /* ChartGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2711E3E32C4177420039A7EC /* ChartGraph.swift */; };
 		2711E3E62C417B250039A7EC /* NoGraphCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2711E3E52C417B250039A7EC /* NoGraphCard.swift */; };
 		2711E3EE2C4250220039A7EC /* ChartGraphByType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2711E3ED2C4250220039A7EC /* ChartGraphByType.swift */; };
+		2711E3F62C426DAF0039A7EC /* AddRecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2711E3F52C426DAF0039A7EC /* AddRecordView.swift */; };
+		2711E3FA2C42721C0039A7EC /* AddRecordView 2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2711E3F92C42721C0039A7EC /* AddRecordView 2.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,7 +49,6 @@
 		24AB42C32C3E9ED60094F172 /* GlucoseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlucoseData.swift; sourceTree = "<group>"; };
 		24AB42C52C3ED1C20094F172 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		24AB42C82C3ED2ED0094F172 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		24AB42CC2C3ED3F80094F172 /* AddRecordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRecordView.swift; sourceTree = "<group>"; };
 		24AB42CE2C3ED4000094F172 /* RecordDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordDetailView.swift; sourceTree = "<group>"; };
 		24AB42D02C3ED8250094F172 /* AddDummyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDummyView.swift; sourceTree = "<group>"; };
 		24AB42D32C3EDA7C0094F172 /* TextStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextStyles.swift; sourceTree = "<group>"; };
@@ -65,6 +65,8 @@
 		2711E3E32C4177420039A7EC /* ChartGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartGraph.swift; sourceTree = "<group>"; };
 		2711E3E52C417B250039A7EC /* NoGraphCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoGraphCard.swift; sourceTree = "<group>"; };
 		2711E3ED2C4250220039A7EC /* ChartGraphByType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartGraphByType.swift; sourceTree = "<group>"; };
+		2711E3F52C426DAF0039A7EC /* AddRecordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRecordView.swift; sourceTree = "<group>"; };
+		2711E3F92C42721C0039A7EC /* AddRecordView 2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "AddRecordView 2.swift"; path = "../../../../../Library/Mobile Documents/.Trash/AddRecordView 2.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,11 +154,12 @@
 		24AB42D82C3F86920094F172 /* Screen */ = {
 			isa = PBXGroup;
 			children = (
-				24AB42CC2C3ED3F80094F172 /* AddRecordView.swift */,
+				2711E3F92C42721C0039A7EC /* AddRecordView 2.swift */,
 				24AB42CE2C3ED4000094F172 /* RecordDetailView.swift */,
 				24AB42C82C3ED2ED0094F172 /* HomeView.swift */,
 				2711E3D12C40F8060039A7EC /* ChartHistoryView.swift */,
 				2711E3DB2C41141E0039A7EC /* SampleAddRecordView.swift */,
+				2711E3F52C426DAF0039A7EC /* AddRecordView.swift */,
 			);
 			path = Screen;
 			sourceTree = "<group>";
@@ -255,11 +258,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				2711E3D42C40FAC80039A7EC /* ChartCard.swift in Sources */,
-				24AB42CD2C3ED3F80094F172 /* AddRecordView.swift in Sources */,
 				2711E3EE2C4250220039A7EC /* ChartGraphByType.swift in Sources */,
 				24AB42C62C3ED1C20094F172 /* User.swift in Sources */,
 				0B3AF32A2C401688001BE8AB /* TestConverter2.swift in Sources */,
 				0BC53D992C40C5AE006B8C35 /* UnitConverter.swift in Sources */,
+				2711E3FA2C42721C0039A7EC /* AddRecordView 2.swift in Sources */,
 				2711E3E02C411A300039A7EC /* HistoryList.swift in Sources */,
 				2711E3DE2C4114F10039A7EC /* HideKeyboard.swift in Sources */,
 				24AB42D42C3EDA7C0094F172 /* TextStyles.swift in Sources */,
@@ -270,6 +273,7 @@
 				24AB42C42C3E9ED60094F172 /* GlucoseData.swift in Sources */,
 				2711E3E62C417B250039A7EC /* NoGraphCard.swift in Sources */,
 				0BC53D972C40B959006B8C35 /* AddDummy2View.swift in Sources */,
+				2711E3F62C426DAF0039A7EC /* AddRecordView.swift in Sources */,
 				24AB42C92C3ED2ED0094F172 /* HomeView.swift in Sources */,
 				24AB42D72C3EE2DA0094F172 /* HomeDummyView.swift in Sources */,
 				24BEAF622C3F8B74003DA842 /* HomeViewModel.swift in Sources */,
