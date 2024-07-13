@@ -10,6 +10,7 @@ import SwiftData
 
 struct HomeView: View {
     
+    @Environment (\.colorScheme) var colorScheme
     @State var viewModel:GlutenDataViewModel
     @StateObject var homeViewModel = HomeViewModel()
     
@@ -19,9 +20,9 @@ struct HomeView: View {
             
             ZStack {
                 LinearGradient(
-                    gradient: Gradient(colors: [.blue, .white]),
-                    startPoint: .top,
-                    endPoint: UnitPoint(x: 0.5, y: 0.15)
+                    gradient: colorScheme == .dark ? Gradient(colors: [.blue, .black]) : Gradient(colors: [.blue, .white]),
+                    startPoint: .topLeading,
+                    endPoint: UnitPoint(x: 0.5, y: 0.35)
                 )
                 
                 VStack{
@@ -29,46 +30,67 @@ struct HomeView: View {
                     
                     Text("Summary")
                         .font(.appLargeTitle)
+                        .padding([.top], 15)
+                        .foregroundColor(colorScheme == .dark ? .white : .black)
                     
                     Text("\(homeViewModel.startDateString) - now")
                         .font(.appBody)
+                        .foregroundColor(colorScheme == .dark ? .white : .black)
                     
                     
                     VStack{
                         Text("Average Sugar Level")
                             .font(.title3)
                             .fontWeight(.semibold)
+                            .foregroundColor(colorScheme == .dark ? .white : .black)
                         
                         HStack(alignment: .firstTextBaseline){
-                            Text("120")
+                            Text("\(viewModel.avgOverall)")
                                 .font(.appAverageText)
                             Text("mg/dL")
                                 .font(.appTitle2)
                         }
                         .foregroundColor(.blue)
                         
-                        Text("You're doing great!")
-                            .font(.appBody)
+                        if viewModel.avgOverall > 140 {
+                            Text("I think you should stop eating sweet ☹️")
+                                .font(Font.appBody)
+                                .foregroundColor(colorScheme == .dark ? .white : .black)
+                        } else if viewModel.avgOverall > 200 {
+                            Text("NO! ARE YOU GOOD? GO VISIT DOCTOR PLEASE!")
+                                .font(Font.appBody)
+                                .foregroundColor(colorScheme == .dark ? .white : .black)
+                        } else {
+                            Text("You're doing great!")
+                                .font(Font.appBody)
+                                .foregroundColor(colorScheme == .dark ? .white : .black)
+                        }
                     }
                     .padding()
-                    
+                    .padding([.bottom], 25)
+                                    
                     VStack(alignment: .leading){
                         HStack{
-                            Text("Chart & Record")
+                            Text("Chart & Records")
                                 .font(.appTitle2)
+                                .foregroundColor(colorScheme == .dark ? .white : .black)
                             
                             Spacer()
                             
-                            Text("Detail>")
+                            NavigationLink(destination: ChartHistoryView(modelContext: viewModel.modelContext)) {
+                                HStack (spacing: 0) {
+                                    Text("Detail")
+                                    Image(systemName: "arrow.right")
+                                }
                                 .foregroundStyle(.gray)
                                 .opacity(0.65)
-                                .bold()
+                            }
                         }
+                        .padding([.leading, .trailing], 10)
                         
-                        ChartRecordCard()
+                        RecentCheckCard(modelContext: viewModel.modelContext)
                         
                     }
-                    .padding()
                     
                     Button{
                         homeViewModel.isShowingSheet.toggle()
@@ -105,9 +127,4 @@ struct HomeView: View {
     }
 }
 
-//#Preview {
-//    HomeView()
-//        .modelContainer(for: GlucoseData.self)
-//    
-//}
 

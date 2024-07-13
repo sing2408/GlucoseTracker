@@ -33,7 +33,6 @@
 		2711E3E22C41647C0039A7EC /* RecentCheckCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2711E3E12C41647C0039A7EC /* RecentCheckCard.swift */; };
 		2711E3E42C4177420039A7EC /* ChartGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2711E3E32C4177420039A7EC /* ChartGraph.swift */; };
 		2711E3E62C417B250039A7EC /* NoGraphCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2711E3E52C417B250039A7EC /* NoGraphCard.swift */; };
-		2711E3E82C417BF70039A7EC /* ChartRecordCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2711E3E72C417BF70039A7EC /* ChartRecordCard.swift */; };
 		2711E3EE2C4250220039A7EC /* ChartGraphByType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2711E3ED2C4250220039A7EC /* ChartGraphByType.swift */; };
 /* End PBXBuildFile section */
 
@@ -65,7 +64,6 @@
 		2711E3E12C41647C0039A7EC /* RecentCheckCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentCheckCard.swift; sourceTree = "<group>"; };
 		2711E3E32C4177420039A7EC /* ChartGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartGraph.swift; sourceTree = "<group>"; };
 		2711E3E52C417B250039A7EC /* NoGraphCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoGraphCard.swift; sourceTree = "<group>"; };
-		2711E3E72C417BF70039A7EC /* ChartRecordCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartRecordCard.swift; sourceTree = "<group>"; };
 		2711E3ED2C4250220039A7EC /* ChartGraphByType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartGraphByType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -166,7 +164,6 @@
 		24AB42D92C3F86E10094F172 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				2711E3E72C417BF70039A7EC /* ChartRecordCard.swift */,
 				2711E3D32C40FAC80039A7EC /* ChartCard.swift */,
 				2711E3D52C40FE660039A7EC /* ChartCardAvg.swift */,
 				2711E3DF2C411A300039A7EC /* HistoryList.swift */,
@@ -277,7 +274,6 @@
 				24AB42D72C3EE2DA0094F172 /* HomeDummyView.swift in Sources */,
 				24BEAF622C3F8B74003DA842 /* HomeViewModel.swift in Sources */,
 				2711E3DC2C41141E0039A7EC /* SampleAddRecordView.swift in Sources */,
-				2711E3E82C417BF70039A7EC /* ChartRecordCard.swift in Sources */,
 				2711E3D62C40FE660039A7EC /* ChartCardAvg.swift in Sources */,
 				24AB42D12C3ED8250094F172 /* AddDummyView.swift in Sources */,
 				24AB42CF2C3ED4000094F172 /* RecordDetailView.swift in Sources */,

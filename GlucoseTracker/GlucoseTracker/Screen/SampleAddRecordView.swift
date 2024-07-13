@@ -52,28 +52,6 @@ struct SampleAddRecordView: View {
             
             Spacer()
             
-//            List {
-//                ForEach(viewModel.items.reversed()) { item in
-//                    HStack {
-//                        Text(dateFormatter.string(from: item.date))
-//                        Divider()
-//                        VStack {
-//                            Text("\(String(item.amount)) mg/dL")
-//                            Text("\(String(item.mmolAmount)) mmol/L")
-//                        }
-//                        Divider()
-//                        Text(item.type)
-//                    }
-//                    .padding()
-//                }
-//                .onDelete { indexes in
-//                    for index in indexes {
-//                        let originIndex = viewModel.items.count - 1 - index
-//                        viewModel.removeItem(viewModel.items[originIndex])
-//                    }
-//                }
-//            }
-            
             NavigationLink(destination: ChartHistoryView(modelContext: viewModel.modelContext)) {
                 Text("Go to Chart & History")
                     .font(.appTitle1)
