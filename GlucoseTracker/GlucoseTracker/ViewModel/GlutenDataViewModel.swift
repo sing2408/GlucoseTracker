@@ -38,10 +38,12 @@ class GlutenDataViewModel:ObservableObject {
     }
     
     var latestItem: GlucoseData? {
-        items.last
+        fetchItems()
+        return items.last
     }
     
     var avgOverall: Int {
+        fetchItems()
         let calendar = Calendar.current
         let sevenDaysAgo = calendar.date(byAdding: .day, value: -14, to: Date())!
         
@@ -54,6 +56,7 @@ class GlutenDataViewModel:ObservableObject {
     }
     
     var avgBeforeMeal: Int {
+        fetchItems()
         let calendar = Calendar.current
         let sevenDaysAgo = calendar.date(byAdding: .day, value: -14, to: Date())!
         
@@ -66,6 +69,7 @@ class GlutenDataViewModel:ObservableObject {
     }
     
     var avgfAfterMeal: Int {
+        fetchItems()
         let calendar = Calendar.current
         let sevenDaysAgo = calendar.date(byAdding: .day, value: -14, to: Date())!
         

@@ -95,7 +95,6 @@ struct HomeView: View {
                     
                     Button{
                         isShowingSheet.toggle()
-                        print("Tapped")
                     } label: {
                         Rectangle()
                             .frame(width: 342, height: 64)
@@ -119,6 +118,7 @@ struct HomeView: View {
         }
         .sheet(isPresented: $isShowingSheet) {
             AddRecordView(modelContext: viewModel.modelContext)
+                .presentationDetents([.height(650)])
         }
     }
     

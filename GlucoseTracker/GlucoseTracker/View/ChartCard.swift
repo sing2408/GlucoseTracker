@@ -18,6 +18,3 @@ struct ChartCard: View {
     }
 }
 
-#Preview {
-    ChartCard()
-}

@@ -48,10 +48,11 @@ struct RecentCheckCard: View {
                             
                             Spacer()
                             
-                            VStack {
+                            VStack(alignment: viewModel.latestItem?.amount != nil ? .leading : .center) {
                                 Text("Recent Check Up")
                                     .font(.system(size: 17))
                                     .bold()
+                                    .foregroundStyle(.black)
                                 Text(viewModel.latestItem?.amount != nil ? "\(viewModel.latestItem!.amount)mg/dL" : "--mg/dL")
                                     .font(Font.appTitle2)
                                     .foregroundStyle(viewModel.latestItem.map { item in

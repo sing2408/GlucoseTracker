@@ -6,50 +6,49 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct RecordDetailView: View {
-    var mealType = ["mg/dL", "mMol"]
+    @Environment (\.dismiss) var dismiss
     @State private var selectedType = "mg/dL"
+    let item: GlucoseData
     
     var body: some View {
         NavigationStack {
             VStack {
-                HStack {
-                    
-                    Button(action: {}, label: {
-                        Text("Cancel")
-                    })
-                    .frame(width: 100, height: 22, alignment: .leading)
-                    
-                    Button(action: {}, label: {
-                        Image(systemName: "pencil")
-                    })
-                    .frame(width: 250, height: 22, alignment: .trailing)
-                    
-                    Spacer()
-                    
+                Button(action: {
+                    dismiss()
+                }) {
+                    Image(systemName: "xmark")
+                        .font(Font.appTitle2)
                 }
+                .padding()
+                .offset(x: -160)
                 
-                Spacer()
                 VStack {
                     Text("Sugar Level Record")
                         .font(.appTitle1)
                         .frame(width: 300)
-                    Spacer()
-                    Text("109")
-                        .font(Font.system(size: 96, weight: .bold))
-                        .frame(width: 200)
-                    
-                    Spacer()
-                    
-                    Picker("please select type", selection: $selectedType) {
-                        ForEach(mealType, id: \.self) {
-                            Text($0)
-                        }
-                    }.pickerStyle(.palette)
+                    if selectedType == "mMol" {
+                        Text("\(String(format: "%.1f", item.mmolAmount))")
+                            .font(Font.system(size: 96, weight: .bold))
+                            .frame(width: 200)
+                            .padding([.top], 25)
+                    } else {
+                        Text("\(item.amount)")
+                            .font(Font.system(size: 96, weight: .bold))
+                            .frame(width: 200)
+                            .padding([.top], 25)
+                    }
+                    Picker(selection: $selectedType) {
+                        Text("mg/dL").tag("mg/dL")
+                        Text("mMol").tag("mMol")
+                    } label: {
+                        Text("Type")
+                    }
+                    .pickerStyle(SegmentedPickerStyle())
                 }
-                .padding(.horizontal, 124)
-                
+                .padding(.horizontal, 120)
                 
                 VStack {
                     VStack(spacing: 20) {
@@ -58,49 +57,47 @@ struct RecordDetailView: View {
                                 HStack {
                                     Text("Type")
                                     Spacer()
-                                    Text("After Meal")
+                                    Text("\(item.type)")
                                         .multilineTextAlignment(.trailing)
                                         .textFieldStyle(PlainTextFieldStyle())
                                 }
-                                .listRowBackground(Color(red: 0.95, green: 0.95, blue: 0.97))
+                                .listRowBackground(Color(UIColor.systemBackground))
                                 
                                 HStack {
                                     Text("Time")
                                     Spacer()
-                                    Text("13.20 pm")
+                                    Text("\(DateFormatter.timeCustom.string(from: item.date))")
                                         .multilineTextAlignment(.trailing)
                                         .textFieldStyle(PlainTextFieldStyle())
                                 }
-                                .listRowBackground(Color(red: 0.95, green: 0.95, blue: 0.97))
+                                .listRowBackground(Color(UIColor.systemBackground))
                                 
                                 HStack {
                                     Text("Date")
                                     Spacer()
-                                    Text("12 July 2023")
+                                    Text("\(DateFormatter.fullDateCustom.string(from: item.date))")
                                         .multilineTextAlignment(.trailing)
                                         .textFieldStyle(PlainTextFieldStyle())
                                 }
-                                .listRowBackground(Color(red: 0.95, green: 0.95, blue: 0.97))
+                                .listRowBackground(Color(UIColor.systemBackground))
                                 
-                                HStack {
-                                    Text("Meal Consumed")
-                                    Spacer()
-                                    Text("Klatak satay")
-                                        .multilineTextAlignment(.trailing)
-                                        .textFieldStyle(PlainTextFieldStyle())
+                                if item.type == "After eat" {
+                                    HStack {
+                                        Text("Food Consumed")
+                                        Spacer()
+                                        Text("\(item.notes)")
+                                            .multilineTextAlignment(.trailing)
+                                            .textFieldStyle(PlainTextFieldStyle())
+                                    }
+                                    .listRowBackground(Color(UIColor.systemBackground))
                                 }
-                                .listRowBackground(Color(red: 0.95, green: 0.95, blue: 0.97))
+                                
                             }
                         }
-                        
                         .scrollContentBackground(.hidden)
                     }
                 }
             }
         }
     }
-}
-
-#Preview {
-    RecordDetailView()
 }

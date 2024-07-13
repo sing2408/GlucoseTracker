@@ -18,12 +18,6 @@ struct GlucoseTrackerApp: App {
             NavigationView {
                 HomeView(modelContext: container.mainContext)
             }
-            
-            //            RecentCheckCard(modelContext: container.mainContext)
-            //            ChartGraph(modelContext: container.mainContext)
-            //            ChartHistoryView(modelContext: container.mainContext)
-            //            HistoryList(modelContext: container.mainContext)
-//            AddRecordView(modelContext: container.mainContext)
         }
         .modelContainer(container)
     }

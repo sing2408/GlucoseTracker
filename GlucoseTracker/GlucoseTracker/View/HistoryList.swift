@@ -9,7 +9,12 @@ import SwiftUI
 import SwiftData
 
 struct HistoryList: View {
+    @Environment (\.dismiss) var dismiss
+    
     @State var viewModel: GlutenDataViewModel
+    @State var selectedItem: GlucoseData?
+    @State var showDetail: Bool = false
+    
     var body: some View {
         if viewModel.items.isEmpty {
             HStack {
@@ -41,6 +46,7 @@ struct HistoryList: View {
                                     .foregroundStyle(.gray)
                                     .opacity(0.75)
                                     .bold()
+                                    .font(.system(size: 14))
                             }
                         }
                         Spacer()
@@ -48,12 +54,31 @@ struct HistoryList: View {
                             .foregroundStyle(.gray)
                             .opacity(0.75)
                             .frame(width: 100)
+                        Button(action: {
+                            self.selectedItem = item
+                            self.showDetail.toggle()
+                        }) {
+                            Image(systemName: "info.circle")
+                                .resizable()
+                                .scaledToFit()
+                                .foregroundColor(.blue)
+                                .frame(width: 17)
+                        }
                     }
                 }
                 .onDelete { indexes in
                     for index in indexes {
                         let originIndex = viewModel.items.count - 1 - index
                         viewModel.removeItem(viewModel.items[originIndex])
+                    }
+                }
+                .sheet(isPresented: $showDetail) {
+                    if let selectedItem = selectedItem {
+                        RecordDetailView(item: selectedItem)
+                            .presentationDetents([.height(650)])
+                    } else {
+                        NoDataView()
+                            .presentationDetents([.height(650)])
                     }
                 }
             }
