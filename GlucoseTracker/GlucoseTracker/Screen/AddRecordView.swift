@@ -13,6 +13,7 @@ struct AddRecordView: View {
     @State var viewModel:GlutenDataViewModel
     
     @Environment(\.dismiss) var dismiss
+    @Environment(\.colorScheme) var colorScheme
     
     @State private var inputAmount:Int? = nil
     @State private var selectedType:String = "Before eat"
@@ -65,7 +66,7 @@ struct AddRecordView: View {
                     TextField("120", value: $inputAmount, format: .number)
                         .keyboardType(.numberPad)
                         .font(.system(size: 76, weight: .bold))
-                        .foregroundStyle(.black)
+                        .foregroundStyle(colorScheme == .dark ? .white : .black)
                         .frame(maxWidth: 150)
                     Text("mg/dL")
                         .font(.appTitle2)
