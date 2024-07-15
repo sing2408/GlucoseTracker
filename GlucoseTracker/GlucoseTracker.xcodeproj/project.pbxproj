@@ -28,6 +28,7 @@
 		2711E3EE2C4250220039A7EC /* ChartGraphByType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2711E3ED2C4250220039A7EC /* ChartGraphByType.swift */; };
 		2711E3F62C426DAF0039A7EC /* AddRecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2711E3F52C426DAF0039A7EC /* AddRecordView.swift */; };
 		2711E3FC2C42D0990039A7EC /* NoDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2711E3FB2C42D0990039A7EC /* NoDataView.swift */; };
+		3BB4E4FC2C4506C2004049CB /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 3BB4E4FB2C4506C2004049CB /* Localizable.xcstrings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +54,7 @@
 		2711E3ED2C4250220039A7EC /* ChartGraphByType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartGraphByType.swift; sourceTree = "<group>"; };
 		2711E3F52C426DAF0039A7EC /* AddRecordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRecordView.swift; sourceTree = "<group>"; };
 		2711E3FB2C42D0990039A7EC /* NoDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoDataView.swift; sourceTree = "<group>"; };
+		3BB4E4FB2C4506C2004049CB /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 				24AB42D82C3F86920094F172 /* Screen */,
 				24AB42D52C3EDA870094F172 /* Extensions */,
 				24AB42BB2C3E9E220094F172 /* Preview Content */,
+				3BB4E4FB2C4506C2004049CB /* Localizable.xcstrings */,
 			);
 			path = GlucoseTracker;
 			sourceTree = "<group>";
@@ -200,6 +203,7 @@
 			knownRegions = (
 				en,
 				Base,
+				id,
 			);
 			mainGroup = 24AB42A92C3E9E210094F172;
 			productRefGroup = 24AB42B32C3E9E210094F172 /* Products */;
@@ -218,6 +222,7 @@
 			files = (
 				24AB42BD2C3E9E220094F172 /* Preview Assets.xcassets in Resources */,
 				24AB42BA2C3E9E220094F172 /* Assets.xcassets in Resources */,
+				3BB4E4FC2C4506C2004049CB /* Localizable.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -380,7 +385,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"GlucoseTracker/Preview Content\"";
-				DEVELOPMENT_TEAM = M6ZUY47J83;
+				DEVELOPMENT_TEAM = XCBP8Y6THA;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -408,7 +413,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"GlucoseTracker/Preview Content\"";
-				DEVELOPMENT_TEAM = M6ZUY47J83;
+				DEVELOPMENT_TEAM = XCBP8Y6THA;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
