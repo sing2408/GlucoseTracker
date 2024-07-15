@@ -50,6 +50,7 @@ struct RecentCheckCard: View {
                             
                             VStack(alignment: viewModel.latestItem?.amount != nil ? .leading : .center) {
                                 Text("Recent Check Up")
+                                    .frame(width: 150)
                                     .font(.system(size: 17))
                                     .bold()
                                     .foregroundStyle(.black)
@@ -65,6 +66,7 @@ struct RecentCheckCard: View {
                                             return Color.green
                                         }
                                     } ?? .gray)
+                                    .frame(width: 150)
                                     .bold()
                             }
                             .padding()

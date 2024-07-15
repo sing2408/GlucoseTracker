@@ -30,15 +30,22 @@ struct HistoryList: View {
             List {
                 ForEach(viewModel.items.reversed()) { item in
                     HStack {
-                        Image(systemName: item.type == "Before eat" ? "takeoutbag.and.cup.and.straw" : "takeoutbag.and.cup.and.straw.fill")
-                            .foregroundColor(item.type == "Before eat" ? .blue : .pink)
+                        Image(systemName: "circle.fill")
+                            .foregroundColor(item.amount > 140 && item.amount < 200 ? .yellow : item.amount > 200 ? .red : .green)
                             .font(.system(size: 36))
+                        
                         Spacer()
+                        
                         VStack(alignment: .leading) {
-                            Text("\(item.type)")
-                                .font(Font.appBody)
-                                .foregroundColor(item.type == "Before eat" ? .blue : .pink)
-                                .bold()
+                            HStack {
+                                Image(systemName: item.type == "Before eat" ? "takeoutbag.and.cup.and.straw" : "takeoutbag.and.cup.and.straw.fill")
+                                    .foregroundColor(item.type == "Before eat" ? .blue : .pink)
+                                    .font(.system(size: 17))
+                                Text(item.type == "Before eat" ? "Before eat" : "After eat")
+                                    .font(.system(size: 14))
+                                    .foregroundColor(item.type == "Before eat" ? .blue : .pink)
+                                    .bold()
+                            }
                             HStack(spacing: 0){
                                 Text("\(item.amount)")
                                     .font(Font.appTitle2)
@@ -49,11 +56,16 @@ struct HistoryList: View {
                                     .font(.system(size: 14))
                             }
                         }
+                        
                         Spacer()
+
                         Text("\(DateFormatter.custom.string(from: item.date))")
                             .foregroundStyle(.gray)
                             .opacity(0.75)
                             .frame(width: 100)
+                        
+                        Spacer()
+                        
                         Button(action: {
                             self.selectedItem = item
                             self.showDetail.toggle()
@@ -65,6 +77,7 @@ struct HistoryList: View {
                                 .frame(width: 17)
                         }
                     }
+                    .frame(maxWidth: .infinity)
                 }
                 .onDelete { indexes in
                     for index in indexes {
