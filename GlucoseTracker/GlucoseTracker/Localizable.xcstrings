@@ -147,6 +147,9 @@
         }
       }
     },
+    "Cancel" : {
+
+    },
     "Chart & Records" : {
       "localizations" : {
         "id" : {
@@ -282,6 +285,9 @@
           }
         }
       }
+    },
+    "Save" : {
+
     },
     "Select Option" : {
       "localizations" : {
