@@ -39,6 +39,7 @@ struct AddRecordView: View {
                 }
                 .font(Font.appLargeTitle)
                 .multilineTextAlignment(.center)
+                .frame(width: 350)
                 
                 VStack {
                     Text("Input your current sugar level based on your")
@@ -49,6 +50,7 @@ struct AddRecordView: View {
                 .opacity(0.75)
                 .multilineTextAlignment(.center)
                 .padding([.top], -5)
+                .frame(width: 300)
                 
                 HStack {
                     DatePicker("", selection: $inputDate, displayedComponents: .date)
@@ -125,9 +127,9 @@ struct AddRecordView: View {
                 .padding([.top], 25)
             }
         }
-        .onTapGesture {
-            hideKeyboard()
-        }
+//        .onTapGesture {
+//            hideKeyboard()
+//        }
     }
     
 //    init(modelContext: ModelContext) {

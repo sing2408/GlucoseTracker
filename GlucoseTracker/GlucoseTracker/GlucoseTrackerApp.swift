@@ -17,6 +17,7 @@ struct GlucoseTrackerApp: App {
         WindowGroup {
             NavigationView {
                 HomeView(modelContext: container.mainContext)
+//                HistoryListSample(modelContext: container.mainContext)
             }
         }
         .modelContainer(container)

@@ -16,8 +16,8 @@ struct ChartGraphByType: View {
     @Binding var chartType: String
     
     var body: some View {
-        var sortedItem = viewModel.items.sorted{$0.date < $1.date}
-        var sevenRecentData = Array(sortedItem.suffix(16))
+        @State var sortedItem = viewModel.items.sorted{$0.date < $1.date}
+        @State var sevenRecentData = Array(sortedItem.suffix(16))
         
         Chart {
             ForEach(sevenRecentData.filter{$0.type == chartType}) { item in
