@@ -125,6 +125,9 @@ struct AddRecordView: View {
                 .padding([.top], 25)
             }
         }
+        .onTapGesture {
+            hideKeyboard()
+        }
     }
     
 //    init(modelContext: ModelContext) {
