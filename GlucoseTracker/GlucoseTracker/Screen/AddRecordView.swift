@@ -15,6 +15,9 @@ struct AddRecordView: View {
     @Environment(\.dismiss) var dismiss
     @Environment(\.colorScheme) var colorScheme
     
+    @State private var inputAmountString: String = ""
+    @State private var isError: Bool = false
+    
     @State private var inputAmount:Int? = nil
     @State private var selectedType:String = "Before eat"
     @State private var inputDate:Date = .now
@@ -23,32 +26,38 @@ struct AddRecordView: View {
     
     var body: some View {
         VStack {
-            Button(action: {
-                dismiss()
-            }) {
-                Image(systemName: "xmark")
-                    .font(Font.appTitle2)
+            HStack{
+                Button(action: {
+                    dismiss()
+                }) {
+                    Image(systemName: "xmark")
+                        .font(Font.appTitle2)
+                }
+                Spacer()
             }
             .padding()
-            .offset(x: -170, y: selectedType == "After eat" ? 0 : -38)
+            
+            //            .offset(x: -170, y: selectedType == "After eat" ? 0 : -38)
             
             VStack {
                 VStack(alignment: .center) {
-                    Text("Track your current")
-                    Text("sugar level!")
+                    Text("Track your current sugar level")
+                    //Text("sugar level!")
                 }
                 .font(Font.appLargeTitle)
                 .multilineTextAlignment(.center)
+                .padding()
                 
                 VStack {
-                    Text("Input your current sugar level based on your")
-                    Text("glucometer result each day.")
+                    Text("Input your current sugar level based on your glucometer result each day.")
+                    //Text("glucometer result each day.")
                 }
                 .font(Font.appBody)
                 .foregroundColor(.gray)
                 .opacity(0.75)
                 .multilineTextAlignment(.center)
-                .padding([.top], -5)
+                //.padding([.top], -5)
+                .padding(.horizontal)
                 
                 HStack {
                     DatePicker("", selection: $inputDate, displayedComponents: .date)
@@ -61,17 +70,35 @@ struct AddRecordView: View {
                         .labelsHidden()
                 }
                 
-                .padding([.top], 30)
                 
-                HStack (alignment: .firstTextBaseline, spacing: 0) {
-                    TextField("120", value: $inputAmount, format: .number)
+                
+                HStack(alignment: .firstTextBaseline, spacing: 0) {
+                    TextField("120", text: $inputAmountString.max(3))
                         .keyboardType(.numberPad)
                         .font(.system(size: 76, weight: .bold))
-                        .foregroundStyle(colorScheme == .dark ? .white : .black)
+                        .foregroundStyle(Color.primary)
                         .frame(maxWidth: 150)
+                        .onChange(of: inputAmountString) { newValue in
+                            if let value = Int(newValue), value <= 999 {
+                                inputAmount = value
+                            } else if newValue.isEmpty {
+                                inputAmount = nil
+                            }
+                        }
+                    
                     Text("mg/dL")
                         .font(.appTitle2)
                 }
+                
+                if isError {
+                    Text("Please enter a valid amount.")
+                        .font(.subheadline)
+                        .foregroundColor(.red)
+                } else{
+                    Text("Enter your glucose level")
+                        .font(.subheadline)
+                }
+                
                 
                 VStack {
                     Picker(selection: $selectedType) {
@@ -83,19 +110,18 @@ struct AddRecordView: View {
                     .pickerStyle(SegmentedPickerStyle())
                     .frame(maxWidth: 300)
                     
-                    if selectedType == "After eat" {
-                        VStack(alignment: .leading, spacing: 5) {
-                            Text("Food Consumed")
-                                .font(.subheadline)
-                            TextField("Note", text: $inputNotes)
-                                .frame(maxWidth: 300, minHeight: 40)
-                                .padding(.leading)
-                                .background(Color(UIColor.systemBackground))
-                                .cornerRadius(10)
-                                .shadow(radius: 1)
-                        }
-                        .padding(.top, 5)
+                    VStack(alignment: .leading, spacing: 5) {
+                        Text("Notes")
+                            .font(.subheadline)
+                        TextField("Note", text: $inputNotes)
+                            .frame(maxWidth: 300, minHeight: 40)
+                            .padding(.leading)
+                            .background(Color(UIColor.systemBackground))
+                            .cornerRadius(10)
+                            .shadow(radius: 1)
                     }
+                    .padding(.top, 5)
+                    
                 }
                 .padding()
                 .background(Color(UIColor.systemBackground))
@@ -104,13 +130,21 @@ struct AddRecordView: View {
                 .frame(maxWidth: 300)
                 
                 Button(action: {
-                    viewModel.addItem(inputDate, inputAmount!, selectedType, inputNotes)
-                    inputAmount = nil
-                    selectedType = "Before eat"
-                    hideKeyboard()
-                    dismiss()
-                    viewModel.fetchItems()
-                    print(viewModel.avgOverall)
+                    
+                    if ((inputAmount) != nil) {
+                        viewModel.addItem(inputDate, inputAmount!, selectedType, inputNotes)
+                        inputAmount = nil
+                        selectedType = "Before eat"
+                        hideKeyboard()
+                        dismiss()
+                        //viewModel.fetchItems()
+                    }
+                    else {
+                        print("not yet filled")
+                        isError.toggle()
+                    }
+                    
+                    
                 }) {
                     Rectangle()
                         .frame(width: 342, height: 64)
@@ -126,9 +160,15 @@ struct AddRecordView: View {
             }
         }
     }
-    
-//    init(modelContext: ModelContext) {
-//        let viewModel = GlutenDataViewModel(modelContext: modelContext)
-//        _viewModel = ObservedObject(initialValue: viewModel)
-//    }
+}
+
+extension Binding where Value == String {
+    func max(_ limit: Int) -> Self {
+        if self.wrappedValue.count > limit {
+            DispatchQueue.main.async {
+                self.wrappedValue = String(self.wrappedValue.prefix(limit))
+            }
+        }
+        return self
+    }
 }

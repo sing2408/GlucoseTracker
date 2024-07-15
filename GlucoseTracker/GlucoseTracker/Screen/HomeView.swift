@@ -4,7 +4,7 @@ import SwiftData
 struct HomeView: View {
     
     @Environment(\.colorScheme) var colorScheme
-    @StateObject var viewModel: GlutenDataViewModel
+    @ObservedObject var viewModel: GlutenDataViewModel
     @StateObject var homeViewModel = HomeViewModel()
     @State var isShowingSheet = false
     
@@ -72,21 +72,24 @@ struct HomeView: View {
                             
                             NavigationLink(destination: ChartHistoryView(modelContext: viewModel.modelContext)) {
                                 HStack(spacing: 0) {
-                                    Text("Detail")
-                                    Image(systemName: "arrow.right")
+                                    Text("See More")
+//                                    Image(systemName: "greaterthan")
+//                                        .font(.appBody)
                                 }
-                                .foregroundStyle(.gray)
-                                .opacity(0.65)
+                                .font(.appBody)
+                                //.opacity(0.65)
                             }
                         }
-                        .padding([.leading, .trailing], 10)
+                        .padding()
                         
                         RecentCheckCard(modelContext: viewModel.modelContext)
                         
                     }
                     
                     Button {
+                        
                         isShowingSheet.toggle()
+                        
                     } label: {
                         Rectangle()
                             .frame(width: 342, height: 64)
@@ -115,6 +118,6 @@ struct HomeView: View {
     }
     
     init(modelContext: ModelContext) {
-        _viewModel = StateObject(wrappedValue: GlutenDataViewModel(modelContext: modelContext))
+        _viewModel = ObservedObject(wrappedValue: GlutenDataViewModel(modelContext: modelContext))
     }
 }

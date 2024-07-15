@@ -10,7 +10,7 @@ import SwiftData
 
 struct ChartHistoryView: View {
     @Environment (\.colorScheme) var colorScheme
-    @ObservedObject var viewModel:GlutenDataViewModel
+    @StateObject var viewModel:GlutenDataViewModel
     @State private var chartType:String = "All"
     
     var body: some View {
@@ -63,6 +63,6 @@ struct ChartHistoryView: View {
     
     init(modelContext: ModelContext) {
         let viewModel = GlutenDataViewModel(modelContext: modelContext)
-        _viewModel = ObservedObject(initialValue: viewModel)
+        _viewModel = StateObject(wrappedValue: viewModel)
     }
 }

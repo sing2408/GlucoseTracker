@@ -9,11 +9,20 @@ import SwiftUI
 import SwiftData
 
 struct HistoryList: View {
+    
+    class DetailManager: ObservableObject{
+            
+        @Published var selectedItem: GlucoseData?
+        @Published var showDetail: Bool = false
+        }
+        
+
+    @StateObject var manager = DetailManager()
+    
     @Environment (\.dismiss) var dismiss
     
-    @State var viewModel: GlutenDataViewModel
-    @State var selectedItem: GlucoseData?
-    @State var showDetail: Bool = false
+    @ObservedObject var viewModel: GlutenDataViewModel
+    
     
     var body: some View {
         if viewModel.items.isEmpty {
@@ -55,8 +64,13 @@ struct HistoryList: View {
                             .opacity(0.75)
                             .frame(width: 100)
                         Button(action: {
-                            self.selectedItem = item
-                            self.showDetail.toggle()
+                        
+                            print("Button pressed")
+                                manager.selectedItem = item
+                            //print("Selected item set to: \(self.selectedItem?.amount)")
+                                manager.showDetail = true
+                                //print("Show detail set to: \(self.showDetail)")
+                                
                         }) {
                             Image(systemName: "info.circle")
                                 .resizable()
@@ -72,9 +86,9 @@ struct HistoryList: View {
                         viewModel.removeItem(viewModel.items[originIndex])
                     }
                 }
-                .sheet(isPresented: $showDetail) {
-                    if let selectedItem = selectedItem {
-                        RecordDetailView(item: selectedItem)
+                .sheet(isPresented: $manager.showDetail) {
+                    if let selected = manager.selectedItem {
+                        RecordDetailView(item: selected)
                             .presentationDetents([.height(650)])
                     } else {
                         NoDataView()
@@ -87,7 +101,7 @@ struct HistoryList: View {
     
     init(modelContext: ModelContext) {
         let viewModel = GlutenDataViewModel(modelContext: modelContext)
-        _viewModel = State(initialValue: viewModel)
+        _viewModel = ObservedObject(initialValue: viewModel)
     }
     
     private let dateFormatter: DateFormatter = {

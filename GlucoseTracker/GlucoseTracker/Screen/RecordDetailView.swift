@@ -16,14 +16,20 @@ struct RecordDetailView: View {
     var body: some View {
         NavigationStack {
             VStack {
-                Button(action: {
-                    dismiss()
-                }) {
-                    Image(systemName: "xmark")
-                        .font(Font.appTitle2)
+                HStack{
+                    Button(action: {
+                        dismiss()
+                    }) {
+                        Image(systemName: "xmark")
+                            .font(Font.appTitle2)
+                    }
+                    
+                    
+                    Spacer()
                 }
                 .padding()
-                .offset(x: -160)
+                
+                //.offset(x: -160)
                 
                 VStack {
                     Text("Sugar Level Record")
@@ -81,16 +87,16 @@ struct RecordDetailView: View {
                                 }
                                 .listRowBackground(Color(UIColor.systemBackground))
                                 
-                                if item.type == "After eat" {
-                                    HStack {
-                                        Text("Food Consumed")
-                                        Spacer()
-                                        Text("\(item.notes)")
-                                            .multilineTextAlignment(.trailing)
-                                            .textFieldStyle(PlainTextFieldStyle())
-                                    }
-                                    .listRowBackground(Color(UIColor.systemBackground))
+                                
+                                HStack {
+                                    Text("Notes")
+                                    Spacer()
+                                    Text("\(item.notes)")
+                                        .multilineTextAlignment(.trailing)
+                                        .textFieldStyle(PlainTextFieldStyle())
                                 }
+                                .listRowBackground(Color(UIColor.systemBackground))
+                                
                                 
                             }
                         }
