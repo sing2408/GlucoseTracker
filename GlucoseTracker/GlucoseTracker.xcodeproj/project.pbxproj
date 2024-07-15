@@ -28,6 +28,7 @@
 		2711E3EE2C4250220039A7EC /* ChartGraphByType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2711E3ED2C4250220039A7EC /* ChartGraphByType.swift */; };
 		2711E3F62C426DAF0039A7EC /* AddRecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2711E3F52C426DAF0039A7EC /* AddRecordView.swift */; };
 		2711E3FC2C42D0990039A7EC /* NoDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2711E3FB2C42D0990039A7EC /* NoDataView.swift */; };
+		27886DD02C45534200D2DE9F /* HistoryListByType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27886DCF2C45534200D2DE9F /* HistoryListByType.swift */; };
 		3BB4E4FC2C4506C2004049CB /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 3BB4E4FB2C4506C2004049CB /* Localizable.xcstrings */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +55,7 @@
 		2711E3ED2C4250220039A7EC /* ChartGraphByType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartGraphByType.swift; sourceTree = "<group>"; };
 		2711E3F52C426DAF0039A7EC /* AddRecordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRecordView.swift; sourceTree = "<group>"; };
 		2711E3FB2C42D0990039A7EC /* NoDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoDataView.swift; sourceTree = "<group>"; };
+		27886DCF2C45534200D2DE9F /* HistoryListByType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryListByType.swift; sourceTree = "<group>"; };
 		3BB4E4FB2C4506C2004049CB /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -148,6 +150,7 @@
 				2711E3E52C417B250039A7EC /* NoGraphCard.swift */,
 				2711E3ED2C4250220039A7EC /* ChartGraphByType.swift */,
 				2711E3FB2C42D0990039A7EC /* NoDataView.swift */,
+				27886DCF2C45534200D2DE9F /* HistoryListByType.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -238,6 +241,7 @@
 				2711E3E02C411A300039A7EC /* HistoryList.swift in Sources */,
 				2711E3DE2C4114F10039A7EC /* HideKeyboard.swift in Sources */,
 				24AB42D42C3EDA7C0094F172 /* TextStyles.swift in Sources */,
+				27886DD02C45534200D2DE9F /* HistoryListByType.swift in Sources */,
 				2711E3E22C41647C0039A7EC /* RecentCheckCard.swift in Sources */,
 				2711E3D22C40F8060039A7EC /* ChartHistoryView.swift in Sources */,
 				2468A8F82C4038CC00BF5574 /* DateFormatter.swift in Sources */,

@@ -55,7 +55,14 @@ struct ChartHistoryView: View {
                 .font(Font.appTitle2)
                 .frame(maxWidth: .infinity, alignment: .leading)
             
-            HistoryList(modelContext: viewModel.modelContext)
+            if chartType == "All" {
+                HistoryList(modelContext: viewModel.modelContext)
+            } else if chartType == "Before eat" {
+                HistoryListByType(modelContext: viewModel.modelContext, type: chartType)
+            } else if chartType == "After eat" {
+                HistoryListByType(modelContext: viewModel.modelContext, type: chartType)
+            }
+            
         }
         .offset(y: viewModel.items.count < 4 ? -20 : 0)
         .padding()
