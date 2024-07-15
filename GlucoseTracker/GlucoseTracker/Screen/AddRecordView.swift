@@ -10,7 +10,7 @@ import SwiftData
 
 struct AddRecordView: View {
     
-    @State var viewModel:GlutenDataViewModel
+    @ObservedObject var viewModel:GlutenDataViewModel
     
     @Environment(\.dismiss) var dismiss
     @Environment(\.colorScheme) var colorScheme
@@ -59,6 +59,9 @@ struct AddRecordView: View {
                         .datePickerStyle(CompactDatePickerStyle())
                         .accentColor(.blue)
                         .labelsHidden()
+                }
+                .onTapGesture {
+                    hideKeyboard()
                 }
                 .padding([.top], 30)
                 
@@ -109,6 +112,7 @@ struct AddRecordView: View {
                     hideKeyboard()
                     dismiss()
                     viewModel.fetchItems()
+                    print(viewModel.avgOverall)
                 }) {
                     Rectangle()
                         .frame(width: 342, height: 64)
@@ -125,8 +129,8 @@ struct AddRecordView: View {
         }
     }
     
-    init(modelContext: ModelContext) {
-        let viewModel = GlutenDataViewModel(modelContext: modelContext)
-        _viewModel = State(initialValue: viewModel)
-    }
+//    init(modelContext: ModelContext) {
+//        let viewModel = GlutenDataViewModel(modelContext: modelContext)
+//        _viewModel = ObservedObject(initialValue: viewModel)
+//    }
 }

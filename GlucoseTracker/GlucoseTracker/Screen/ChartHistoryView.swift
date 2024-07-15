@@ -10,7 +10,7 @@ import SwiftData
 
 struct ChartHistoryView: View {
     @Environment (\.colorScheme) var colorScheme
-    @State var viewModel:GlutenDataViewModel
+    @ObservedObject var viewModel:GlutenDataViewModel
     @State private var chartType:String = "All"
     
     var body: some View {
@@ -39,13 +39,13 @@ struct ChartHistoryView: View {
                 } else if chartType == "Before eat" {
                     ZStack {
                         ChartCard()
-                        ChartGraphByType(modelContext: viewModel.modelContext, chartType: chartType)
+                        ChartGraphByType(modelContext: viewModel.modelContext, chartType: $chartType)
                             .padding()
                     }
                 } else {
                     ZStack {
                         ChartCard()
-                        ChartGraphByType(modelContext: viewModel.modelContext, chartType: chartType)
+                        ChartGraphByType(modelContext: viewModel.modelContext, chartType: $chartType)
                             .padding()
                     }
                 }
@@ -63,6 +63,6 @@ struct ChartHistoryView: View {
     
     init(modelContext: ModelContext) {
         let viewModel = GlutenDataViewModel(modelContext: modelContext)
-        _viewModel = State(initialValue: viewModel)
+        _viewModel = ObservedObject(initialValue: viewModel)
     }
 }

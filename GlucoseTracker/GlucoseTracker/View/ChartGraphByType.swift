@@ -13,7 +13,7 @@ struct ChartGraphByType: View {
     @State var viewModel:GlutenDataViewModel
     @Environment(\.colorScheme) var colorScheme
     
-    @State var chartType:String
+    @Binding var chartType: String
     
     var body: some View {
         var sortedItem = viewModel.items.sorted{$0.date < $1.date}
@@ -60,9 +60,9 @@ struct ChartGraphByType: View {
         .padding()
     }
     
-    init(modelContext: ModelContext, chartType: String) {
-        let viewModel = GlutenDataViewModel(modelContext: modelContext)
-        _viewModel = State(initialValue: viewModel)
-        self.chartType = chartType
-    }
+    init(modelContext: ModelContext, chartType: Binding<String>) {
+            let viewModel = GlutenDataViewModel(modelContext: modelContext)
+            _viewModel = State(initialValue: viewModel)
+            _chartType = chartType
+        }
 }

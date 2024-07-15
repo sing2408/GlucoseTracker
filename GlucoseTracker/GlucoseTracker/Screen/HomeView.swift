@@ -1,23 +1,16 @@
-//
-//  HomeView.swift
-//  GlucoseTracker
-//
-//  Created by Singgih Tulus Makmud on 10/07/24.
-
-
 import SwiftUI
 import SwiftData
 
 struct HomeView: View {
     
-    @Environment (\.colorScheme) var colorScheme
-    @State var viewModel:GlutenDataViewModel
+    @Environment(\.colorScheme) var colorScheme
+    @StateObject var viewModel: GlutenDataViewModel
     @StateObject var homeViewModel = HomeViewModel()
     @State var isShowingSheet = false
     
     var body: some View {
         
-        NavigationStack{
+        NavigationStack {
             
             ZStack {
                 LinearGradient(
@@ -26,7 +19,7 @@ struct HomeView: View {
                     endPoint: UnitPoint(x: 0.5, y: 0.35)
                 )
                 
-                VStack{
+                VStack {
                     Spacer()
                     
                     Text("Summary")
@@ -38,14 +31,13 @@ struct HomeView: View {
                         .font(.appBody)
                         .foregroundColor(colorScheme == .dark ? .white : .black)
                     
-                    
-                    VStack{
+                    VStack {
                         Text("Average Sugar Level")
                             .font(.title3)
                             .fontWeight(.semibold)
                             .foregroundColor(colorScheme == .dark ? .white : .black)
                         
-                        HStack(alignment: .firstTextBaseline){
+                        HStack(alignment: .firstTextBaseline) {
                             Text("\(viewModel.avgOverall)")
                                 .font(.appAverageText)
                             Text("mg/dL")
@@ -70,8 +62,8 @@ struct HomeView: View {
                     .padding()
                     .padding([.bottom], 25)
                                     
-                    VStack(alignment: .leading){
-                        HStack{
+                    VStack(alignment: .leading) {
+                        HStack {
                             Text("Chart & Records")
                                 .font(.appTitle2)
                                 .foregroundColor(colorScheme == .dark ? .white : .black)
@@ -79,7 +71,7 @@ struct HomeView: View {
                             Spacer()
                             
                             NavigationLink(destination: ChartHistoryView(modelContext: viewModel.modelContext)) {
-                                HStack (spacing: 0) {
+                                HStack(spacing: 0) {
                                     Text("Detail")
                                     Image(systemName: "arrow.right")
                                 }
@@ -93,14 +85,14 @@ struct HomeView: View {
                         
                     }
                     
-                    Button{
+                    Button {
                         isShowingSheet.toggle()
                     } label: {
                         Rectangle()
                             .frame(width: 342, height: 64)
                             .foregroundColor(.blue)
                             .cornerRadius(12)
-                            .overlay{
+                            .overlay {
                                 Text("Add New Record")
                                     .font(.appTitle2)
                                     .foregroundColor(.white)
@@ -117,15 +109,12 @@ struct HomeView: View {
             .ignoresSafeArea()
         }
         .sheet(isPresented: $isShowingSheet) {
-            AddRecordView(modelContext: viewModel.modelContext)
+            AddRecordView(viewModel: viewModel)
                 .presentationDetents([.height(650)])
         }
     }
     
     init(modelContext: ModelContext) {
-        let viewModel = GlutenDataViewModel(modelContext: modelContext)
-        _viewModel = State(initialValue: viewModel)
+        _viewModel = StateObject(wrappedValue: GlutenDataViewModel(modelContext: modelContext))
     }
 }
-
-
