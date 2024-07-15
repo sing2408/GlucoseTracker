@@ -1,15 +1,8 @@
-//
-//  ChartCardAvg.swift
-//  GlucoseTracker
-//
-//  Created by tandyys on 12/07/24.
-//
-
 import SwiftUI
 import SwiftData
 
 struct ChartCardAvg: View {
-    @State var viewModel: GlutenDataViewModel
+    @ObservedObject var viewModel: GlutenDataViewModel
     
     var body: some View {
         HStack {
@@ -32,7 +25,7 @@ struct ChartCardAvg: View {
                 Text("After meal avg.")
                     .opacity(0.6)
                 HStack(spacing: 0) {
-                    Text("\(viewModel.avgfAfterMeal)")
+                    Text("\(viewModel.avgAfterMeal)")
                         .font(Font.system(size: 24))
                         .bold()
                     Text("mg/dL")
@@ -47,6 +40,6 @@ struct ChartCardAvg: View {
     
     init(modelContext: ModelContext) {
         let viewModel = GlutenDataViewModel(modelContext: modelContext)
-        _viewModel = State(initialValue: viewModel)
+        _viewModel = ObservedObject(wrappedValue: viewModel)
     }
 }

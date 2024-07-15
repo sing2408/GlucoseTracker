@@ -9,7 +9,7 @@ import SwiftUI
 import SwiftData
 
 struct RecentCheckCard: View {
-    @State var viewModel: GlutenDataViewModel
+    @ObservedObject var viewModel: GlutenDataViewModel
     
     var body: some View {
         
@@ -93,6 +93,6 @@ struct RecentCheckCard: View {
     
     init(modelContext: ModelContext) {
         let viewModel = GlutenDataViewModel(modelContext: modelContext)
-        _viewModel = State(initialValue: viewModel)
+        _viewModel = ObservedObject(wrappedValue: viewModel)
     }
 }
