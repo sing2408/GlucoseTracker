@@ -13,11 +13,31 @@ struct HomeView: View {
         NavigationStack {
             
             ZStack {
-                LinearGradient(
-                    gradient: colorScheme == .dark ? Gradient(colors: [.blue, .black]) : Gradient(colors: [.blue, .white]),
-                    startPoint: .topLeading,
-                    endPoint: UnitPoint(x: 0.5, y: 0.35)
-                )
+                if viewModel.avgOverall > 140 && viewModel.avgOverall < 200 {
+                    LinearGradient(
+                        gradient: colorScheme == .dark ? Gradient(colors: [.yellow, .black]) : Gradient(colors: [.yellow, .white]),
+                        startPoint: .topLeading,
+                        endPoint: UnitPoint(x: 0.5, y: 0.35)
+                    )
+                } else if viewModel.avgOverall > 200 {
+                    LinearGradient(
+                        gradient: colorScheme == .dark ? Gradient(colors: [.red, .black]) : Gradient(colors: [.red, .white]),
+                        startPoint: .topLeading,
+                        endPoint: UnitPoint(x: 0.5, y: 0.35)
+                    )
+                } else if viewModel.avgOverall < 140 && viewModel.avgOverall != 0 {
+                    LinearGradient(
+                        gradient: colorScheme == .dark ? Gradient(colors: [.green, .black]) : Gradient(colors: [.green, .white]),
+                        startPoint: .topLeading,
+                        endPoint: UnitPoint(x: 0.5, y: 0.35)
+                    )
+                } else {
+                    LinearGradient(
+                        gradient: colorScheme == .dark ? Gradient(colors: [.blue, .black]) : Gradient(colors: [.blue, .white]),
+                        startPoint: .topLeading,
+                        endPoint: UnitPoint(x: 0.5, y: 0.35)
+                    )
+                }
                 
                 VStack {
                     Spacer()
@@ -43,7 +63,7 @@ struct HomeView: View {
                             Text("mg/dL")
                                 .font(.appTitle2)
                         }
-                        .foregroundColor(.blue)
+                        .foregroundColor(viewModel.avgOverall > 140 && viewModel.avgOverall < 200 ? .yellow : viewModel.avgOverall > 200 ? .red : viewModel.avgOverall < 140 && viewModel.avgOverall != 0 ? .green : .blue)
                         
                         if viewModel.avgOverall > 140 {
                             Text("I think you should stop eating sweet ☹️")
