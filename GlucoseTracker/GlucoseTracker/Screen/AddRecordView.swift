@@ -60,9 +60,7 @@ struct AddRecordView: View {
                         .accentColor(.blue)
                         .labelsHidden()
                 }
-                .onTapGesture {
-                    hideKeyboard()
-                }
+                
                 .padding([.top], 30)
                 
                 HStack (alignment: .firstTextBaseline, spacing: 0) {
