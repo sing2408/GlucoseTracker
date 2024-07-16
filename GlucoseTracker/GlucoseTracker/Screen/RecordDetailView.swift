@@ -21,13 +21,14 @@ struct RecordDetailView: View {
     var body: some View {
         NavigationStack {
             VStack {
-                HStack {
+                HStack{
                     Button(action: {
                         dismiss()
                     }) {
                         Image(systemName: "xmark")
                             .font(Font.appTitle2)
                     }
+
                     .padding()
                     .offset(x: -140)
                     
@@ -40,6 +41,7 @@ struct RecordDetailView: View {
                     .padding()
                     .offset(x: 140)
                 }
+
                 
                 VStack {
                     Text("Sugar Level Record")
@@ -125,6 +127,7 @@ struct RecordDetailView: View {
                                     }
                                     .listRowBackground(Color(UIColor.systemBackground))
                                 }
+
                             }
                         }
                         .scrollContentBackground(.hidden)
