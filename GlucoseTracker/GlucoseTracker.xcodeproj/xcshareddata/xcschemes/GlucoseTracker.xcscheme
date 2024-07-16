@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "24AB42B12C3E9E210094F172"
-               BuildableName = "GlucoseTracker.app"
+               BuildableName = "GlucoSee.app"
                BlueprintName = "GlucoseTracker"
                ReferencedContainer = "container:GlucoseTracker.xcodeproj">
             </BuildableReference>
@@ -33,7 +33,7 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      language = "en"
+      language = "id"
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
       ignoresPersistentStateOnLaunch = "NO"
@@ -45,7 +45,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "24AB42B12C3E9E210094F172"
-            BuildableName = "GlucoseTracker.app"
+            BuildableName = "GlucoSee.app"
             BlueprintName = "GlucoseTracker"
             ReferencedContainer = "container:GlucoseTracker.xcodeproj">
          </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "24AB42B12C3E9E210094F172"
-            BuildableName = "GlucoseTracker.app"
+            BuildableName = "GlucoSee.app"
             BlueprintName = "GlucoseTracker"
             ReferencedContainer = "container:GlucoseTracker.xcodeproj">
          </BuildableReference>

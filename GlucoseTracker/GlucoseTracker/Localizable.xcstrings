@@ -131,10 +131,24 @@
       }
     },
     "Be careful, sugar levels high!" : {
-
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hati-hati, kadar gula darahmu tinggi!"
+          }
+        }
+      }
     },
     "Be more aware of your meals!" : {
-
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lebih teliti dengan apa yang kamu konsumsi!"
+          }
+        }
+      }
     },
     "Before eat" : {
       "localizations" : {
@@ -157,7 +171,14 @@
       }
     },
     "Cancel" : {
-
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Batalkan"
+          }
+        }
+      }
     },
     "Chart & Records" : {
       "localizations" : {
@@ -191,7 +212,14 @@
       }
     },
     "Enter your glucose level" : {
-
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Masukkan data glukosa"
+          }
+        }
+      }
     },
     "Food Consumed" : {
       "localizations" : {
@@ -289,7 +317,14 @@
       }
     },
     "Please enter a valid amount." : {
-
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Silakan masukkan jumlah yang valid"
+          }
+        }
+      }
     },
     "Please try one more time on another data." : {
       "localizations" : {
@@ -312,7 +347,14 @@
       }
     },
     "Save" : {
-
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Simpan"
+          }
+        }
+      }
     },
     "See More" : {
       "localizations" : {
@@ -397,7 +439,14 @@
       }
     },
     "Track your current sugar level" : {
-
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cek kadar gula darahmu sekarang"
+          }
+        }
+      }
     },
     "Try Again" : {
       "localizations" : {
