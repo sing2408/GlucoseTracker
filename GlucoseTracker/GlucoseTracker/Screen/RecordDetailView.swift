@@ -12,8 +12,12 @@ struct RecordDetailView: View {
     @Environment (\.dismiss) var dismiss
     @Environment (\.colorScheme) var colorScheme
     
+
+    @State var viewModel: GlutenDataViewModel
+
     
     @State private var inputNewAmountString: String = ""
+
     @State private var selectedType = "mg/dL"
     @State var item: GlucoseData?
     @State var isEditing: Bool = false
@@ -35,10 +39,12 @@ struct RecordDetailView: View {
                     .offset(x: -140)
                     
                     Button(action: {
-                        isEditing.toggle()
+                        viewModel.removeItem(item!)
+                        dismiss()
                     }) {
-                        Image(systemName: "pencil")
+                        Image(systemName: "trash.fill")
                             .font(Font.appTitle2)
+                            .foregroundColor(.red)
                     }
                     .padding()
                     .offset(x: 140)
@@ -49,6 +55,7 @@ struct RecordDetailView: View {
                     Text("Sugar Level Record")
                         .font(.appTitle1)
                         .frame(width: 300)
+
                     if selectedType == "mMol" {
                         Text("\(String(format: "%.1f", item!.mmolAmount))")
                             .font(Font.system(size: 96, weight: .bold))
@@ -71,10 +78,34 @@ struct RecordDetailView: View {
                                 }
                         } else {
                             Text("\(item!.amount)")
+
                                 .font(Font.system(size: 96, weight: .bold))
                                 .frame(width: 200)
                                 .padding([.top], 25)
+                        } else {
+                            if isEditing {
+                                TextField("120", value: $newAmount, format: .number)
+                                    .keyboardType(.numberPad)
+                                    .font(.system(size: 86, weight: .bold))
+                                    .foregroundStyle(colorScheme == .dark ? .white : .black)
+                                    .frame(maxWidth: 200)
+                                    .padding([.top], 25)
+                            } else {
+                                Text("\(item!.amount)")
+                                    .font(Font.system(size: 96, weight: .bold))
+                                    .frame(width: 200)
+                                    .padding([.top], 25)
+                            }
                         }
+                        
+                        Button(action: {
+                            isEditing.toggle()
+                        }) {
+                            Image(systemName: "pencil")
+                                .font(Font.appTitle2)
+                        }
+                        .padding([.top], 60)
+                        .padding([.leading], -20)
                     }
                     
                     

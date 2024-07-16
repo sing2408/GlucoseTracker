@@ -11,10 +11,9 @@ import SwiftData
 struct HistoryList: View {
     
     class DetailManager: ObservableObject{
-            
         @Published var selectedItem: GlucoseData?
         @Published var showDetail: Bool = false
-        }
+    }
         
 
     @StateObject var manager = DetailManager()
@@ -38,7 +37,9 @@ struct HistoryList: View {
             }
         } else {
             VStack(spacing: 0) {
-                ForEach(viewModel.items.reversed()) { item in
+                ForEach(viewModel.items
+                    .sorted{ $0.date > $1.date})
+                { item in
                     HStack {
                         Image(systemName: "circle.fill")
                             .foregroundColor(item.amount > 140 && item.amount < 200 ? .yellow : item.amount > 200 ? .red : .green)
@@ -115,7 +116,7 @@ struct HistoryList: View {
 
                 .sheet(isPresented: $manager.showDetail) {
                     if let selected = manager.selectedItem {
-                        RecordDetailView(item: selected)
+                        RecordDetailView(viewModel: viewModel, item: selected)
                             .presentationDetents([.height(650)])
                     } else {
                         NoDataView()

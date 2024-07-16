@@ -66,12 +66,9 @@ struct ChartHistoryView: View {
                     HistoryListByType(modelContext: viewModel.modelContext, type: $chartType)
                 }
             }
-            .ignoresSafeArea(edges: .bottom)
         }
         .padding()
-        .ignoresSafeArea(edges: .bottom)
         .offset(y: viewModel.items.count < 4 ? -20 : 0)
-        //.padding()
     }
 
     init(modelContext: ModelContext) {

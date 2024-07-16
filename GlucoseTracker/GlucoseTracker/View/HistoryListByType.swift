@@ -106,6 +106,7 @@ struct HistoryListByType: View {
                     }
                 }
             }
+
             .sheet(isPresented: $manager.showDetail) {
                 if let selectedItem = manager.selectedItem {
                     RecordDetailView(item: selectedItem)
