@@ -67,17 +67,6 @@
         }
       }
     },
-    "%lldmg/dL" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%lld mg/dL"
-          }
-        }
-      }
-    },
     "120" : {
       "localizations" : {
         "id" : {
@@ -100,6 +89,12 @@
     },
     "After eat" : {
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "After meal"
+          }
+        },
         "id" : {
           "stringUnit" : {
             "state" : "translated",
@@ -170,6 +165,12 @@
     },
     "Before eat" : {
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Before meal"
+          }
+        },
         "id" : {
           "stringUnit" : {
             "state" : "translated",
@@ -218,17 +219,6 @@
         }
       }
     },
-    "Detail" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Detail"
-          }
-        }
-      }
-    },
     "Enter your glucose level" : {
       "localizations" : {
         "id" : {
@@ -245,17 +235,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Makanan yang Dikonsumsi"
-          }
-        }
-      }
-    },
-    "glucometer result each day." : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "hasil glukometer harian"
           }
         }
       }
@@ -280,23 +259,12 @@
         }
       }
     },
-    "Input your current sugar level based on your" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Masukkan kadar gula darahmu saat ini berdasarkan"
-          }
-        }
-      }
-    },
     "Input your current sugar level based on your glucometer result each day." : {
       "localizations" : {
         "id" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Masukkan kadar gula saat ini berdasarkan hasil glukometer"
+            "value" : "Masukkan kadar gula saat ini berdasarkan hasil glukometer."
           }
         }
       }
@@ -421,17 +389,6 @@
         }
       }
     },
-    "sugar level!" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "gula darah"
-          }
-        }
-      }
-    },
     "Summary" : {
       "localizations" : {
         "id" : {
@@ -448,17 +405,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Waktu"
-          }
-        }
-      }
-    },
-    "Track your current" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Lacak"
           }
         }
       }
