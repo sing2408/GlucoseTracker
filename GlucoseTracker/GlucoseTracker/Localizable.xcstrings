@@ -8,7 +8,14 @@
 
     },
     " mg/dL" : {
-
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "mg/dL"
+          }
+        }
+      }
     },
     "--mg/dL" : {
       "localizations" : {
@@ -41,7 +48,14 @@
       }
     },
     "%@mg/dL" : {
-
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@mg/dL"
+          }
+        }
+      }
     },
     "%lld" : {
       "localizations" : {
@@ -278,7 +292,14 @@
       }
     },
     "Input your current sugar level based on your glucometer result each day." : {
-
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Masukkan kadar gula saat ini berdasarkan hasil glukometer"
+          }
+        }
+      }
     },
     "mg/dL" : {
       "localizations" : {
@@ -483,7 +504,14 @@
       }
     },
     "You're doing great!" : {
-
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kamu hebat!"
+          }
+        }
+      }
     }
   },
   "version" : "1.0"
