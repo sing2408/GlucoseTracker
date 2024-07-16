@@ -17,6 +17,7 @@ struct GlucoseTrackerApp: App {
         WindowGroup {
             NavigationView {
                 HomeView(modelContext: container.mainContext)
+                    .onAppear(perform: UIApplication.shared.addTapGestureRecognizer)
             }
         }
         .modelContainer(container)

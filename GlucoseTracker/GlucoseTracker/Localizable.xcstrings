@@ -40,6 +40,9 @@
         }
       }
     },
+    "%@mg/dL" : {
+
+    },
     "%lld" : {
       "localizations" : {
         "id" : {
@@ -51,6 +54,7 @@
       }
     },
     "%lldmg/dL" : {
+      "extractionState" : "stale",
       "localizations" : {
         "id" : {
           "stringUnit" : {
