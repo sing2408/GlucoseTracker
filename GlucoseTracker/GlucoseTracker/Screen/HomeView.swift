@@ -1,5 +1,6 @@
 import SwiftUI
 import SwiftData
+import UIKit
 
 struct HomeView: View {
     
@@ -111,7 +112,8 @@ struct HomeView: View {
                     Button {
                         
                         isShowingSheet.toggle()
-                        
+                        HapticFeedback.shared.trigger()
+
                     } label: {
                         Rectangle()
                             .frame(width: 342, height: 64)

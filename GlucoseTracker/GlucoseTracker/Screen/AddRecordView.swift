@@ -7,6 +7,7 @@
 
 import SwiftUI
 import SwiftData
+import UIKit
 
 struct AddRecordView: View {
     
@@ -31,6 +32,7 @@ struct AddRecordView: View {
             HStack{
                 Button(action: {
                     dismiss()
+                    UIImpactFeedbackGenerator(style: .medium).impactOccurred()
                 }) {
                     Image(systemName: "xmark")
                         .font(Font.appTitle2)
@@ -90,6 +92,7 @@ struct AddRecordView: View {
                             } else if newValue.isEmpty {
                                 inputAmount = nil
                             }
+                            HapticFeedback.shared.trigger()
                         }
                     
                     Text("mg/dL")
@@ -119,6 +122,9 @@ struct AddRecordView: View {
                     }
                     .pickerStyle(SegmentedPickerStyle())
                     .frame(maxWidth: 300)
+                    .onChange(of: selectedType) { _ in
+                        HapticFeedback.shared.trigger()
+                    }
                     
                     VStack(alignment: .leading, spacing: 5) {
                         Text("Notes")
@@ -129,6 +135,9 @@ struct AddRecordView: View {
                             .background(Color(UIColor.systemBackground))
                             .cornerRadius(10)
                             .shadow(radius: 1)
+                            .onChange(of: inputNotes) { _ in
+                                HapticFeedback.shared.trigger()
+                            }
                     }
                     .padding(.top, 5)
                     
@@ -145,6 +154,7 @@ struct AddRecordView: View {
                         viewModel.addItem(inputDate, inputAmount!, selectedType, inputNotes)
                         inputAmount = nil
                         selectedType = "Before eat"
+                        HapticFeedback.shared.trigger()
                         dismiss()
                         //viewModel.fetchItems()
                     }
