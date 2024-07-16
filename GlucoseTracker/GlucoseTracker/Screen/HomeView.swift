@@ -15,27 +15,27 @@ struct HomeView: View {
             ZStack {
                 if viewModel.avgOverall > 140 && viewModel.avgOverall < 200 {
                     LinearGradient(
-                        gradient: colorScheme == .dark ? Gradient(colors: [.yellow, .black]) : Gradient(colors: [.yellow, .white]),
+                        gradient: colorScheme == .dark ? Gradient(colors: [.orange, .black]) : Gradient(colors: [.orange, .white]),
                         startPoint: .topLeading,
-                        endPoint: UnitPoint(x: 0.25, y: 0.25)
+                        endPoint: UnitPoint(x: 0.4, y: 0.3)
                     )
                 } else if viewModel.avgOverall > 200 {
                     LinearGradient(
                         gradient: colorScheme == .dark ? Gradient(colors: [.red, .black]) : Gradient(colors: [.red, .white]),
                         startPoint: .topLeading,
-                        endPoint: UnitPoint(x: 0.25, y: 0.25)
+                        endPoint: UnitPoint(x: 0.4, y: 0.3)
                     )
                 } else if viewModel.avgOverall < 140 && viewModel.avgOverall != 0 {
                     LinearGradient(
                         gradient: colorScheme == .dark ? Gradient(colors: [.green, .black]) : Gradient(colors: [.green, .white]),
                         startPoint: .topLeading,
-                        endPoint: UnitPoint(x: 0.25, y: 0.25)
+                        endPoint: UnitPoint(x: 0.4, y: 0.3)
                     )
                 } else {
                     LinearGradient(
                         gradient: colorScheme == .dark ? Gradient(colors: [.blue, .black]) : Gradient(colors: [.blue, .white]),
                         startPoint: .topLeading,
-                        endPoint: UnitPoint(x: 0.25, y: 0.25)
+                        endPoint: UnitPoint(x: 0.4, y: 0.3)
                     )
                 }
                 
@@ -63,14 +63,14 @@ struct HomeView: View {
                             Text("mg/dL")
                                 .font(.appTitle2)
                         }
-                        .foregroundColor(viewModel.avgOverall > 140 && viewModel.avgOverall < 200 ? .yellow : viewModel.avgOverall > 200 ? .red : viewModel.avgOverall < 140 && viewModel.avgOverall != 0 ? .green : .blue)
+                        .foregroundColor(viewModel.avgOverall > 140 && viewModel.avgOverall < 200 ? .orange : viewModel.avgOverall > 200 ? .red : viewModel.avgOverall < 140 && viewModel.avgOverall != 0 ? .green : .blue)
                         
                         if viewModel.avgOverall > 140 {
-                            Text("I think you should stop eating sweet ☹️")
+                            Text("Be more aware of your meals!")
                                 .font(Font.appBody)
                                 .foregroundColor(colorScheme == .dark ? .white : .black)
                         } else if viewModel.avgOverall > 200 {
-                            Text("NO! ARE YOU GOOD? GO VISIT DOCTOR PLEASE!")
+                            Text("Be careful, sugar levels high!")
                                 .font(Font.appBody)
                                 .foregroundColor(colorScheme == .dark ? .white : .black)
                         } else {

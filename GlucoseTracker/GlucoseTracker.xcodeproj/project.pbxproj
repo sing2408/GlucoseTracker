@@ -34,7 +34,7 @@
 
 /* Begin PBXFileReference section */
 		2468A8F72C4038CC00BF5574 /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
-		24AB42B22C3E9E210094F172 /* GlucoseTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GlucoseTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		24AB42B22C3E9E210094F172 /* GlucoSee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GlucoSee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24AB42B52C3E9E210094F172 /* GlucoseTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlucoseTrackerApp.swift; sourceTree = "<group>"; };
 		24AB42B92C3E9E220094F172 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		24AB42BC2C3E9E220094F172 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -81,7 +81,7 @@
 		24AB42B32C3E9E210094F172 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				24AB42B22C3E9E210094F172 /* GlucoseTracker.app */,
+				24AB42B22C3E9E210094F172 /* GlucoSee.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -181,7 +181,7 @@
 			);
 			name = GlucoseTracker;
 			productName = GlucoseTracker;
-			productReference = 24AB42B22C3E9E210094F172 /* GlucoseTracker.app */;
+			productReference = 24AB42B22C3E9E210094F172 /* GlucoSee.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -402,7 +402,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.GlucoseTracker;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = GlucoSee;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -430,7 +430,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.GlucoseTracker;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = GlucoSee;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

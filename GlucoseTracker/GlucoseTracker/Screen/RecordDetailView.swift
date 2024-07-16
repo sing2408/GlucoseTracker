@@ -108,7 +108,7 @@ struct RecordDetailView: View {
                                 }
                                 .listRowBackground(Color(UIColor.systemBackground))
                                 
-                                if item!.type == "After eat" {
+                               
                                     HStack {
                                         Text("Food Consumed")
                                         Spacer()
@@ -126,7 +126,7 @@ struct RecordDetailView: View {
                                         }
                                     }
                                     .listRowBackground(Color(UIColor.systemBackground))
-                                }
+                                
 
                             }
                         }

@@ -15,7 +15,7 @@ struct HistoryListByType: View {
     @State var viewModel: GlutenDataViewModel
     @State var selectedItem: GlucoseData?
     @State var showDetail: Bool = false
-    @State var selectedType: String
+    @Binding var selectedType: String
     
     var body: some View {
         if viewModel.items.isEmpty {
@@ -111,10 +111,10 @@ struct HistoryListByType: View {
         }
     }
     
-    init(modelContext: ModelContext, type: String) {
+    init(modelContext: ModelContext, type: Binding<String>) {
         let viewModel = GlutenDataViewModel(modelContext: modelContext)
         _viewModel = State(initialValue: viewModel)
-        self.selectedType = type
+        _selectedType = type
     }
     
     private let dateFormatter: DateFormatter = {

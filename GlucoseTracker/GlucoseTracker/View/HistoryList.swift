@@ -57,7 +57,7 @@ struct HistoryList: View {
                             HStack(spacing: 0) {
                                 Text("\(item.amount)")
                                     .font(Font.appTitle1)
-                                Text("mg/dL")
+                                Text(" mg/dL")
                                     .foregroundStyle(.gray)
                                     .opacity(0.75)
                                     .bold()
