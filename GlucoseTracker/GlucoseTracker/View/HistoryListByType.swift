@@ -12,9 +12,16 @@ struct HistoryListByType: View {
     @Environment (\.dismiss) var dismiss
     @Environment (\.colorScheme) var colorScheme
     
+    class DetailManager: ObservableObject{
+            
+        @Published var selectedItem: GlucoseData?
+        @Published var showDetail: Bool = false
+        }
+        
+
+    @StateObject var manager = DetailManager()
+    
     @State var viewModel: GlutenDataViewModel
-    @State var selectedItem: GlucoseData?
-    @State var showDetail: Bool = false
     @Binding var selectedType: String
     
     var body: some View {
@@ -56,20 +63,20 @@ struct HistoryListByType: View {
                                     .font(.system(size: 17))
                             }
                         }
-                        .frame(width: 170)
+                        //.frame(width: 170)
                         
                         Spacer()
                         
                         Text("\(DateFormatter.custom.string(from: item.date))")
                             .foregroundStyle(.gray)
                             .opacity(0.75)
-                            .frame(width: 100)
+                            //.frame(width: 100)
                         
                         Spacer()
                         
                         Button(action: {
-                            self.selectedItem = item
-                            self.showDetail.toggle()
+                            manager.selectedItem = item
+                            manager.showDetail.toggle()
                         }) {
                             Image(systemName: "info.circle")
                                 .resizable()
@@ -78,7 +85,7 @@ struct HistoryListByType: View {
                                 .frame(width: 17)
                         }
                     }
-                    .frame(width: 350)        
+                    //.frame(width: 350)        
                     .padding()
                     .background(Color(.systemBackground))
                     .cornerRadius(10)
@@ -99,8 +106,8 @@ struct HistoryListByType: View {
                     }
                 }
             }
-            .sheet(isPresented: $showDetail) {
-                if let selectedItem = selectedItem {
+            .sheet(isPresented: $manager.showDetail) {
+                if let selectedItem = manager.selectedItem {
                     RecordDetailView(item: selectedItem)
                         .presentationDetents([.height(650)])
                 } else {

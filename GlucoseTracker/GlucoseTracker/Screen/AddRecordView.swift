@@ -24,6 +24,8 @@ struct AddRecordView: View {
     @State private var inputNotes: String = ""
     
     
+    
+    
     var body: some View {
         VStack {
             HStack{
@@ -44,10 +46,13 @@ struct AddRecordView: View {
                     Text("Track your current sugar level")
                     //Text("sugar level!")
                 }
-                .font(Font.appLargeTitle)
+                .font(Font.appLargeTitle2)
+
+                
                 .multilineTextAlignment(.center)
 
                 .frame(width: 350)
+                .padding(.bottom, 3)
 
                 
                 VStack {
@@ -59,9 +64,7 @@ struct AddRecordView: View {
                 .opacity(0.75)
                 .multilineTextAlignment(.center)
 
-                .padding([.top], -5)
                 .frame(width: 300)
-
                 
                 HStack {
                     DatePicker("", selection: $inputDate, displayedComponents: .date)
@@ -73,8 +76,7 @@ struct AddRecordView: View {
                         .accentColor(.blue)
                         .labelsHidden()
                 }
-                
-                
+                .padding(.top)
                 
                 HStack(alignment: .firstTextBaseline, spacing: 0) {
                     TextField("120", text: $inputAmountString.max(3))
@@ -94,14 +96,18 @@ struct AddRecordView: View {
                         .font(.appTitle2)
                 }
                 
-                if isError {
-                    Text("Please enter a valid amount.")
-                        .font(.subheadline)
-                        .foregroundColor(.red)
-                } else{
-                    Text("Enter your glucose level")
-                        .font(.subheadline)
+                VStack{
+                    if isError {
+                        Text("Please enter a valid amount.")
+                            .font(.subheadline)
+                            .foregroundColor(.red)
+                    } else{
+                        Text("Enter your glucose level")
+                            .font(.subheadline)
+                    }
+                    
                 }
+                .padding(.bottom, 25)
                 
                 
                 VStack {
@@ -139,13 +145,13 @@ struct AddRecordView: View {
                         viewModel.addItem(inputDate, inputAmount!, selectedType, inputNotes)
                         inputAmount = nil
                         selectedType = "Before eat"
-                        hideKeyboard()
+                        //hideKeyboard()
                         dismiss()
                         //viewModel.fetchItems()
                     }
                     else {
                         print("not yet filled")
-                        isError.toggle()
+                        isError = true
                     }
                     
                     
@@ -166,16 +172,5 @@ struct AddRecordView: View {
 //        .onTapGesture {
 //            hideKeyboard()
 //        }
-    }
-}
-
-extension Binding where Value == String {
-    func max(_ limit: Int) -> Self {
-        if self.wrappedValue.count > limit {
-            DispatchQueue.main.async {
-                self.wrappedValue = String(self.wrappedValue.prefix(limit))
-            }
-        }
-        return self
     }
 }
