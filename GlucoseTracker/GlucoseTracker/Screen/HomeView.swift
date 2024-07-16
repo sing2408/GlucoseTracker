@@ -17,25 +17,25 @@ struct HomeView: View {
                     LinearGradient(
                         gradient: colorScheme == .dark ? Gradient(colors: [.yellow, .black]) : Gradient(colors: [.yellow, .white]),
                         startPoint: .topLeading,
-                        endPoint: UnitPoint(x: 0.5, y: 0.35)
+                        endPoint: UnitPoint(x: 0.25, y: 0.25)
                     )
                 } else if viewModel.avgOverall > 200 {
                     LinearGradient(
                         gradient: colorScheme == .dark ? Gradient(colors: [.red, .black]) : Gradient(colors: [.red, .white]),
                         startPoint: .topLeading,
-                        endPoint: UnitPoint(x: 0.5, y: 0.35)
+                        endPoint: UnitPoint(x: 0.25, y: 0.25)
                     )
                 } else if viewModel.avgOverall < 140 && viewModel.avgOverall != 0 {
                     LinearGradient(
                         gradient: colorScheme == .dark ? Gradient(colors: [.green, .black]) : Gradient(colors: [.green, .white]),
                         startPoint: .topLeading,
-                        endPoint: UnitPoint(x: 0.5, y: 0.35)
+                        endPoint: UnitPoint(x: 0.25, y: 0.25)
                     )
                 } else {
                     LinearGradient(
                         gradient: colorScheme == .dark ? Gradient(colors: [.blue, .black]) : Gradient(colors: [.blue, .white]),
                         startPoint: .topLeading,
-                        endPoint: UnitPoint(x: 0.5, y: 0.35)
+                        endPoint: UnitPoint(x: 0.25, y: 0.25)
                     )
                 }
                 
