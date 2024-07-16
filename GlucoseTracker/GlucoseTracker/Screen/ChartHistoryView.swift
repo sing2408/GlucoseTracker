@@ -25,42 +25,53 @@ struct ChartHistoryView: View {
             }
             .pickerStyle(SegmentedPickerStyle())
             
-            if viewModel.items.count < 4 {
-                NoGrapChart()
-            } else {
-                if chartType == "All" {
-                    ZStack {
-                        ChartCard()
-                        VStack {
-                            ChartCardAvg(modelContext: viewModel.modelContext)
-                            ChartGraph(modelContext: viewModel.modelContext)
+            ScrollView {
+                if viewModel.items.count < 4 {
+                    NoGrapChart()
+                } else {
+                    if chartType == "All" {
+                        ZStack {
+                            ChartCard()
+                            VStack {
+                                ChartCardAvg(modelContext: viewModel.modelContext)
+                                ChartGraph(modelContext: viewModel.modelContext)
+                            }
+                        }
+                    } else if chartType == "Before eat" {
+                        ZStack {
+                            ChartCard()
+                            ChartGraphByType(modelContext: viewModel.modelContext, chartType: $chartType)
+                                .padding()
+                        }
+                    } else {
+                        ZStack {
+                            ChartCard()
+                            ChartGraphByType(modelContext: viewModel.modelContext, chartType: $chartType)
+                                .padding()
                         }
                     }
+                }
+                
+                Text("History")
+                    .font(Font.appTitle2)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding()
+                
+                if chartType == "All" {
+                    HistoryList(modelContext: viewModel.modelContext)
                 } else if chartType == "Before eat" {
-                    ZStack {
-                        ChartCard()
-                        ChartGraphByType(modelContext: viewModel.modelContext, chartType: $chartType)
-                            .padding()
-                    }
-                } else {
-                    ZStack {
-                        ChartCard()
-                        ChartGraphByType(modelContext: viewModel.modelContext, chartType: $chartType)
-                            .padding()
-                    }
+                    HistoryListByType(modelContext: viewModel.modelContext, type: chartType)
+                } else if chartType == "After eat" {
+                    HistoryListByType(modelContext: viewModel.modelContext, type: chartType)
                 }
             }
-            
-            Text("History")
-                .font(Font.appTitle2)
-                .frame(maxWidth: .infinity, alignment: .leading)
-            
-            HistoryList(modelContext: viewModel.modelContext)
+            .ignoresSafeArea(edges: .bottom)
         }
+        .ignoresSafeArea(edges: .bottom)
         .offset(y: viewModel.items.count < 4 ? -20 : 0)
         .padding()
     }
-    
+
     init(modelContext: ModelContext) {
         let viewModel = GlutenDataViewModel(modelContext: modelContext)
         _viewModel = StateObject(wrappedValue: viewModel)

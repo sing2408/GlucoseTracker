@@ -1,29 +1,21 @@
 //
-//  HistoryList.swift
+//  HistoryListByType.swift
 //  GlucoseTracker
 //
-//  Created by tandyys on 12/07/24.
+//  Created by tandyys on 15/07/24.
 //
 
 import SwiftUI
 import SwiftData
 
-struct HistoryList: View {
-    
-    class DetailManager: ObservableObject{
-            
-        @Published var selectedItem: GlucoseData?
-        @Published var showDetail: Bool = false
-        }
-        
-
-    @StateObject var manager = DetailManager()
-    
+struct HistoryListByType: View {
     @Environment (\.dismiss) var dismiss
     @Environment (\.colorScheme) var colorScheme
     
-    @ObservedObject var viewModel: GlutenDataViewModel
-    
+    @State var viewModel: GlutenDataViewModel
+    @State var selectedItem: GlucoseData?
+    @State var showDetail: Bool = false
+    @State var selectedType: String
     
     var body: some View {
         if viewModel.items.isEmpty {
@@ -38,7 +30,7 @@ struct HistoryList: View {
             }
         } else {
             VStack(spacing: 0) {
-                ForEach(viewModel.items.reversed()) { item in
+                ForEach(viewModel.items.reversed().filter{$0.type == selectedType}) { item in
                     HStack {
                         Image(systemName: "circle.fill")
                             .foregroundColor(item.amount > 140 && item.amount < 200 ? .yellow : item.amount > 200 ? .red : .green)
@@ -76,13 +68,8 @@ struct HistoryList: View {
                         Spacer()
                         
                         Button(action: {
-                        
-                            print("Button pressed")
-                                manager.selectedItem = item
-                            //print("Selected item set to: \(self.selectedItem?.amount)")
-                                manager.showDetail = true
-                                //print("Show detail set to: \(self.showDetail)")
-                                
+                            self.selectedItem = item
+                            self.showDetail.toggle()
                         }) {
                             Image(systemName: "info.circle")
                                 .resizable()
@@ -91,7 +78,7 @@ struct HistoryList: View {
                                 .frame(width: 17)
                         }
                     }
-                    .frame(width: 350)
+                    .frame(width: 350)        
                     .padding()
                     .background(Color(.systemBackground))
                     .cornerRadius(10)
@@ -111,23 +98,23 @@ struct HistoryList: View {
                         viewModel.removeItem(viewModel.items[originIndex])
                     }
                 }
-
-                .sheet(isPresented: $manager.showDetail) {
-                    if let selected = manager.selectedItem {
-                        RecordDetailView(item: selected)
-                            .presentationDetents([.height(650)])
-                    } else {
-                        NoDataView()
-                            .presentationDetents([.height(650)])
-                    }
+            }
+            .sheet(isPresented: $showDetail) {
+                if let selectedItem = selectedItem {
+                    RecordDetailView(item: selectedItem)
+                        .presentationDetents([.height(650)])
+                } else {
+                    NoDataView()
+                        .presentationDetents([.height(650)])
                 }
             }
         }
     }
     
-    init(modelContext: ModelContext) {
+    init(modelContext: ModelContext, type: String) {
         let viewModel = GlutenDataViewModel(modelContext: modelContext)
-        _viewModel = ObservedObject(initialValue: viewModel)
+        _viewModel = State(initialValue: viewModel)
+        self.selectedType = type
     }
     
     private let dateFormatter: DateFormatter = {
@@ -137,3 +124,4 @@ struct HistoryList: View {
         return formatter
     }()
 }
+

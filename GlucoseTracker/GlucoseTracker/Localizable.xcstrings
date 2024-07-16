@@ -147,6 +147,9 @@
         }
       }
     },
+    "Cancel" : {
+
+    },
     "Chart & Records" : {
       "localizations" : {
         "id" : {
@@ -291,7 +294,7 @@
         "id" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Coba sekali lagi"
+            "value" : "Coba sekali lagi pada data yang lain"
           }
         }
       }
@@ -306,6 +309,7 @@
         }
       }
     },
+
     "See More" : {
       "localizations" : {
         "id" : {
@@ -331,7 +335,7 @@
         "id" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Kirim"
+            "value" : "Tambah"
           }
         }
       }
