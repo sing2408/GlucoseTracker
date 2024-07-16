@@ -10,7 +10,7 @@ import SwiftData
 
 @Model
 class GlucoseData:Identifiable {
-    var id = UUID().uuidString
+    var id: String
     var date: Date
     var amount: Int
     var mmolAmount: Double {

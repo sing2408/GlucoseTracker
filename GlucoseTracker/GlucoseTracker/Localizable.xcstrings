@@ -171,6 +171,7 @@
       }
     },
     "Detail" : {
+      "extractionState" : "stale",
       "localizations" : {
         "id" : {
           "stringUnit" : {
@@ -180,7 +181,11 @@
         }
       }
     },
+    "Enter your glucose level" : {
+
+    },
     "Food Consumed" : {
+      "extractionState" : "stale",
       "localizations" : {
         "id" : {
           "stringUnit" : {
@@ -191,6 +196,7 @@
       }
     },
     "glucometer result each day." : {
+      "extractionState" : "stale",
       "localizations" : {
         "id" : {
           "stringUnit" : {
@@ -224,6 +230,7 @@
 
     },
     "Input your current sugar level based on your" : {
+      "extractionState" : "stale",
       "localizations" : {
         "id" : {
           "stringUnit" : {
@@ -232,6 +239,9 @@
           }
         }
       }
+    },
+    "Input your current sugar level based on your glucometer result each day." : {
+
     },
     "mg/dL" : {
       "localizations" : {
@@ -266,6 +276,19 @@
         }
       }
     },
+    "Notes" : {
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Catatan"
+          }
+        }
+      }
+    },
+    "Please enter a valid amount." : {
+
+    },
     "Please try one more time on another data." : {
       "localizations" : {
         "id" : {
@@ -286,8 +309,16 @@
         }
       }
     },
-    "Save" : {
 
+    "See More" : {
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lihat Selengkapnya"
+          }
+        }
+      }
     },
     "Select Option" : {
       "localizations" : {
@@ -320,6 +351,7 @@
       }
     },
     "sugar level!" : {
+      "extractionState" : "stale",
       "localizations" : {
         "id" : {
           "stringUnit" : {
@@ -350,6 +382,7 @@
       }
     },
     "Track your current" : {
+      "extractionState" : "stale",
       "localizations" : {
         "id" : {
           "stringUnit" : {
@@ -358,6 +391,9 @@
           }
         }
       }
+    },
+    "Track your current sugar level" : {
+
     },
     "Try Again" : {
       "localizations" : {
