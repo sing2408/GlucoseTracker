@@ -26,6 +26,7 @@ struct ChartHistoryView: View {
             .pickerStyle(SegmentedPickerStyle())
             
             ScrollView {
+                
                 if viewModel.items.count < 4 {
                     NoGrapChart()
                 } else {
@@ -60,16 +61,17 @@ struct ChartHistoryView: View {
                 if chartType == "All" {
                     HistoryList(modelContext: viewModel.modelContext)
                 } else if chartType == "Before eat" {
-                    HistoryListByType(modelContext: viewModel.modelContext, type: chartType)
+                    HistoryListByType(modelContext: viewModel.modelContext, type: $chartType)
                 } else if chartType == "After eat" {
-                    HistoryListByType(modelContext: viewModel.modelContext, type: chartType)
+                    HistoryListByType(modelContext: viewModel.modelContext, type: $chartType)
                 }
             }
             .ignoresSafeArea(edges: .bottom)
         }
+        .padding()
         .ignoresSafeArea(edges: .bottom)
         .offset(y: viewModel.items.count < 4 ? -20 : 0)
-        .padding()
+        //.padding()
     }
 
     init(modelContext: ModelContext) {

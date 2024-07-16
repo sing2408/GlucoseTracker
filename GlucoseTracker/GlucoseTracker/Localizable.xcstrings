@@ -7,6 +7,9 @@
     " " : {
 
     },
+    " mg/dL" : {
+
+    },
     "--mg/dL" : {
       "localizations" : {
         "id" : {
@@ -127,6 +130,12 @@
         }
       }
     },
+    "Be careful, sugar levels high!" : {
+
+    },
+    "Be more aware of your meals!" : {
+
+    },
     "Before eat" : {
       "localizations" : {
         "id" : {
@@ -185,7 +194,6 @@
 
     },
     "Food Consumed" : {
-      "extractionState" : "stale",
       "localizations" : {
         "id" : {
           "stringUnit" : {
@@ -226,9 +234,6 @@
         }
       }
     },
-    "I think you should stop eating sweet ☹️" : {
-
-    },
     "Input your current sugar level based on your" : {
       "extractionState" : "stale",
       "localizations" : {
@@ -262,9 +267,6 @@
           }
         }
       }
-    },
-    "NO! ARE YOU GOOD? GO VISIT DOCTOR PLEASE!" : {
-
     },
     "Note" : {
       "localizations" : {
@@ -309,7 +311,9 @@
         }
       }
     },
+    "Save" : {
 
+    },
     "See More" : {
       "localizations" : {
         "id" : {
