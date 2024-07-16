@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B1F2A6B2C46A2C4004054C2 /* HapticFeedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1F2A6A2C46A2C4004054C2 /* HapticFeedback.swift */; };
 		2468A8F82C4038CC00BF5574 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2468A8F72C4038CC00BF5574 /* DateFormatter.swift */; };
 		24AB42B62C3E9E210094F172 /* GlucoseTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AB42B52C3E9E210094F172 /* GlucoseTrackerApp.swift */; };
 		24AB42BA2C3E9E220094F172 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24AB42B92C3E9E220094F172 /* Assets.xcassets */; };
@@ -33,6 +34,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0B1F2A6A2C46A2C4004054C2 /* HapticFeedback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticFeedback.swift; sourceTree = "<group>"; };
 		2468A8F72C4038CC00BF5574 /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
 		24AB42B22C3E9E210094F172 /* GlucoSee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GlucoSee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24AB42B52C3E9E210094F172 /* GlucoseTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlucoseTrackerApp.swift; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 				24AB42D32C3EDA7C0094F172 /* TextStyles.swift */,
 				2468A8F72C4038CC00BF5574 /* DateFormatter.swift */,
 				2711E3DD2C4114F10039A7EC /* HideKeyboard.swift */,
+				0B1F2A6A2C46A2C4004054C2 /* HapticFeedback.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -244,6 +247,7 @@
 				27886DD02C45534200D2DE9F /* HistoryListByType.swift in Sources */,
 				2711E3E22C41647C0039A7EC /* RecentCheckCard.swift in Sources */,
 				2711E3D22C40F8060039A7EC /* ChartHistoryView.swift in Sources */,
+				0B1F2A6B2C46A2C4004054C2 /* HapticFeedback.swift in Sources */,
 				2468A8F82C4038CC00BF5574 /* DateFormatter.swift in Sources */,
 				2711E3E42C4177420039A7EC /* ChartGraph.swift in Sources */,
 				24AB42C42C3E9ED60094F172 /* GlucoseData.swift in Sources */,

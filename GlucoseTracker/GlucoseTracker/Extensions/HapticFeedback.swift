@@ -7,6 +7,8 @@
 
 import UIKit
 
+//haptic
+
 class HapticFeedback {
     static let shared = HapticFeedback()
     private let feedbackGenerator = UIImpactFeedbackGenerator(style: .medium)
