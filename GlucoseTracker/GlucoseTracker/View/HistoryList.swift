@@ -115,7 +115,7 @@ struct HistoryList: View {
 
                 .sheet(isPresented: $manager.showDetail) {
                     if let selected = manager.selectedItem {
-                        RecordDetailView(item: selected)
+                        RecordDetailView(viewModel: viewModel, item: selected)
                             .presentationDetents([.height(650)])
                     } else {
                         NoDataView()
