@@ -9,6 +9,7 @@ import SwiftUI
 
 extension Font {
     static let appLargeTitle = Font.system(size: 34, weight: .bold)
+    static let appLargeTitle2 = Font.system(size: 32, weight: .bold)
     static let appAverageText = Font.system(size: 96, weight: .bold)
     static let appTitle1 = Font.system(size: 28, weight: .bold)
     static let appTitle2 = Font.system(size: 22, weight: .bold)

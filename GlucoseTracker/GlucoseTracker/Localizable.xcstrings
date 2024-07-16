@@ -230,6 +230,7 @@
       }
     },
     "Food Consumed" : {
+      "extractionState" : "stale",
       "localizations" : {
         "id" : {
           "stringUnit" : {

@@ -12,7 +12,12 @@ struct RecordDetailView: View {
     @Environment (\.dismiss) var dismiss
     @Environment (\.colorScheme) var colorScheme
     
+
     @State var viewModel: GlutenDataViewModel
+
+    
+    @State private var inputNewAmountString: String = ""
+
     @State private var selectedType = "mg/dL"
     @State var item: GlucoseData?
     @State var isEditing: Bool = false
@@ -50,37 +55,50 @@ struct RecordDetailView: View {
                     Text("Sugar Level Record")
                         .font(.appTitle1)
                         .frame(width: 300)
-                    HStack {
+
+                    HStack{
+                        
+                        
                         if selectedType == "mMol" {
                             Text("\(String(format: "%.1f", item!.mmolAmount))")
                                 .font(Font.system(size: 96, weight: .bold))
-                                .frame(width: 200)
+                                .frame(width: 250)
                                 .padding([.top], 25)
                         } else {
                             if isEditing {
-                                TextField("120", value: $newAmount, format: .number)
+                                TextField("120", text: $inputNewAmountString.max(3))
                                     .keyboardType(.numberPad)
                                     .font(.system(size: 86, weight: .bold))
                                     .foregroundStyle(colorScheme == .dark ? .white : .black)
-                                    .frame(maxWidth: 200)
+                                //                                .frame(maxWidth: 200)
                                     .padding([.top], 25)
+                                    .onChange(of: inputNewAmountString) { newValue in
+                                        if let value = Int(newValue), value <= 999 {
+                                            newAmount = value
+                                        } else if newValue.isEmpty {
+                                            newAmount = nil
+                                        }
+                                    }
                             } else {
                                 Text("\(item!.amount)")
+                                
                                     .font(Font.system(size: 96, weight: .bold))
                                     .frame(width: 200)
                                     .padding([.top], 25)
+                            } 
+                            
+                            Button(action: {
+                                isEditing.toggle()
+                            }) {
+                                Image(systemName: "pencil")
+                                    .font(Font.appTitle2)
                             }
+                            .padding([.top], 60)
+                            .padding([.leading], -20)
                         }
-                        
-                        Button(action: {
-                            isEditing.toggle()
-                        }) {
-                            Image(systemName: "pencil")
-                                .font(Font.appTitle2)
-                        }
-                        .padding([.top], 60)
-                        .padding([.leading], -20)
                     }
+                    
+                    
                     Picker(selection: $selectedType) {
                         Text("mg/dL").tag("mg/dL")
                         Text("mMol").tag("mMol")
@@ -124,7 +142,7 @@ struct RecordDetailView: View {
                                 
                                
                                     HStack {
-                                        Text("Food Consumed")
+                                        Text("Notes")
                                         Spacer()
                                         if isEditing {
                                             TextField("Note", text: $newNotes)
@@ -141,6 +159,8 @@ struct RecordDetailView: View {
                                     }
                                     .listRowBackground(Color(UIColor.systemBackground))
                                 
+                    
+                                
 
                             }
                         }
@@ -149,8 +169,12 @@ struct RecordDetailView: View {
                         if isEditing {
                             VStack {
                                 Button(action: {
-                                    saveEdit()
-                                    isEditing.toggle()
+                                    
+                                    if(newAmount != nil){
+                                        saveEdit()
+                                        isEditing.toggle()
+                                    }
+                                    
                                 }) {
                                     Rectangle()
                                         .frame(width: 342, height: 64)
@@ -179,6 +203,12 @@ struct RecordDetailView: View {
                                 }
                             }
                         }
+                        
+    
+                        
+                        
+                        
+                        
                     }
                 }
             }
@@ -190,5 +220,16 @@ struct RecordDetailView: View {
             item.amount = newAmount!
             item.notes = newNotes
         }
+    }
+}
+
+extension Binding where Value == String {
+    func max(_ limit: Int) -> Self {
+        if self.wrappedValue.count > limit {
+            DispatchQueue.main.async {
+                self.wrappedValue = String(self.wrappedValue.prefix(limit))
+            }
+        }
+        return self
     }
 }

@@ -44,6 +44,7 @@ struct HistoryList: View {
                         Image(systemName: "circle.fill")
                             .foregroundColor(item.amount > 140 && item.amount < 200 ? .yellow : item.amount > 200 ? .red : .green)
                             .font(.system(size: 42))
+                            .padding([.trailing], 10)
                         VStack(alignment: .leading) {
                             HStack {
                                 Image(systemName: item.type == "Before eat" ? "takeoutbag.and.cup.and.straw" : "takeoutbag.and.cup.and.straw.fill")
@@ -65,14 +66,14 @@ struct HistoryList: View {
                                     .font(.system(size: 17))
                             }
                         }
-                        .frame(width: 170)
+                        //.frame(width: 170)
                         
                         Spacer()
                         
                         Text("\(DateFormatter.custom.string(from: item.date))")
                             .foregroundStyle(.gray)
                             .opacity(0.75)
-                            .frame(width: 100)
+                            //.frame(width: 100)
                         
                         Spacer()
                         
@@ -92,7 +93,7 @@ struct HistoryList: View {
                                 .frame(width: 17)
                         }
                     }
-                    .frame(width: 350)
+                    //.frame(width: 350)
                     .padding()
                     .background(Color(.systemBackground))
                     .cornerRadius(10)
