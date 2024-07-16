@@ -38,7 +38,7 @@ class GlutenDataViewModel: ObservableObject {
     }
     
     var latestItem: GlucoseData? {
-        return items.last
+        return items.sorted{$0.date > $1.date}.first
     }
     
     private func updateAverages() {
