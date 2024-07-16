@@ -55,7 +55,7 @@ struct RecentCheckCard: View {
                                     .bold()
                                     .foregroundStyle(.black)
                                 
-                                Text(viewModel.latestItem?.amount != nil ? "\(viewModel.latestItem!.amount)mg/dL" : "--mg/dL")
+                                Text(viewModel.items.sorted{$0.date > $1.date}.first != nil ? "\(String(viewModel.items.sorted{$0.date > $1.date}.first!.amount))mg/dL" : "--mg/dL")
                                     .font(Font.appTitle2)
                                     .foregroundStyle(viewModel.latestItem.map { item in
                                         switch item.amount {
@@ -73,8 +73,8 @@ struct RecentCheckCard: View {
                             
                             Spacer()
                             
-                            if viewModel.latestItem?.date != nil {
-                                Text(DateFormatter.custom.string(from: viewModel.latestItem!.date))
+                            if viewModel.items.sorted(by: {$0.date > $1.date}) != nil {
+                                Text(DateFormatter.custom.string(from: viewModel.items.sorted{$0.date > $1.date}.first!.date))
                                     .foregroundStyle(.gray)
                                     .opacity(0.7)
                                     .frame(width: 100)
