@@ -139,7 +139,7 @@ struct AddRecordView: View {
                         viewModel.addItem(inputDate, inputAmount!, selectedType, inputNotes)
                         inputAmount = nil
                         selectedType = "Before eat"
-                        hideKeyboard()
+//                        hideKeyboard()
                         dismiss()
                         //viewModel.fetchItems()
                     }
