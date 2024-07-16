@@ -18,7 +18,7 @@ struct RecentCheckCard: View {
                 .frame(width: 350, height: 250)
                 .shadow(color: Color.gray.opacity(0.5), radius: 10, x: 0, y: 5)
                 .foregroundColor(.white)
-                .padding()
+                .padding(.horizontal)
                 .overlay {
                     VStack {
                         Image("RecentGraph")

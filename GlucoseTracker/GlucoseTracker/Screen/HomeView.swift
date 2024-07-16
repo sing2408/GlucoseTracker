@@ -80,7 +80,7 @@ struct HomeView: View {
                         }
                     }
                     .padding()
-                    .padding([.bottom], 25)
+                    
                                     
                     VStack(alignment: .leading) {
                         HStack {
@@ -105,6 +105,8 @@ struct HomeView: View {
                         RecentCheckCard(modelContext: viewModel.modelContext)
                         
                     }
+                    
+                    Spacer()
                     
                     Button {
                         
