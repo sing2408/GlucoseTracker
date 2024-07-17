@@ -8,6 +8,5 @@
 import Foundation
 
 protocol Fetchable {
-    var items: [GlucoseData] { get }
     func fetchItems()
 }

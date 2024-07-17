@@ -67,20 +67,15 @@ struct RecentCheckCard: View {
                                             return Color.green
                                         }
                                     } ?? .gray)
-                                    //.frame(width: 150)
                                     .bold()
                             }
                             
                             Spacer()
                             
-                            if viewModel.items.sorted(by: {$0.date > $1.date}) != nil {
-                                Text(DateFormatter.custom.string(from: viewModel.items.sorted{$0.date > $1.date}.first!.date))
-                                    .foregroundStyle(.gray)
-                                    .opacity(0.7)
-                                    .frame(width: 100)
-                                    .offset(y: -5)
+                            if viewModel.items.isEmpty {
+                                Text("")
                             } else {
-                                Text(" ")
+                                Text(DateFormatter.custom.string(from: viewModel.sortData().first!.date))
                             }
                         }
                         .frame(width: 350)

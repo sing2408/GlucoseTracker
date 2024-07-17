@@ -14,6 +14,9 @@ class GlutenDataViewModel: ObservableObject, Addable ,Removable, Fetchable {
         fetchItems()
     }
     
+    func sortData() -> [GlucoseData] {
+        return items.sorted{$0.date > $1.date}
+    }
     
     func addItem(_ date: Date, _ amount: Int, _ type: String, _ notes: String) {
         let item = GlucoseData(date: date, amount: amount, type: type, notes: notes)
