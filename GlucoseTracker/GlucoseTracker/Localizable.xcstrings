@@ -8,7 +8,14 @@
 
     },
     " mg/dL" : {
-
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "mg/dL"
+          }
+        }
+      }
     },
     "--mg/dL" : {
       "localizations" : {
@@ -35,13 +42,20 @@
         "id" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "%@- sekarang"
+            "value" : "%@ - sekarang"
           }
         }
       }
     },
     "%@mg/dL" : {
-
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@mg/dL"
+          }
+        }
+      }
     },
     "%lld" : {
       "localizations" : {
@@ -49,17 +63,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld"
-          }
-        }
-      }
-    },
-    "%lldmg/dL" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%lld mg/dL"
           }
         }
       }
@@ -86,6 +89,12 @@
     },
     "After eat" : {
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "After meal"
+          }
+        },
         "id" : {
           "stringUnit" : {
             "state" : "translated",
@@ -135,13 +144,33 @@
       }
     },
     "Be careful, sugar levels high!" : {
-
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hati-hati, kadar gula darahmu tinggi!"
+          }
+        }
+      }
     },
     "Be more aware of your meals!" : {
-
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lebih teliti dengan apa yang kamu konsumsi!"
+          }
+        }
+      }
     },
     "Before eat" : {
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Before meal"
+          }
+        },
         "id" : {
           "stringUnit" : {
             "state" : "translated",
@@ -161,7 +190,14 @@
       }
     },
     "Cancel" : {
-
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Batalkan"
+          }
+        }
+      }
     },
     "Chart & Records" : {
       "localizations" : {
@@ -183,19 +219,15 @@
         }
       }
     },
-    "Detail" : {
-      "extractionState" : "stale",
+    "Enter your glucose level" : {
       "localizations" : {
         "id" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Detail"
+            "value" : "Masukkan data glukosa"
           }
         }
       }
-    },
-    "Enter your glucose level" : {
-
     },
     "Food Consumed" : {
       "extractionState" : "stale",
@@ -204,17 +236,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Makanan yang Dikonsumsi"
-          }
-        }
-      }
-    },
-    "glucometer result each day." : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "hasil glukometer harian"
           }
         }
       }
@@ -239,19 +260,15 @@
         }
       }
     },
-    "Input your current sugar level based on your" : {
-      "extractionState" : "stale",
+    "Input your current sugar level based on your glucometer result each day." : {
       "localizations" : {
         "id" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Masukkan kadar gula darahmu saat ini berdasarkan"
+            "value" : "Masukkan kadar gula saat ini berdasarkan hasil glukometer."
           }
         }
       }
-    },
-    "Input your current sugar level based on your glucometer result each day." : {
-
     },
     "mg/dL" : {
       "localizations" : {
@@ -294,7 +311,14 @@
       }
     },
     "Please enter a valid amount." : {
-
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Silakan masukkan jumlah yang valid"
+          }
+        }
+      }
     },
     "Please try one more time on another data." : {
       "localizations" : {
@@ -317,7 +341,14 @@
       }
     },
     "Save" : {
-
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Simpan"
+          }
+        }
+      }
     },
     "See More" : {
       "localizations" : {
@@ -359,17 +390,6 @@
         }
       }
     },
-    "sugar level!" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "gula darah"
-          }
-        }
-      }
-    },
     "Summary" : {
       "localizations" : {
         "id" : {
@@ -390,19 +410,15 @@
         }
       }
     },
-    "Track your current" : {
-      "extractionState" : "stale",
+    "Track your current sugar level" : {
       "localizations" : {
         "id" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Lacak"
+            "value" : "Cek kadar gula darahmu sekarang"
           }
         }
       }
-    },
-    "Track your current sugar level" : {
-
     },
     "Try Again" : {
       "localizations" : {
@@ -435,7 +451,14 @@
       }
     },
     "You're doing great!" : {
-
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kamu hebat!"
+          }
+        }
+      }
     }
   },
   "version" : "1.0"

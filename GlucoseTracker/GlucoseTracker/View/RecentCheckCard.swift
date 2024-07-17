@@ -9,6 +9,7 @@ import SwiftUI
 import SwiftData
 
 struct RecentCheckCard: View {
+    @Environment (\.colorScheme) var colorScheme
     @ObservedObject var viewModel: GlutenDataViewModel
     
     var body: some View {
@@ -16,12 +17,12 @@ struct RecentCheckCard: View {
         NavigationLink(destination: ChartHistoryView(modelContext: viewModel.modelContext)) {
             RoundedRectangle(cornerRadius: 12)
                 .frame(width: 350, height: 250)
-                .shadow(color: Color.gray.opacity(0.5), radius: 10, x: 0, y: 5)
-                .foregroundColor(.white)
+                .shadow(color: Color.gray.opacity(0.7), radius: 8, x: 0, y: 5)
+                .foregroundColor(colorScheme == .dark ? .black : .white)
                 .padding(.horizontal)
                 .overlay {
                     VStack {
-                        Image("RecentGraph")
+                        Image(colorScheme == .dark ? "DarkModeChart" : "RecentGraph")
                             .resizable()
                             .scaledToFit()
                             .frame(width: 300)
@@ -50,10 +51,9 @@ struct RecentCheckCard: View {
                             
                             VStack(alignment: .leading) {
                                 Text("Recent Check Up")
-                                    //.frame(width: 150)
                                     .font(.system(size: 17))
                                     .bold()
-                                    .foregroundStyle(.black)
+                                    .foregroundStyle(colorScheme == .dark ? .white : .black)
                                 
                                 Text(viewModel.items.sorted{$0.date > $1.date}.first != nil ? "\(String(viewModel.items.sorted{$0.date > $1.date}.first!.amount))mg/dL" : "--mg/dL")
                                     .font(Font.appTitle2)
