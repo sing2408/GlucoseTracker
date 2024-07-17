@@ -76,6 +76,10 @@ struct RecentCheckCard: View {
                                 Text("")
                             } else {
                                 Text(DateFormatter.custom.string(from: viewModel.sortData().first!.date))
+                                    .foregroundStyle(.gray)
+                                    .opacity(0.7)
+                                    .frame(width: 100)
+                                    .offset(y: -5)
                             }
                         }
                         .frame(width: 350)
