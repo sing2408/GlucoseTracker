@@ -7,18 +7,66 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B1F2A6B2C46A2C4004054C2 /* HapticFeedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1F2A6A2C46A2C4004054C2 /* HapticFeedback.swift */; };
+		244240372C46CE3900D19D6C /* RecordDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244240362C46CE3900D19D6C /* RecordDetailView.swift */; };
+		244240392C46CECE00D19D6C /* BindingExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244240382C46CECE00D19D6C /* BindingExtension.swift */; };
+		2442403C2C46D6C200D19D6C /* Addable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442403B2C46D6C200D19D6C /* Addable.swift */; };
+		2442403E2C46D6D000D19D6C /* Fetchable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442403D2C46D6D000D19D6C /* Fetchable.swift */; };
+		244240402C46D88300D19D6C /* Removable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442403F2C46D88300D19D6C /* Removable.swift */; };
+		2468A8F82C4038CC00BF5574 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2468A8F72C4038CC00BF5574 /* DateFormatter.swift */; };
 		24AB42B62C3E9E210094F172 /* GlucoseTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AB42B52C3E9E210094F172 /* GlucoseTrackerApp.swift */; };
-		24AB42B82C3E9E210094F172 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AB42B72C3E9E210094F172 /* ContentView.swift */; };
 		24AB42BA2C3E9E220094F172 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24AB42B92C3E9E220094F172 /* Assets.xcassets */; };
 		24AB42BD2C3E9E220094F172 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24AB42BC2C3E9E220094F172 /* Preview Assets.xcassets */; };
+		24AB42C42C3E9ED60094F172 /* GlucoseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AB42C32C3E9ED60094F172 /* GlucoseData.swift */; };
+		24AB42C92C3ED2ED0094F172 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AB42C82C3ED2ED0094F172 /* HomeView.swift */; };
+		24AB42D42C3EDA7C0094F172 /* TextStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AB42D32C3EDA7C0094F172 /* TextStyles.swift */; };
+		24BEAF622C3F8B74003DA842 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BEAF612C3F8B74003DA842 /* HomeViewModel.swift */; };
+		2711E3D22C40F8060039A7EC /* ChartHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2711E3D12C40F8060039A7EC /* ChartHistoryView.swift */; };
+		2711E3D42C40FAC80039A7EC /* ChartCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2711E3D32C40FAC80039A7EC /* ChartCard.swift */; };
+		2711E3D62C40FE660039A7EC /* ChartCardAvg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2711E3D52C40FE660039A7EC /* ChartCardAvg.swift */; };
+		2711E3DA2C4109BF0039A7EC /* GlutenDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2711E3D92C4109BF0039A7EC /* GlutenDataViewModel.swift */; };
+		2711E3DE2C4114F10039A7EC /* HideKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2711E3DD2C4114F10039A7EC /* HideKeyboard.swift */; };
+		2711E3E02C411A300039A7EC /* HistoryList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2711E3DF2C411A300039A7EC /* HistoryList.swift */; };
+		2711E3E22C41647C0039A7EC /* RecentCheckCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2711E3E12C41647C0039A7EC /* RecentCheckCard.swift */; };
+		2711E3E42C4177420039A7EC /* ChartGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2711E3E32C4177420039A7EC /* ChartGraph.swift */; };
+		2711E3E62C417B250039A7EC /* NoGraphCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2711E3E52C417B250039A7EC /* NoGraphCard.swift */; };
+		2711E3EE2C4250220039A7EC /* ChartGraphByType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2711E3ED2C4250220039A7EC /* ChartGraphByType.swift */; };
+		2711E3F62C426DAF0039A7EC /* AddRecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2711E3F52C426DAF0039A7EC /* AddRecordView.swift */; };
+		2711E3FC2C42D0990039A7EC /* NoDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2711E3FB2C42D0990039A7EC /* NoDataView.swift */; };
+		27886DD02C45534200D2DE9F /* HistoryListByType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27886DCF2C45534200D2DE9F /* HistoryListByType.swift */; };
+		3BB4E4FC2C4506C2004049CB /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 3BB4E4FB2C4506C2004049CB /* Localizable.xcstrings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		24AB42B22C3E9E210094F172 /* GlucoseTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GlucoseTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0B1F2A6A2C46A2C4004054C2 /* HapticFeedback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticFeedback.swift; sourceTree = "<group>"; };
+		244240362C46CE3900D19D6C /* RecordDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordDetailView.swift; sourceTree = "<group>"; };
+		244240382C46CECE00D19D6C /* BindingExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingExtension.swift; sourceTree = "<group>"; };
+		2442403B2C46D6C200D19D6C /* Addable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Addable.swift; sourceTree = "<group>"; };
+		2442403D2C46D6D000D19D6C /* Fetchable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fetchable.swift; sourceTree = "<group>"; };
+		2442403F2C46D88300D19D6C /* Removable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Removable.swift; sourceTree = "<group>"; };
+		2468A8F72C4038CC00BF5574 /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
+		24AB42B22C3E9E210094F172 /* GlucoSee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GlucoSee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24AB42B52C3E9E210094F172 /* GlucoseTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlucoseTrackerApp.swift; sourceTree = "<group>"; };
-		24AB42B72C3E9E210094F172 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		24AB42B92C3E9E220094F172 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		24AB42BC2C3E9E220094F172 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		24AB42C32C3E9ED60094F172 /* GlucoseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlucoseData.swift; sourceTree = "<group>"; };
+		24AB42C82C3ED2ED0094F172 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		24AB42D32C3EDA7C0094F172 /* TextStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextStyles.swift; sourceTree = "<group>"; };
+		24BEAF612C3F8B74003DA842 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		2711E3D12C40F8060039A7EC /* ChartHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartHistoryView.swift; sourceTree = "<group>"; };
+		2711E3D32C40FAC80039A7EC /* ChartCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartCard.swift; sourceTree = "<group>"; };
+		2711E3D52C40FE660039A7EC /* ChartCardAvg.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartCardAvg.swift; sourceTree = "<group>"; };
+		2711E3D92C4109BF0039A7EC /* GlutenDataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlutenDataViewModel.swift; sourceTree = "<group>"; };
+		2711E3DD2C4114F10039A7EC /* HideKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HideKeyboard.swift; sourceTree = "<group>"; };
+		2711E3DF2C411A300039A7EC /* HistoryList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryList.swift; sourceTree = "<group>"; };
+		2711E3E12C41647C0039A7EC /* RecentCheckCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentCheckCard.swift; sourceTree = "<group>"; };
+		2711E3E32C4177420039A7EC /* ChartGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartGraph.swift; sourceTree = "<group>"; };
+		2711E3E52C417B250039A7EC /* NoGraphCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoGraphCard.swift; sourceTree = "<group>"; };
+		2711E3ED2C4250220039A7EC /* ChartGraphByType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartGraphByType.swift; sourceTree = "<group>"; };
+		2711E3F52C426DAF0039A7EC /* AddRecordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRecordView.swift; sourceTree = "<group>"; };
+		2711E3FB2C42D0990039A7EC /* NoDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoDataView.swift; sourceTree = "<group>"; };
+		27886DCF2C45534200D2DE9F /* HistoryListByType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryListByType.swift; sourceTree = "<group>"; };
+		3BB4E4FB2C4506C2004049CB /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +80,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2442403A2C46D68500D19D6C /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				2442403B2C46D6C200D19D6C /* Addable.swift */,
+				2442403D2C46D6D000D19D6C /* Fetchable.swift */,
+				2442403F2C46D88300D19D6C /* Removable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		24AB42A92C3E9E210094F172 = {
 			isa = PBXGroup;
 			children = (
@@ -43,7 +101,7 @@
 		24AB42B32C3E9E210094F172 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				24AB42B22C3E9E210094F172 /* GlucoseTracker.app */,
+				24AB42B22C3E9E210094F172 /* GlucoSee.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -52,9 +110,15 @@
 			isa = PBXGroup;
 			children = (
 				24AB42B52C3E9E210094F172 /* GlucoseTrackerApp.swift */,
-				24AB42B72C3E9E210094F172 /* ContentView.swift */,
 				24AB42B92C3E9E220094F172 /* Assets.xcassets */,
+				2442403A2C46D68500D19D6C /* Protocols */,
+				24AB42C72C3ED2BC0094F172 /* Model */,
+				24AB42D92C3F86E10094F172 /* View */,
+				24AB42DA2C3F86F30094F172 /* ViewModel */,
+				24AB42D82C3F86920094F172 /* Screen */,
+				24AB42D52C3EDA870094F172 /* Extensions */,
 				24AB42BB2C3E9E220094F172 /* Preview Content */,
+				3BB4E4FB2C4506C2004049CB /* Localizable.xcstrings */,
 			);
 			path = GlucoseTracker;
 			sourceTree = "<group>";
@@ -65,6 +129,62 @@
 				24AB42BC2C3E9E220094F172 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		24AB42C72C3ED2BC0094F172 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				24AB42C32C3E9ED60094F172 /* GlucoseData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		24AB42D52C3EDA870094F172 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				24AB42D32C3EDA7C0094F172 /* TextStyles.swift */,
+				2468A8F72C4038CC00BF5574 /* DateFormatter.swift */,
+				2711E3DD2C4114F10039A7EC /* HideKeyboard.swift */,
+				0B1F2A6A2C46A2C4004054C2 /* HapticFeedback.swift */,
+				244240382C46CECE00D19D6C /* BindingExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		24AB42D82C3F86920094F172 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				24AB42C82C3ED2ED0094F172 /* HomeView.swift */,
+				244240362C46CE3900D19D6C /* RecordDetailView.swift */,
+				2711E3D12C40F8060039A7EC /* ChartHistoryView.swift */,
+				2711E3F52C426DAF0039A7EC /* AddRecordView.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		24AB42D92C3F86E10094F172 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2711E3D32C40FAC80039A7EC /* ChartCard.swift */,
+				2711E3D52C40FE660039A7EC /* ChartCardAvg.swift */,
+				2711E3DF2C411A300039A7EC /* HistoryList.swift */,
+				2711E3E12C41647C0039A7EC /* RecentCheckCard.swift */,
+				2711E3E32C4177420039A7EC /* ChartGraph.swift */,
+				2711E3E52C417B250039A7EC /* NoGraphCard.swift */,
+				2711E3ED2C4250220039A7EC /* ChartGraphByType.swift */,
+				2711E3FB2C42D0990039A7EC /* NoDataView.swift */,
+				27886DCF2C45534200D2DE9F /* HistoryListByType.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		24AB42DA2C3F86F30094F172 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				24BEAF612C3F8B74003DA842 /* HomeViewModel.swift */,
+				2711E3D92C4109BF0039A7EC /* GlutenDataViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -84,7 +204,7 @@
 			);
 			name = GlucoseTracker;
 			productName = GlucoseTracker;
-			productReference = 24AB42B22C3E9E210094F172 /* GlucoseTracker.app */;
+			productReference = 24AB42B22C3E9E210094F172 /* GlucoSee.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -109,6 +229,7 @@
 			knownRegions = (
 				en,
 				Base,
+				id,
 			);
 			mainGroup = 24AB42A92C3E9E210094F172;
 			productRefGroup = 24AB42B32C3E9E210094F172 /* Products */;
@@ -127,6 +248,7 @@
 			files = (
 				24AB42BD2C3E9E220094F172 /* Preview Assets.xcassets in Resources */,
 				24AB42BA2C3E9E220094F172 /* Assets.xcassets in Resources */,
+				3BB4E4FC2C4506C2004049CB /* Localizable.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,7 +259,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				24AB42B82C3E9E210094F172 /* ContentView.swift in Sources */,
+				2442403C2C46D6C200D19D6C /* Addable.swift in Sources */,
+				2711E3D42C40FAC80039A7EC /* ChartCard.swift in Sources */,
+				2711E3EE2C4250220039A7EC /* ChartGraphByType.swift in Sources */,
+				2711E3E02C411A300039A7EC /* HistoryList.swift in Sources */,
+				2711E3DE2C4114F10039A7EC /* HideKeyboard.swift in Sources */,
+				24AB42D42C3EDA7C0094F172 /* TextStyles.swift in Sources */,
+				27886DD02C45534200D2DE9F /* HistoryListByType.swift in Sources */,
+				244240402C46D88300D19D6C /* Removable.swift in Sources */,
+				2711E3E22C41647C0039A7EC /* RecentCheckCard.swift in Sources */,
+				2711E3D22C40F8060039A7EC /* ChartHistoryView.swift in Sources */,
+				0B1F2A6B2C46A2C4004054C2 /* HapticFeedback.swift in Sources */,
+				2468A8F82C4038CC00BF5574 /* DateFormatter.swift in Sources */,
+				2711E3E42C4177420039A7EC /* ChartGraph.swift in Sources */,
+				24AB42C42C3E9ED60094F172 /* GlucoseData.swift in Sources */,
+				2711E3E62C417B250039A7EC /* NoGraphCard.swift in Sources */,
+				244240392C46CECE00D19D6C /* BindingExtension.swift in Sources */,
+				2711E3FC2C42D0990039A7EC /* NoDataView.swift in Sources */,
+				2442403E2C46D6D000D19D6C /* Fetchable.swift in Sources */,
+				2711E3F62C426DAF0039A7EC /* AddRecordView.swift in Sources */,
+				24AB42C92C3ED2ED0094F172 /* HomeView.swift in Sources */,
+				24BEAF622C3F8B74003DA842 /* HomeViewModel.swift in Sources */,
+				244240372C46CE3900D19D6C /* RecordDetailView.swift in Sources */,
+				2711E3D62C40FE660039A7EC /* ChartCardAvg.swift in Sources */,
+				2711E3DA2C4109BF0039A7EC /* GlutenDataViewModel.swift in Sources */,
 				24AB42B62C3E9E210094F172 /* GlucoseTrackerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -278,15 +423,14 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.GlucoseTracker;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = GlucoSee;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -307,15 +451,14 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.GlucoseTracker;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = GlucoSee;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
