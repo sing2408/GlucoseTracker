@@ -12,7 +12,7 @@ class HomeViewModel: ObservableObject {
     var endDateString: String
     @Published var isShowingSheet: Bool = false
     
-    @Environment(\.colorScheme) var colorScheme
+    var colorScheme: ColorScheme?
     
     init() {
         let calendar = Calendar.current
@@ -30,7 +30,7 @@ class HomeViewModel: ObservableObject {
         print(isShowingSheet)
     }
     
-    func backgroundColor(avgOverall: Int) -> LinearGradient {
+    func backgroundColor(avgOverall: Int, colorScheme: ColorScheme) -> LinearGradient {
         if avgOverall > 140 && avgOverall < 200 {
             return LinearGradient(
                 gradient: colorScheme == .dark ? Gradient(colors: [.orange, .black]) : Gradient(colors: [.orange, .white]),

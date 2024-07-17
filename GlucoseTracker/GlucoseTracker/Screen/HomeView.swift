@@ -13,7 +13,7 @@ struct HomeView: View {
         NavigationStack {
             
             ZStack {
-                homeViewModel.backgroundColor(avgOverall: viewModel.avgOverall)
+                homeViewModel.backgroundColor(avgOverall: viewModel.avgOverall, colorScheme: colorScheme)
                 
                 VStack {
                     Spacer()
@@ -113,6 +113,7 @@ struct HomeView: View {
             .ignoresSafeArea()
             
         }
+        
         .sheet(isPresented: $homeViewModel.isShowingSheet) {
             AddRecordView(viewModel: viewModel)
                 .presentationDetents([.height(650)])

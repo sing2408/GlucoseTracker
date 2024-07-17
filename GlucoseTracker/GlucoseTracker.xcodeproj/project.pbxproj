@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-
 		0B1F2A6B2C46A2C4004054C2 /* HapticFeedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1F2A6A2C46A2C4004054C2 /* HapticFeedback.swift */; };
 		244240372C46CE3900D19D6C /* RecordDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244240362C46CE3900D19D6C /* RecordDetailView.swift */; };
 		244240392C46CECE00D19D6C /* BindingExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244240382C46CECE00D19D6C /* BindingExtension.swift */; };
@@ -146,10 +145,8 @@
 				24AB42D32C3EDA7C0094F172 /* TextStyles.swift */,
 				2468A8F72C4038CC00BF5574 /* DateFormatter.swift */,
 				2711E3DD2C4114F10039A7EC /* HideKeyboard.swift */,
-
 				0B1F2A6A2C46A2C4004054C2 /* HapticFeedback.swift */,
 				244240382C46CECE00D19D6C /* BindingExtension.swift */,
-
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -420,7 +417,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"GlucoseTracker/Preview Content\"";
-				DEVELOPMENT_TEAM = L27J25C3C8;
+				DEVELOPMENT_TEAM = M6ZUY47J83;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -448,7 +445,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"GlucoseTracker/Preview Content\"";
-				DEVELOPMENT_TEAM = L27J25C3C8;
+				DEVELOPMENT_TEAM = M6ZUY47J83;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
