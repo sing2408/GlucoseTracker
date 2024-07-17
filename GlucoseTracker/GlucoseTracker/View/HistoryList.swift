@@ -107,12 +107,7 @@ struct HistoryList: View {
                     Spacer()
                     
                 }
-                .onDelete { indexes in
-                    for index in indexes {
-                        let originIndex = viewModel.items.count - 1 - index
-                        viewModel.removeItem(viewModel.items[originIndex])
-                    }
-                }
+                
 
                 .sheet(isPresented: $manager.showDetail) {
                     if let selected = manager.selectedItem {

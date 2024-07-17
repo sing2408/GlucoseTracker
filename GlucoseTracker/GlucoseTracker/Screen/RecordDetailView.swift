@@ -11,11 +11,7 @@ import SwiftData
 struct RecordDetailView: View {
     @Environment (\.dismiss) var dismiss
     @Environment (\.colorScheme) var colorScheme
-    
-
-    @State var viewModel: GlutenDataViewModel
-
-    
+    @ObservedObject var viewModel: GlutenDataViewModel
     @State private var inputNewAmountString: String = ""
 
     @State private var selectedType = "mg/dL"
@@ -40,6 +36,7 @@ struct RecordDetailView: View {
                     
                     Button(action: {
                         viewModel.removeItem(item!)
+                        viewModel.fetchItems()
                         dismiss()
                     }) {
                         Image(systemName: "trash.fill")
@@ -158,10 +155,6 @@ struct RecordDetailView: View {
                                         }
                                     }
                                     .listRowBackground(Color(UIColor.systemBackground))
-                                
-                    
-                                
-
                             }
                         }
                         .scrollContentBackground(.hidden)
@@ -213,8 +206,8 @@ struct RecordDetailView: View {
                 }
             }
         }
+        
     }
-    
     private func saveEdit() {
         if let item {
             item.amount = newAmount!
@@ -223,13 +216,3 @@ struct RecordDetailView: View {
     }
 }
 
-extension Binding where Value == String {
-    func max(_ limit: Int) -> Self {
-        if self.wrappedValue.count > limit {
-            DispatchQueue.main.async {
-                self.wrappedValue = String(self.wrappedValue.prefix(limit))
-            }
-        }
-        return self
-    }
-}

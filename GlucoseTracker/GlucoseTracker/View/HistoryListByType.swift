@@ -42,6 +42,7 @@ struct HistoryListByType: View {
                         Image(systemName: "circle.fill")
                             .foregroundColor(item.amount > 140 && item.amount < 200 ? .yellow : item.amount > 200 ? .red : .green)
                             .font(.system(size: 42))
+                            .padding([.trailing], 10)
                         VStack(alignment: .leading) {
                             HStack {
                                 Image(systemName: item.type == "Before eat" ? "takeoutbag.and.cup.and.straw" : "takeoutbag.and.cup.and.straw.fill")

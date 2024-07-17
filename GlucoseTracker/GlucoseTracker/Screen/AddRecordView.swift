@@ -23,9 +23,6 @@ struct AddRecordView: View {
     @State private var inputDate:Date = .now
     @State private var inputNotes: String = ""
     
-    
-    
-    
     var body: some View {
         VStack {
             HStack{
@@ -38,8 +35,6 @@ struct AddRecordView: View {
                 Spacer()
             }
             .padding()
-            
-            //            .offset(x: -170, y: selectedType == "After eat" ? 0 : -38)
             
             VStack {
                 VStack(alignment: .center) {
@@ -168,8 +163,5 @@ struct AddRecordView: View {
                 .padding([.top], 25)
             }
         }
-//        .onTapGesture {
-//            hideKeyboard()
-//        }
     }
 }
