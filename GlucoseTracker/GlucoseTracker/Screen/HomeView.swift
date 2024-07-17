@@ -78,19 +78,16 @@ struct HomeView: View {
                         .padding()
                         
                         RecentCheckCard(modelContext: viewModel.modelContext)
-                        
                     }
+                    .onTapGesture {
+                        HapticFeedback.shared.trigger()
+                    }
+                    
                     Spacer()
                     
                     Button {
-
-                        
                         homeViewModel.toggleSheet()
                         HapticFeedback.shared.trigger()
-
-
-                        
-
                     } label: {
                         Rectangle()
                             .frame(width: 342, height: 64)

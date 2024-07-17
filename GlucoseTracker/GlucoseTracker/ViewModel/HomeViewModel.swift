@@ -27,7 +27,6 @@ class HomeViewModel: ObservableObject {
     
     func toggleSheet() {
         isShowingSheet.toggle()
-        print(isShowingSheet)
     }
     
     func backgroundColor(avgOverall: Int, colorScheme: ColorScheme) -> LinearGradient {

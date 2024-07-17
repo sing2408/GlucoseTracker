@@ -41,7 +41,6 @@ struct AddRecordView: View {
             VStack {
                 VStack(alignment: .center) {
                     Text("Track your current sugar level")
-                    //Text("sugar level!")
                 }
                 .font(Font.appLargeTitle2)
 
@@ -54,7 +53,6 @@ struct AddRecordView: View {
                 
                 VStack {
                     Text("Input your current sugar level based on your glucometer result each day.")
-                    //Text("glucometer result each day.")
                 }
                 .font(Font.appBody)
                 .foregroundColor(.gray)
@@ -81,14 +79,14 @@ struct AddRecordView: View {
                         .font(.system(size: 76, weight: .bold))
                         .foregroundStyle(Color.primary)
                         .frame(maxWidth: 150)
-                        .onChange(of: inputAmountString) { newValue in
-                            if let value = Int(newValue), value <= 999 {
+                        .onChange(of: inputAmountString, {
+                            if let value = Int(inputAmountString), value <= 999 {
                                 inputAmount = value
-                            } else if newValue.isEmpty {
+                            } else if inputAmountString.isEmpty {
                                 inputAmount = nil
                             }
                             HapticFeedback.shared.trigger()
-                        }
+                        })
                     
                     Text("mg/dL")
                         .font(.appTitle2)
@@ -117,22 +115,22 @@ struct AddRecordView: View {
                     }
                     .pickerStyle(SegmentedPickerStyle())
                     .frame(maxWidth: 300)
-                    .onChange(of: selectedType) { _ in
+                    .onChange(of: selectedType, {
                         HapticFeedback.shared.trigger()
-                    }
+                    })
                     
                     VStack(alignment: .leading, spacing: 5) {
                         Text("Notes")
                             .font(.subheadline)
-                        TextField("Note", text: $inputNotes)
+                        TextField("Note", text: $inputNotes, onEditingChanged: {_ in HapticFeedback.shared.trigger()})
                             .frame(maxWidth: 300, minHeight: 40)
                             .padding(.leading)
                             .background(Color(UIColor.systemBackground))
                             .cornerRadius(10)
                             .shadow(radius: 1)
-                            .onChange(of: inputNotes) { _ in
-                                HapticFeedback.shared.trigger()
-                            }
+//                            .onChange(of: inputNotes) { _ in
+//                                HapticFeedback.shared.trigger()
+//                            }
                     }
                     .padding(.top, 5)
                     

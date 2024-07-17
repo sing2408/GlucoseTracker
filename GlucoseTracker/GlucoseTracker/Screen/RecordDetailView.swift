@@ -69,13 +69,13 @@ struct RecordDetailView: View {
                                     .foregroundStyle(colorScheme == .dark ? .white : .black)
                                 //                                .frame(maxWidth: 200)
                                     .padding([.top], 25)
-                                    .onChange(of: inputNewAmountString) { newValue in
-                                        if let value = Int(newValue), value <= 999 {
+                                    .onChange(of: inputNewAmountString, {
+                                        if let value = Int(inputNewAmountString), value <= 999 {
                                             newAmount = value
-                                        } else if newValue.isEmpty {
+                                        } else if inputNewAmountString.isEmpty {
                                             newAmount = nil
                                         }
-                                    }
+                                    })
                             } else {
                                 Text("\(item!.amount)")
                                 
