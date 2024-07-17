@@ -1,12 +1,13 @@
 import Foundation
 import SwiftData
 
-class GlutenDataViewModel: ObservableObject {
+class GlutenDataViewModel: ObservableObject, Addable ,Removable, Fetchable {
     var modelContext: ModelContext
     @Published var items: [GlucoseData] = []
     @Published var avgOverall: Int = 0
     @Published var avgBeforeMeal: Int = 0
     @Published var avgAfterMeal: Int = 0
+    
     
     init(modelContext: ModelContext) {
         self.modelContext = modelContext

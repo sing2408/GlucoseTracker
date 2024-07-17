@@ -4,41 +4,16 @@ import UIKit
 
 struct HomeView: View {
     
-    @Environment(\.colorScheme) var colorScheme
-    @ObservedObject var viewModel: GlutenDataViewModel
     @StateObject var homeViewModel = HomeViewModel()
-    @State var isShowingSheet = false
+    @ObservedObject var viewModel: GlutenDataViewModel
+    @Environment(\.colorScheme) var colorScheme
     
     var body: some View {
         
         NavigationStack {
             
             ZStack {
-                if viewModel.avgOverall > 140 && viewModel.avgOverall < 200 {
-                    LinearGradient(
-                        gradient: colorScheme == .dark ? Gradient(colors: [.orange, .black]) : Gradient(colors: [.orange, .white]),
-                        startPoint: .topLeading,
-                        endPoint: UnitPoint(x: 0.4, y: 0.3)
-                    )
-                } else if viewModel.avgOverall > 200 {
-                    LinearGradient(
-                        gradient: colorScheme == .dark ? Gradient(colors: [.red, .black]) : Gradient(colors: [.red, .white]),
-                        startPoint: .topLeading,
-                        endPoint: UnitPoint(x: 0.4, y: 0.3)
-                    )
-                } else if viewModel.avgOverall < 140 && viewModel.avgOverall != 0 {
-                    LinearGradient(
-                        gradient: colorScheme == .dark ? Gradient(colors: [.green, .black]) : Gradient(colors: [.green, .white]),
-                        startPoint: .topLeading,
-                        endPoint: UnitPoint(x: 0.4, y: 0.3)
-                    )
-                } else {
-                    LinearGradient(
-                        gradient: colorScheme == .dark ? Gradient(colors: [.blue, .black]) : Gradient(colors: [.blue, .white]),
-                        startPoint: .topLeading,
-                        endPoint: UnitPoint(x: 0.4, y: 0.3)
-                    )
-                }
+                homeViewModel.backgroundColor(avgOverall: viewModel.avgOverall)
                 
                 VStack {
                     Spacer()
@@ -64,7 +39,7 @@ struct HomeView: View {
                             Text("mg/dL")
                                 .font(.appTitle2)
                         }
-                        .foregroundColor(viewModel.avgOverall > 140 && viewModel.avgOverall < 200 ? .orange : viewModel.avgOverall > 200 ? .red : viewModel.avgOverall < 140 && viewModel.avgOverall != 0 ? .green : .blue)
+                        .foregroundColor(homeViewModel.averageColor(avgOverall: viewModel.avgOverall))
                         
                         if viewModel.avgOverall > 140 {
                             Text("Be more aware of your meals!")
@@ -82,7 +57,6 @@ struct HomeView: View {
                     }
                     .padding()
                     
-                                    
                     VStack(alignment: .leading) {
                         HStack {
                             Text("Chart & Records")
@@ -91,14 +65,14 @@ struct HomeView: View {
                             
                             Spacer()
                             
-                            NavigationLink(destination: ChartHistoryView(modelContext: viewModel.modelContext)) {
+                            NavigationLink(destination: ChartHistoryView(modelContext: viewModel.modelContext).onDisappear {
+                                viewModel.fetchItems()
+                            }) {
                                 HStack(spacing: 0) {
                                     Text("See More")
-//                                    Image(systemName: "greaterthan")
-//                                        .font(.appBody)
+                                    
                                 }
                                 .font(.appBody)
-                                //.opacity(0.65)
                             }
                         }
                         .padding()
@@ -106,13 +80,16 @@ struct HomeView: View {
                         RecentCheckCard(modelContext: viewModel.modelContext)
                         
                     }
-                    
                     Spacer()
                     
                     Button {
+
                         
-                        isShowingSheet.toggle()
+                        homeViewModel.toggleSheet()
                         HapticFeedback.shared.trigger()
+
+
+                        
 
                     } label: {
                         Rectangle()
@@ -134,10 +111,14 @@ struct HomeView: View {
                 .padding()
             }
             .ignoresSafeArea()
+            
         }
-        .sheet(isPresented: $isShowingSheet) {
+        .sheet(isPresented: $homeViewModel.isShowingSheet) {
             AddRecordView(viewModel: viewModel)
                 .presentationDetents([.height(650)])
+        }
+        .onAppear{
+            viewModel.fetchItems()
         }
     }
     

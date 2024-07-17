@@ -7,14 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+
 		0B1F2A6B2C46A2C4004054C2 /* HapticFeedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1F2A6A2C46A2C4004054C2 /* HapticFeedback.swift */; };
+		244240372C46CE3900D19D6C /* RecordDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244240362C46CE3900D19D6C /* RecordDetailView.swift */; };
+		244240392C46CECE00D19D6C /* BindingExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244240382C46CECE00D19D6C /* BindingExtension.swift */; };
+		2442403C2C46D6C200D19D6C /* Addable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442403B2C46D6C200D19D6C /* Addable.swift */; };
+		2442403E2C46D6D000D19D6C /* Fetchable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442403D2C46D6D000D19D6C /* Fetchable.swift */; };
+		244240402C46D88300D19D6C /* Removable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442403F2C46D88300D19D6C /* Removable.swift */; };
 		2468A8F82C4038CC00BF5574 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2468A8F72C4038CC00BF5574 /* DateFormatter.swift */; };
 		24AB42B62C3E9E210094F172 /* GlucoseTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AB42B52C3E9E210094F172 /* GlucoseTrackerApp.swift */; };
 		24AB42BA2C3E9E220094F172 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24AB42B92C3E9E220094F172 /* Assets.xcassets */; };
 		24AB42BD2C3E9E220094F172 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24AB42BC2C3E9E220094F172 /* Preview Assets.xcassets */; };
 		24AB42C42C3E9ED60094F172 /* GlucoseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AB42C32C3E9ED60094F172 /* GlucoseData.swift */; };
 		24AB42C92C3ED2ED0094F172 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AB42C82C3ED2ED0094F172 /* HomeView.swift */; };
-		24AB42CF2C3ED4000094F172 /* RecordDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AB42CE2C3ED4000094F172 /* RecordDetailView.swift */; };
 		24AB42D42C3EDA7C0094F172 /* TextStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AB42D32C3EDA7C0094F172 /* TextStyles.swift */; };
 		24BEAF622C3F8B74003DA842 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BEAF612C3F8B74003DA842 /* HomeViewModel.swift */; };
 		2711E3D22C40F8060039A7EC /* ChartHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2711E3D12C40F8060039A7EC /* ChartHistoryView.swift */; };
@@ -35,6 +40,11 @@
 
 /* Begin PBXFileReference section */
 		0B1F2A6A2C46A2C4004054C2 /* HapticFeedback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticFeedback.swift; sourceTree = "<group>"; };
+		244240362C46CE3900D19D6C /* RecordDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordDetailView.swift; sourceTree = "<group>"; };
+		244240382C46CECE00D19D6C /* BindingExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingExtension.swift; sourceTree = "<group>"; };
+		2442403B2C46D6C200D19D6C /* Addable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Addable.swift; sourceTree = "<group>"; };
+		2442403D2C46D6D000D19D6C /* Fetchable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fetchable.swift; sourceTree = "<group>"; };
+		2442403F2C46D88300D19D6C /* Removable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Removable.swift; sourceTree = "<group>"; };
 		2468A8F72C4038CC00BF5574 /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
 		24AB42B22C3E9E210094F172 /* GlucoSee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GlucoSee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24AB42B52C3E9E210094F172 /* GlucoseTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlucoseTrackerApp.swift; sourceTree = "<group>"; };
@@ -42,7 +52,6 @@
 		24AB42BC2C3E9E220094F172 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		24AB42C32C3E9ED60094F172 /* GlucoseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlucoseData.swift; sourceTree = "<group>"; };
 		24AB42C82C3ED2ED0094F172 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		24AB42CE2C3ED4000094F172 /* RecordDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordDetailView.swift; sourceTree = "<group>"; };
 		24AB42D32C3EDA7C0094F172 /* TextStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextStyles.swift; sourceTree = "<group>"; };
 		24BEAF612C3F8B74003DA842 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		2711E3D12C40F8060039A7EC /* ChartHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartHistoryView.swift; sourceTree = "<group>"; };
@@ -72,6 +81,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2442403A2C46D68500D19D6C /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				2442403B2C46D6C200D19D6C /* Addable.swift */,
+				2442403D2C46D6D000D19D6C /* Fetchable.swift */,
+				2442403F2C46D88300D19D6C /* Removable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		24AB42A92C3E9E210094F172 = {
 			isa = PBXGroup;
 			children = (
@@ -93,6 +112,7 @@
 			children = (
 				24AB42B52C3E9E210094F172 /* GlucoseTrackerApp.swift */,
 				24AB42B92C3E9E220094F172 /* Assets.xcassets */,
+				2442403A2C46D68500D19D6C /* Protocols */,
 				24AB42C72C3ED2BC0094F172 /* Model */,
 				24AB42D92C3F86E10094F172 /* View */,
 				24AB42DA2C3F86F30094F172 /* ViewModel */,
@@ -126,7 +146,10 @@
 				24AB42D32C3EDA7C0094F172 /* TextStyles.swift */,
 				2468A8F72C4038CC00BF5574 /* DateFormatter.swift */,
 				2711E3DD2C4114F10039A7EC /* HideKeyboard.swift */,
+
 				0B1F2A6A2C46A2C4004054C2 /* HapticFeedback.swift */,
+				244240382C46CECE00D19D6C /* BindingExtension.swift */,
+
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -134,8 +157,8 @@
 		24AB42D82C3F86920094F172 /* Screen */ = {
 			isa = PBXGroup;
 			children = (
-				24AB42CE2C3ED4000094F172 /* RecordDetailView.swift */,
 				24AB42C82C3ED2ED0094F172 /* HomeView.swift */,
+				244240362C46CE3900D19D6C /* RecordDetailView.swift */,
 				2711E3D12C40F8060039A7EC /* ChartHistoryView.swift */,
 				2711E3F52C426DAF0039A7EC /* AddRecordView.swift */,
 			);
@@ -239,12 +262,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2442403C2C46D6C200D19D6C /* Addable.swift in Sources */,
 				2711E3D42C40FAC80039A7EC /* ChartCard.swift in Sources */,
 				2711E3EE2C4250220039A7EC /* ChartGraphByType.swift in Sources */,
 				2711E3E02C411A300039A7EC /* HistoryList.swift in Sources */,
 				2711E3DE2C4114F10039A7EC /* HideKeyboard.swift in Sources */,
 				24AB42D42C3EDA7C0094F172 /* TextStyles.swift in Sources */,
 				27886DD02C45534200D2DE9F /* HistoryListByType.swift in Sources */,
+				244240402C46D88300D19D6C /* Removable.swift in Sources */,
 				2711E3E22C41647C0039A7EC /* RecentCheckCard.swift in Sources */,
 				2711E3D22C40F8060039A7EC /* ChartHistoryView.swift in Sources */,
 				0B1F2A6B2C46A2C4004054C2 /* HapticFeedback.swift in Sources */,
@@ -252,12 +277,14 @@
 				2711E3E42C4177420039A7EC /* ChartGraph.swift in Sources */,
 				24AB42C42C3E9ED60094F172 /* GlucoseData.swift in Sources */,
 				2711E3E62C417B250039A7EC /* NoGraphCard.swift in Sources */,
+				244240392C46CECE00D19D6C /* BindingExtension.swift in Sources */,
 				2711E3FC2C42D0990039A7EC /* NoDataView.swift in Sources */,
+				2442403E2C46D6D000D19D6C /* Fetchable.swift in Sources */,
 				2711E3F62C426DAF0039A7EC /* AddRecordView.swift in Sources */,
 				24AB42C92C3ED2ED0094F172 /* HomeView.swift in Sources */,
 				24BEAF622C3F8B74003DA842 /* HomeViewModel.swift in Sources */,
+				244240372C46CE3900D19D6C /* RecordDetailView.swift in Sources */,
 				2711E3D62C40FE660039A7EC /* ChartCardAvg.swift in Sources */,
-				24AB42CF2C3ED4000094F172 /* RecordDetailView.swift in Sources */,
 				2711E3DA2C4109BF0039A7EC /* GlutenDataViewModel.swift in Sources */,
 				24AB42B62C3E9E210094F172 /* GlucoseTrackerApp.swift in Sources */,
 			);
