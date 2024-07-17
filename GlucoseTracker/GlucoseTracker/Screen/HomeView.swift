@@ -1,5 +1,6 @@
 import SwiftUI
 import SwiftData
+import UIKit
 
 struct HomeView: View {
     
@@ -82,7 +83,14 @@ struct HomeView: View {
                     Spacer()
                     
                     Button {
+
+                        
                         homeViewModel.toggleSheet()
+                        HapticFeedback.shared.trigger()
+
+
+                        
+
                     } label: {
                         Rectangle()
                             .frame(width: 342, height: 64)

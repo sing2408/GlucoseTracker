@@ -24,6 +24,10 @@ struct ChartHistoryView: View {
                 Text("After eat").tag("After eat")
             }
             .pickerStyle(SegmentedPickerStyle())
+            .onChange(of: chartType) { _ in
+                HapticFeedback.shared.trigger()
+            }
+
             
             ScrollView {
                 

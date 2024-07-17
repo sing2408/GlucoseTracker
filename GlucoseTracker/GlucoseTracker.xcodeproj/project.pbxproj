@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+
+		0B1F2A6B2C46A2C4004054C2 /* HapticFeedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1F2A6A2C46A2C4004054C2 /* HapticFeedback.swift */; };
 		244240372C46CE3900D19D6C /* RecordDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244240362C46CE3900D19D6C /* RecordDetailView.swift */; };
 		244240392C46CECE00D19D6C /* BindingExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244240382C46CECE00D19D6C /* BindingExtension.swift */; };
 		2442403C2C46D6C200D19D6C /* Addable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442403B2C46D6C200D19D6C /* Addable.swift */; };
@@ -37,6 +39,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0B1F2A6A2C46A2C4004054C2 /* HapticFeedback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticFeedback.swift; sourceTree = "<group>"; };
 		244240362C46CE3900D19D6C /* RecordDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordDetailView.swift; sourceTree = "<group>"; };
 		244240382C46CECE00D19D6C /* BindingExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingExtension.swift; sourceTree = "<group>"; };
 		2442403B2C46D6C200D19D6C /* Addable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Addable.swift; sourceTree = "<group>"; };
@@ -143,7 +146,10 @@
 				24AB42D32C3EDA7C0094F172 /* TextStyles.swift */,
 				2468A8F72C4038CC00BF5574 /* DateFormatter.swift */,
 				2711E3DD2C4114F10039A7EC /* HideKeyboard.swift */,
+
+				0B1F2A6A2C46A2C4004054C2 /* HapticFeedback.swift */,
 				244240382C46CECE00D19D6C /* BindingExtension.swift */,
+
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -266,6 +272,7 @@
 				244240402C46D88300D19D6C /* Removable.swift in Sources */,
 				2711E3E22C41647C0039A7EC /* RecentCheckCard.swift in Sources */,
 				2711E3D22C40F8060039A7EC /* ChartHistoryView.swift in Sources */,
+				0B1F2A6B2C46A2C4004054C2 /* HapticFeedback.swift in Sources */,
 				2468A8F82C4038CC00BF5574 /* DateFormatter.swift in Sources */,
 				2711E3E42C4177420039A7EC /* ChartGraph.swift in Sources */,
 				24AB42C42C3E9ED60094F172 /* GlucoseData.swift in Sources */,
